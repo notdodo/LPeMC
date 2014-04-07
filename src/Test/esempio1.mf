@@ -1,0 +1,39 @@
+let fun prova:int(y:int, g:int) {
+        y
+    };
+
+    fun a:int(y:int,x:int,fo:(int,int)->int) {
+        y+x
+    };
+
+    fun somma:int(x:int,fi:(int)->int) {
+        fi(x)
+    };
+in print(a(1,6,prova));
+
+let 
+	fun sqr:int(f2:(int,int)->int, x:int, y:int) { f2(x,y)*f2(x,y)};
+	fun sum:int(x:int, y:int) { x+y};
+	
+    fun passofunz:int(f1:((int,int)->int,int,int)->int, f2:(int,int)->int, x:int, y:int){
+    	f1(f2,x,y)
+    };
+in
+	print(passofunz(sqr, sum, 5, 1));
+
+let     var g:int=12;
+	var zz:int=4;
+	fun useFun:int(f2:(int,int)->int, a2:int, b2:int){
+		f2(a2,b2)   
+	};
+        
+        fun passofunz:int(f3:((int,int)->int, int, int)-> int){
+            let
+    		var g:int=2;
+    		var k:int=3;
+    		fun inside:int(c:int,y:int) { c+y };
+            in
+    		f3(inside,5,6);
+        };
+in
+	print(passofunz(useFun));
