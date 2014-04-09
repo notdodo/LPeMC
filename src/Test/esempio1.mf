@@ -1,15 +1,11 @@
-let fun prova:int(y:int, g:int) {
-        y
+let fun somma:int(y:int, g:int) {
+        y+g
     };
 
     fun a:int(y:int,x:int,fo:(int,int)->int) {
-        y+x
+        fo(x,y)
     };
-
-    fun somma:int(x:int,fi:(int)->int) {
-        fi(x)
-    };
-in print(a(1,6,prova));
+in print(a(1,6,somma));
 
 let 
 	fun sqr:int(f2:(int,int)->int, x:int, y:int) { f2(x,y)*f2(x,y)};

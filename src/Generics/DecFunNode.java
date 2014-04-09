@@ -100,6 +100,10 @@ public class DecFunNode extends Node {
         this.decList = e;
     }
     
+    public String getId() {
+        return this.id;
+    }
+    
     public String codeGen() {
         String labelFun = MiniFunLib.newLabel();
 

@@ -1,7 +1,6 @@
 // LetNode
-push lab0 // prova
+push lab0 // somma
 push lab1 // a
-push lab2 // somma
 lfp
 lfp
 push 1
@@ -18,24 +17,7 @@ lw
 js
 print
 halt
-lab0: // prova
-cfp
-lra
-lfp
-push -1
-sub
-lw
-srv
-sra
-pop
-pop
-pop
-sfp
-lrv
-lra
-js
-// END prova
-lab1: // a
+lab0: // somma
 cfp
 lra
 lfp
@@ -52,14 +34,12 @@ sra
 pop
 pop
 pop
-pop
-pop
 sfp
 lrv
 lra
 js
-// END a
-lab2: // somma
+// END somma
+lab1: // a
 cfp
 lra
 lfp
@@ -75,9 +55,14 @@ lfp
 push -3
 sub
 lw
+lfp
+push -4
+sub
+lw
 js
 srv
 sra
+pop
 pop
 pop
 pop
@@ -86,5 +71,5 @@ sfp
 lrv
 lra
 js
-// END somma
+// END a
 // END LetNode
