@@ -1,6 +1,7 @@
+// $ANTLR 3.5.1 C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g 2014-04-09 12:45:50
+
 package Grammar;
 
-// $ANTLR 3.5.1 D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g 2014-04-06 18:34:20
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -66,15 +67,15 @@ public class MiniFunLexer extends Lexer {
 	public MiniFunLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g"; }
 
 	// $ANTLR start "LET"
 	public final void mLET() throws RecognitionException {
 		try {
 			int _type = LET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:218:6: ( 'let' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:218:8: 'let'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:231:6: ( 'let' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:231:8: 'let'
 			{
 			match("let"); 
 
@@ -94,8 +95,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = IN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:219:4: ( 'in' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:219:6: 'in'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:232:4: ( 'in' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:232:6: 'in'
 			{
 			match("in"); 
 
@@ -115,8 +116,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SEMIC;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:220:7: ( ';' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:220:9: ';'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:233:7: ( ';' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:233:9: ';'
 			{
 			match(';'); 
 			}
@@ -135,8 +136,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = COL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:221:5: ( ':' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:221:7: ':'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:234:5: ( ':' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:234:7: ':'
 			{
 			match(':'); 
 			}
@@ -155,8 +156,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = DOUBLCOL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:222:9: ( '::' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:222:11: '::'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:235:9: ( '::' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:235:11: '::'
 			{
 			match("::"); 
 
@@ -176,8 +177,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:223:7: ( ',' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:223:9: ','
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:236:7: ( ',' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:236:9: ','
 			{
 			match(','); 
 			}
@@ -196,8 +197,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ASS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:224:5: ( '=' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:224:7: '='
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:237:5: ( '=' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:237:7: '='
 			{
 			match('='); 
 			}
@@ -216,8 +217,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:225:4: ( '==' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:225:6: '=='
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:238:4: ( '==' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:238:6: '=='
 			{
 			match("=="); 
 
@@ -237,8 +238,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MINORE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:226:8: ( '<=' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:226:10: '<='
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:239:8: ( '<=' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:239:10: '<='
 			{
 			match("<="); 
 
@@ -258,8 +259,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MAGGIORE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:227:9: ( '>=' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:227:11: '>='
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:240:9: ( '>=' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:240:11: '>='
 			{
 			match(">="); 
 
@@ -279,8 +280,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = PLUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:228:6: ( '+' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:228:8: '+'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:241:6: ( '+' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:241:8: '+'
 			{
 			match('+'); 
 			}
@@ -299,8 +300,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = TIMES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:229:7: ( '*' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:229:9: '*'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:242:7: ( '*' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:242:9: '*'
 			{
 			match('*'); 
 			}
@@ -319,8 +320,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MINUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:230:7: ( '-' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:230:9: '-'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:243:7: ( '-' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:243:9: '-'
 			{
 			match('-'); 
 			}
@@ -339,8 +340,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = OR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:231:4: ( '||' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:231:6: '||'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:244:4: ( '||' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:244:6: '||'
 			{
 			match("||"); 
 
@@ -360,8 +361,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = AND;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:232:5: ( '&&' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:232:7: '&&'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:245:5: ( '&&' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:245:7: '&&'
 			{
 			match("&&"); 
 
@@ -381,8 +382,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:233:5: ( '/' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:233:7: '/'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:246:5: ( '/' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:246:7: '/'
 			{
 			match('/'); 
 			}
@@ -401,7 +402,7 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = NAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:234:5: ( ( ( '1' .. '9' ) ( '0' .. '9' )* ) | '0' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:5: ( ( ( '1' .. '9' ) ( '0' .. '9' )* ) | '0' )
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( ((LA2_0 >= '1' && LA2_0 <= '9')) ) {
@@ -419,10 +420,10 @@ public class MiniFunLexer extends Lexer {
 
 			switch (alt2) {
 				case 1 :
-					// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:234:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
 					{
-					// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:234:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
-					// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:234:8: ( '1' .. '9' ) ( '0' .. '9' )*
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:8: ( '1' .. '9' ) ( '0' .. '9' )*
 					{
 					if ( (input.LA(1) >= '1' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -432,7 +433,7 @@ public class MiniFunLexer extends Lexer {
 						recover(mse);
 						throw mse;
 					}
-					// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:234:18: ( '0' .. '9' )*
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:18: ( '0' .. '9' )*
 					loop1:
 					while (true) {
 						int alt1=2;
@@ -443,7 +444,7 @@ public class MiniFunLexer extends Lexer {
 
 						switch (alt1) {
 						case 1 :
-							// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:
+							// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:
 							{
 							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 								input.consume();
@@ -466,7 +467,7 @@ public class MiniFunLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:234:33: '0'
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:33: '0'
 					{
 					match('0'); 
 					}
@@ -487,8 +488,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = TRUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:235:6: ( 'true' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:235:8: 'true'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:248:6: ( 'true' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:248:8: 'true'
 			{
 			match("true"); 
 
@@ -508,8 +509,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FALSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:236:7: ( 'false' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:236:9: 'false'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:249:7: ( 'false' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:249:9: 'false'
 			{
 			match("false"); 
 
@@ -529,8 +530,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = NOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:237:5: ( 'not' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:237:7: 'not'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:250:5: ( 'not' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:250:7: 'not'
 			{
 			match("not"); 
 
@@ -550,8 +551,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = EMPTY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:238:9: ( 'empty' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:238:11: 'empty'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:251:9: ( 'empty' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:251:11: 'empty'
 			{
 			match("empty"); 
 
@@ -571,8 +572,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:239:6: ( 'var' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:239:8: 'var'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:252:6: ( 'var' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:252:8: 'var'
 			{
 			match("var"); 
 
@@ -592,8 +593,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FUN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:240:6: ( 'fun' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:240:8: 'fun'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:253:6: ( 'fun' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:253:8: 'fun'
 			{
 			match("fun"); 
 
@@ -613,8 +614,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ARROW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:241:7: ( '->' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:241:9: '->'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:254:7: ( '->' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:254:9: '->'
 			{
 			match("->"); 
 
@@ -634,8 +635,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:242:7: ( '(' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:242:9: '('
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:255:7: ( '(' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:255:9: '('
 			{
 			match('('); 
 			}
@@ -654,8 +655,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = RPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:243:6: ( ')' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:243:8: ')'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:256:6: ( ')' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:256:8: ')'
 			{
 			match(')'); 
 			}
@@ -674,8 +675,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = CLPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:244:8: ( '{' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:244:10: '{'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:257:8: ( '{' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:257:10: '{'
 			{
 			match('{'); 
 			}
@@ -694,8 +695,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = CRPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:245:7: ( '}' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:245:9: '}'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:258:7: ( '}' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:258:9: '}'
 			{
 			match('}'); 
 			}
@@ -714,8 +715,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SLPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:246:8: ( '[' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:246:10: '['
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:259:8: ( '[' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:259:10: '['
 			{
 			match('['); 
 			}
@@ -734,8 +735,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SRPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:247:7: ( ']' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:247:9: ']'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:260:7: ( ']' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:260:9: ']'
 			{
 			match(']'); 
 			}
@@ -754,8 +755,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:248:5: ( 'if' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:248:7: 'if'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:261:5: ( 'if' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:261:7: 'if'
 			{
 			match("if"); 
 
@@ -775,8 +776,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = THEN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:249:7: ( 'then' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:249:9: 'then'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:262:7: ( 'then' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:262:9: 'then'
 			{
 			match("then"); 
 
@@ -796,8 +797,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ELSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:250:7: ( 'else' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:250:9: 'else'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:263:7: ( 'else' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:263:9: 'else'
 			{
 			match("else"); 
 
@@ -817,8 +818,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = PRINT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:251:7: ( 'print' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:251:9: 'print'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:264:7: ( 'print' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:264:9: 'print'
 			{
 			match("print"); 
 
@@ -838,8 +839,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FIRST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:252:9: ( 'first' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:252:11: 'first'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:265:9: ( 'first' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:265:11: 'first'
 			{
 			match("first"); 
 
@@ -859,8 +860,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = REST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:253:9: ( 'rest' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:253:11: 'rest'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:266:9: ( 'rest' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:266:11: 'rest'
 			{
 			match("rest"); 
 
@@ -880,8 +881,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = INTTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:254:9: ( 'int' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:254:11: 'int'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:267:9: ( 'int' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:267:11: 'int'
 			{
 			match("int"); 
 
@@ -901,8 +902,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = BOOLTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:255:9: ( 'bool' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:255:11: 'bool'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:268:9: ( 'bool' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:268:11: 'bool'
 			{
 			match("bool"); 
 
@@ -922,8 +923,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LISTTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:256:9: ( 'list' )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:256:11: 'list'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:269:9: ( 'list' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:269:11: 'list'
 			{
 			match("list"); 
 
@@ -943,8 +944,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:258:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:258:7: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:271:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:271:7: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -954,7 +955,7 @@ public class MiniFunLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:259:5: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:272:5: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -965,7 +966,7 @@ public class MiniFunLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -999,10 +1000,10 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = WHITESP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:261:10: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:261:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:274:10: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:274:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			{
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:261:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:274:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -1014,7 +1015,7 @@ public class MiniFunLexer extends Lexer {
 
 				switch (alt4) {
 				case 1 :
-					// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 						input.consume();
@@ -1052,8 +1053,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ERR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:263:9: ( . )
-			// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:263:11: .
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:276:9: ( . )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:276:11: .
 			{
 			matchAny(); 
 			 System.out.println("Invalid char: "+getText()); 
@@ -1070,299 +1071,299 @@ public class MiniFunLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:8: ( LET | IN | SEMIC | COL | DOUBLCOL | COMMA | ASS | EQ | MINORE | MAGGIORE | PLUS | TIMES | MINUS | OR | AND | DIV | NAT | TRUE | FALSE | NOT | EMPTY | VAR | FUN | ARROW | LPAR | RPAR | CLPAR | CRPAR | SLPAR | SRPAR | IF | THEN | ELSE | PRINT | FIRST | REST | INTTYPE | BOOLTYPE | LISTTYPE | ID | WHITESP | ERR )
+		// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:8: ( LET | IN | SEMIC | COL | DOUBLCOL | COMMA | ASS | EQ | MINORE | MAGGIORE | PLUS | TIMES | MINUS | OR | AND | DIV | NAT | TRUE | FALSE | NOT | EMPTY | VAR | FUN | ARROW | LPAR | RPAR | CLPAR | CRPAR | SLPAR | SRPAR | IF | THEN | ELSE | PRINT | FIRST | REST | INTTYPE | BOOLTYPE | LISTTYPE | ID | WHITESP | ERR )
 		int alt5=42;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:10: LET
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:10: LET
 				{
 				mLET(); 
 
 				}
 				break;
 			case 2 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:14: IN
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:14: IN
 				{
 				mIN(); 
 
 				}
 				break;
 			case 3 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:17: SEMIC
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:17: SEMIC
 				{
 				mSEMIC(); 
 
 				}
 				break;
 			case 4 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:23: COL
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:23: COL
 				{
 				mCOL(); 
 
 				}
 				break;
 			case 5 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:27: DOUBLCOL
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:27: DOUBLCOL
 				{
 				mDOUBLCOL(); 
 
 				}
 				break;
 			case 6 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:36: COMMA
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:36: COMMA
 				{
 				mCOMMA(); 
 
 				}
 				break;
 			case 7 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:42: ASS
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:42: ASS
 				{
 				mASS(); 
 
 				}
 				break;
 			case 8 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:46: EQ
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:46: EQ
 				{
 				mEQ(); 
 
 				}
 				break;
 			case 9 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:49: MINORE
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:49: MINORE
 				{
 				mMINORE(); 
 
 				}
 				break;
 			case 10 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:56: MAGGIORE
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:56: MAGGIORE
 				{
 				mMAGGIORE(); 
 
 				}
 				break;
 			case 11 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:65: PLUS
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:65: PLUS
 				{
 				mPLUS(); 
 
 				}
 				break;
 			case 12 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:70: TIMES
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:70: TIMES
 				{
 				mTIMES(); 
 
 				}
 				break;
 			case 13 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:76: MINUS
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:76: MINUS
 				{
 				mMINUS(); 
 
 				}
 				break;
 			case 14 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:82: OR
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:82: OR
 				{
 				mOR(); 
 
 				}
 				break;
 			case 15 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:85: AND
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:85: AND
 				{
 				mAND(); 
 
 				}
 				break;
 			case 16 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:89: DIV
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:89: DIV
 				{
 				mDIV(); 
 
 				}
 				break;
 			case 17 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:93: NAT
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:93: NAT
 				{
 				mNAT(); 
 
 				}
 				break;
 			case 18 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:97: TRUE
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:97: TRUE
 				{
 				mTRUE(); 
 
 				}
 				break;
 			case 19 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:102: FALSE
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:102: FALSE
 				{
 				mFALSE(); 
 
 				}
 				break;
 			case 20 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:108: NOT
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:108: NOT
 				{
 				mNOT(); 
 
 				}
 				break;
 			case 21 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:112: EMPTY
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:112: EMPTY
 				{
 				mEMPTY(); 
 
 				}
 				break;
 			case 22 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:118: VAR
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:118: VAR
 				{
 				mVAR(); 
 
 				}
 				break;
 			case 23 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:122: FUN
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:122: FUN
 				{
 				mFUN(); 
 
 				}
 				break;
 			case 24 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:126: ARROW
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:126: ARROW
 				{
 				mARROW(); 
 
 				}
 				break;
 			case 25 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:132: LPAR
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:132: LPAR
 				{
 				mLPAR(); 
 
 				}
 				break;
 			case 26 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:137: RPAR
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:137: RPAR
 				{
 				mRPAR(); 
 
 				}
 				break;
 			case 27 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:142: CLPAR
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:142: CLPAR
 				{
 				mCLPAR(); 
 
 				}
 				break;
 			case 28 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:148: CRPAR
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:148: CRPAR
 				{
 				mCRPAR(); 
 
 				}
 				break;
 			case 29 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:154: SLPAR
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:154: SLPAR
 				{
 				mSLPAR(); 
 
 				}
 				break;
 			case 30 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:160: SRPAR
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:160: SRPAR
 				{
 				mSRPAR(); 
 
 				}
 				break;
 			case 31 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:166: IF
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:166: IF
 				{
 				mIF(); 
 
 				}
 				break;
 			case 32 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:169: THEN
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:169: THEN
 				{
 				mTHEN(); 
 
 				}
 				break;
 			case 33 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:174: ELSE
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:174: ELSE
 				{
 				mELSE(); 
 
 				}
 				break;
 			case 34 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:179: PRINT
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:179: PRINT
 				{
 				mPRINT(); 
 
 				}
 				break;
 			case 35 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:185: FIRST
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:185: FIRST
 				{
 				mFIRST(); 
 
 				}
 				break;
 			case 36 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:191: REST
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:191: REST
 				{
 				mREST(); 
 
 				}
 				break;
 			case 37 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:196: INTTYPE
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:196: INTTYPE
 				{
 				mINTTYPE(); 
 
 				}
 				break;
 			case 38 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:204: BOOLTYPE
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:204: BOOLTYPE
 				{
 				mBOOLTYPE(); 
 
 				}
 				break;
 			case 39 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:213: LISTTYPE
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:213: LISTTYPE
 				{
 				mLISTTYPE(); 
 
 				}
 				break;
 			case 40 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:222: ID
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:222: ID
 				{
 				mID(); 
 
 				}
 				break;
 			case 41 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:225: WHITESP
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:225: WHITESP
 				{
 				mWHITESP(); 
 
 				}
 				break;
 			case 42 :
-				// D:\\Develop\\NetBeans\\doppioculo\\src\\MiniFun.g:1:233: ERR
+				// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:1:233: ERR
 				{
 				mERR(); 
 

@@ -38,7 +38,6 @@ public class FunParNode extends Node {
     }
 
     public String typeCheck() {
-
         return this.decl.getDecl().typeCheck();
     }
 

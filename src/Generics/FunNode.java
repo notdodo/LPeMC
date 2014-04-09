@@ -111,7 +111,8 @@ public class FunNode extends Node {
     }
 
     private boolean parameterMatch(ArrayList<Node> declParameter, ArrayList<Node> passedParameter) {
-        //controllare che se è un funparnode 
+        //controllare che se è un funparnode
+        System.out.println(declParameter+" "+ passedParameter);
         if (declParameter.size() == passedParameter.size()) {
             // Controllo ad uno ad un la compatibilità dei Parametri con la
             // loro dichiarazione
@@ -119,12 +120,10 @@ public class FunNode extends Node {
                 Node par = declParameter.get(i);
                 if (par instanceof DecParNode) {
                     if (((DecParNode) declParameter.get(i)).getType() instanceof FunParType) {
-                                                    System.out.println("è funpartype");
                         ArrayList<Node> parCheck = ((FunParType) ((DecParNode) declParameter.get(i)).getType()).getPar();
                         if (passedParameter.get(i) instanceof FunParNode) {
-                            System.out.println("è funparnode");
                             ArrayList<Node> parCheckFunPar = ((FunParNode) (passedParameter.get(i))).getPar();
-                            parameterMatch(parCheck, parCheckFunPar);
+                            //parameterMatch(parCheck, parCheckFunPar);
                         } else {
                             System.out.println("Parametro atteso: funzione");
                             System.exit(0);
@@ -142,7 +141,6 @@ public class FunNode extends Node {
             }
         } else {
             System.out.println("Type Error FunNode: Numero parametri sbagliato "
-                    + ((DecFunNode)this.decl.getDecl()).getId() + " "
                     + declParameter.size() + " "
                     + ", "
                     + passedParameter.size());
