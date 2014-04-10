@@ -1,6 +1,5 @@
 package Math;
 
-
 import Generics.Node;
 import Generics.MiniFunLib;
 import Type.IntTypeNode;
