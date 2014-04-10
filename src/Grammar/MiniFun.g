@@ -10,7 +10,7 @@ package Grammar;
 import Generics.*;
 import Type.*;
 import Logic.*;
-import Op.*;
+import Math.*;
 import List.*;
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -113,10 +113,10 @@ exp	returns [Node ast]
  	     )*
  	     // a <= b
  	|    MINORE l=term
- 	     {$ast = new MinNode($ast, $l.ast);}
+ 	     {$ast = new MinEqNode($ast, $l.ast);}
  	     // a >= b
  	|    MAGGIORE l=term
- 	     {$ast = new MagNode($ast, $l.ast);}
+ 	     {$ast = new MagEqNode($ast, $l.ast);}
  	     );
  	
 term	returns [Node ast]
@@ -173,7 +173,6 @@ fatt	returns [Node ast]
 	   }
 	   if(entry.getDecl() instanceof DecFunNode || 
 	   	(entry.getDecl() instanceof DecParNode && ((DecParNode)entry.getDecl()).getType() instanceof FunParType)){
-	   	System.out.println("1 FunParNode "+ $i.text+" "+$i.line);
 	   	$ast = new FunParNode(entry,nestingLevel-declNL);
 	   }else {
 	   	//System.out.println("VarNode "+ $i.text+" "+$i.line);
@@ -187,11 +186,9 @@ fatt	returns [Node ast]
 	    )? 
 	    RPAR
 	    {
-	    	   	System.out.println("2 FunNode "+ $i.text+" "+$i.line);
 	    	$ast = new FunNode(entry,nestingLevel-declNL,parList);
 
 	    }
-	    	    	   	{System.out.println($ast);}
 	  )?
 	| IF x=exp THEN CLPAR y=exp CRPAR 
 		   ELSE CLPAR z=exp CRPAR 
