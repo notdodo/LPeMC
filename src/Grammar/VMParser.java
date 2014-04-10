@@ -1,9 +1,8 @@
-package Grammar;
+// $ANTLR 3.5.1 /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g 2014-04-11 01:43:17
 
-// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/base/src/VM.g 2014-04-04 09:23:51
-
-import java.util.HashMap;
-import java.util.ArrayList;
+    package Grammar;
+    
+    import java.util.HashMap;
 
 
 import org.antlr.runtime.*;
@@ -66,10 +65,9 @@ public class VMParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return VMParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "/home/edoardo/NetBeansProjects/base/src/VM.g"; }
+	@Override public String getGrammarFileName() { return "/home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g"; }
 
 
-	      
 	    private int[] code = new int[ExecuteVM.CODESIZE];    
 	    private int i = 0;
 	    private HashMap<String,Integer> labelAddress = new HashMap<String,Integer>();
@@ -80,20 +78,19 @@ public class VMParser extends Parser {
 	       assembly();
 	       return code;
 	    }
-	    
 
 
 
 	// $ANTLR start "assembly"
-	// /home/edoardo/NetBeansProjects/base/src/VM.g:27:1: assembly : ( PUSH e= NUMBER | PUSH e= LABEL | POP | ADD | SUB | MULT | DIV | STOREW | LOADW |e= LABEL COL | BRANCH e= LABEL | BRANCHEQ e= LABEL | BRANCHLESS e= LABEL | JS | LOADRA | STORERA | LOADRV | STORERV | LOADFP | STOREFP | COPYFP | LOADHP | STOREHP | PRINT | HALT )* ;
+	// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:31:1: assembly : ( PUSH e= NUMBER | PUSH e= LABEL | POP | ADD | SUB | MULT | DIV | STOREW | LOADW |e= LABEL COL | BRANCH e= LABEL | BRANCHEQ e= LABEL | BRANCHLESS e= LABEL | JS | LOADRA | STORERA | LOADRV | STORERV | LOADFP | STOREFP | COPYFP | LOADHP | STOREHP | PRINT | HALT )* ;
 	public final void assembly() throws RecognitionException {
 		Token e=null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:27:9: ( ( PUSH e= NUMBER | PUSH e= LABEL | POP | ADD | SUB | MULT | DIV | STOREW | LOADW |e= LABEL COL | BRANCH e= LABEL | BRANCHEQ e= LABEL | BRANCHLESS e= LABEL | JS | LOADRA | STORERA | LOADRV | STORERV | LOADFP | STOREFP | COPYFP | LOADHP | STOREHP | PRINT | HALT )* )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:27:11: ( PUSH e= NUMBER | PUSH e= LABEL | POP | ADD | SUB | MULT | DIV | STOREW | LOADW |e= LABEL COL | BRANCH e= LABEL | BRANCHEQ e= LABEL | BRANCHLESS e= LABEL | JS | LOADRA | STORERA | LOADRV | STORERV | LOADFP | STOREFP | COPYFP | LOADHP | STOREHP | PRINT | HALT )*
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:31:9: ( ( PUSH e= NUMBER | PUSH e= LABEL | POP | ADD | SUB | MULT | DIV | STOREW | LOADW |e= LABEL COL | BRANCH e= LABEL | BRANCHEQ e= LABEL | BRANCHLESS e= LABEL | JS | LOADRA | STORERA | LOADRV | STORERV | LOADFP | STOREFP | COPYFP | LOADHP | STOREHP | PRINT | HALT )* )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:32:9: ( PUSH e= NUMBER | PUSH e= LABEL | POP | ADD | SUB | MULT | DIV | STOREW | LOADW |e= LABEL COL | BRANCH e= LABEL | BRANCHEQ e= LABEL | BRANCHLESS e= LABEL | JS | LOADRA | STORERA | LOADRV | STORERV | LOADFP | STOREFP | COPYFP | LOADHP | STOREHP | PRINT | HALT )*
 			{
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:27:11: ( PUSH e= NUMBER | PUSH e= LABEL | POP | ADD | SUB | MULT | DIV | STOREW | LOADW |e= LABEL COL | BRANCH e= LABEL | BRANCHEQ e= LABEL | BRANCHLESS e= LABEL | JS | LOADRA | STORERA | LOADRV | STORERV | LOADFP | STOREFP | COPYFP | LOADHP | STOREHP | PRINT | HALT )*
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:32:9: ( PUSH e= NUMBER | PUSH e= LABEL | POP | ADD | SUB | MULT | DIV | STOREW | LOADW |e= LABEL COL | BRANCH e= LABEL | BRANCHEQ e= LABEL | BRANCHLESS e= LABEL | JS | LOADRA | STORERA | LOADRV | STORERV | LOADFP | STOREFP | COPYFP | LOADHP | STOREHP | PRINT | HALT )*
 			loop1:
 			while (true) {
 				int alt1=26;
@@ -228,197 +225,247 @@ public class VMParser extends Parser {
 				}
 				switch (alt1) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:27:13: PUSH e= NUMBER
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:33:17: PUSH e= NUMBER
 					{
-					match(input,PUSH,FOLLOW_PUSH_in_assembly26); 
-					e=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_assembly30); 
-					code[i++] = PUSH; 
-								     code[i++] = Integer.parseInt((e!=null?e.getText():null));
+					match(input,PUSH,FOLLOW_PUSH_in_assembly60); 
+					e=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_assembly64); 
+
+					                    code[i++] = PUSH; 
+					                    code[i++] = Integer.parseInt((e!=null?e.getText():null));
+					                
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:29:6: PUSH e= LABEL
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:39:17: PUSH e= LABEL
 					{
-					match(input,PUSH,FOLLOW_PUSH_in_assembly41); 
-					e=(Token)match(input,LABEL,FOLLOW_LABEL_in_assembly45); 
-					code[i++] = PUSH;
-						    		     labels.add((e!=null?e.getText():null));
-						  		     addresses.add(new Integer(i)); 
-						  		     code[i++] = 0;
+					match(input,PUSH,FOLLOW_PUSH_in_assembly120); 
+					e=(Token)match(input,LABEL,FOLLOW_LABEL_in_assembly124); 
+
+					                    code[i++] = PUSH;
+					                    labels.add((e!=null?e.getText():null));
+					                    addresses.add(new Integer(i)); 
+					                    code[i++] = 0;
+					                
 					}
 					break;
 				case 3 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:33:6: POP
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:47:17: POP
 					{
-					match(input,POP,FOLLOW_POP_in_assembly65); 
-					code[i++] = POP;
+					match(input,POP,FOLLOW_POP_in_assembly173); 
+
+					                    code[i++] = POP;
+					                
 					}
 					break;
 				case 4 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:34:6: ADD
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:52:17: ADD
 					{
-					match(input,ADD,FOLLOW_ADD_in_assembly80); 
-					code[i++] = ADD;
+					match(input,ADD,FOLLOW_ADD_in_assembly225); 
+
+					                    code[i++] = ADD;
+					                
 					}
 					break;
 				case 5 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:35:6: SUB
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:57:17: SUB
 					{
-					match(input,SUB,FOLLOW_SUB_in_assembly94); 
-					code[i++] = SUB;
+					match(input,SUB,FOLLOW_SUB_in_assembly276); 
+
+					                    code[i++] = SUB;
+					                
 					}
 					break;
 				case 6 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:36:6: MULT
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:62:17: MULT
 					{
-					match(input,MULT,FOLLOW_MULT_in_assembly108); 
-					code[i++] = MULT;
+					match(input,MULT,FOLLOW_MULT_in_assembly327); 
+
+					                    code[i++] = MULT;
+					                
 					}
 					break;
 				case 7 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:37:6: DIV
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:67:17: DIV
 					{
-					match(input,DIV,FOLLOW_DIV_in_assembly121); 
-					code[i++] = DIV;
+					match(input,DIV,FOLLOW_DIV_in_assembly390); 
+
+					                    code[i++] = DIV;
+					                
 					}
 					break;
 				case 8 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:38:6: STOREW
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:72:17: STOREW
 					{
-					match(input,STOREW,FOLLOW_STOREW_in_assembly135); 
-					code[i++] = STOREW;
+					match(input,STOREW,FOLLOW_STOREW_in_assembly441); 
+
+					                    code[i++] = STOREW;
+					                
 					}
 					break;
 				case 9 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:39:6: LOADW
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:77:17: LOADW
 					{
-					match(input,LOADW,FOLLOW_LOADW_in_assembly148); 
-					code[i++] = LOADW;
+					match(input,LOADW,FOLLOW_LOADW_in_assembly502); 
+
+					                    code[i++] = LOADW;
+					                
 					}
 					break;
 				case 10 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:40:6: e= LABEL COL
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:82:17: e= LABEL COL
 					{
-					e=(Token)match(input,LABEL,FOLLOW_LABEL_in_assembly169); 
-					match(input,COL,FOLLOW_COL_in_assembly171); 
-					labelAddress.put((e!=null?e.getText():null),new Integer(i));
+					e=(Token)match(input,LABEL,FOLLOW_LABEL_in_assembly566); 
+					match(input,COL,FOLLOW_COL_in_assembly568); 
+
+					                    labelAddress.put((e!=null?e.getText():null),new Integer(i));
+					                
 					}
 					break;
 				case 11 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:41:6: BRANCH e= LABEL
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:87:17: BRANCH e= LABEL
 					{
-					match(input,BRANCH,FOLLOW_BRANCH_in_assembly184); 
-					e=(Token)match(input,LABEL,FOLLOW_LABEL_in_assembly188); 
-					code[i++] = BRANCH;
-						  		     labels.add((e!=null?e.getText():null));
-						  		     addresses.add(new Integer(i)); 
-						  		     code[i++] = 0;
+					match(input,BRANCH,FOLLOW_BRANCH_in_assembly624); 
+					e=(Token)match(input,LABEL,FOLLOW_LABEL_in_assembly628); 
+
+					                    code[i++] = BRANCH;
+					                    labels.add((e!=null?e.getText():null));
+					                    addresses.add(new Integer(i)); 
+					                    code[i++] = 0;
+					                
 					}
 					break;
 				case 12 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:45:6: BRANCHEQ e= LABEL
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:95:17: BRANCHEQ e= LABEL
 					{
-					match(input,BRANCHEQ,FOLLOW_BRANCHEQ_in_assembly198); 
-					e=(Token)match(input,LABEL,FOLLOW_LABEL_in_assembly202); 
-					code[i++] = BRANCHEQ;
-						  	  	     labels.add((e!=null?e.getText():null));
-						  		     addresses.add(new Integer(i)); 
-						  		     code[i++] = 0;
+					match(input,BRANCHEQ,FOLLOW_BRANCHEQ_in_assembly685); 
+					e=(Token)match(input,LABEL,FOLLOW_LABEL_in_assembly689); 
+
+					                    code[i++] = BRANCHEQ;
+					                    labels.add((e!=null?e.getText():null));
+					                    addresses.add(new Integer(i)); 
+					                    code[i++] = 0;
+					                
 					}
 					break;
 				case 13 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:49:6: BRANCHLESS e= LABEL
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:103:17: BRANCHLESS e= LABEL
 					{
-					match(input,BRANCHLESS,FOLLOW_BRANCHLESS_in_assembly211); 
-					e=(Token)match(input,LABEL,FOLLOW_LABEL_in_assembly215); 
-					code[i++] = BRANCHLESS;
-						  	  	     labels.add((e!=null?e.getText():null));
-						  		     addresses.add(new Integer(i)); 
-						  		     code[i++] = 0;
+					match(input,BRANCHLESS,FOLLOW_BRANCHLESS_in_assembly760); 
+					e=(Token)match(input,LABEL,FOLLOW_LABEL_in_assembly764); 
+
+					                    code[i++] = BRANCHLESS;
+					                    labels.add((e!=null?e.getText():null));
+					                    addresses.add(new Integer(i)); 
+					                    code[i++] = 0;
+					                
 					}
 					break;
 				case 14 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:53:6: JS
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:111:17: JS
 					{
-					match(input,JS,FOLLOW_JS_in_assembly224); 
-					code[i++] = JS;
+					match(input,JS,FOLLOW_JS_in_assembly833); 
+
+					                    code[i++] = JS;
+					                
 					}
 					break;
 				case 15 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:54:6: LOADRA
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:116:17: LOADRA
 					{
-					match(input,LOADRA,FOLLOW_LOADRA_in_assembly253); 
-					code[i++] = LOADRA;
+					match(input,LOADRA,FOLLOW_LOADRA_in_assembly893); 
+
+					                    code[i++] = LOADRA;
+					                
 					}
 					break;
 				case 16 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:55:6: STORERA
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:121:17: STORERA
 					{
-					match(input,STORERA,FOLLOW_STORERA_in_assembly271); 
-					code[i++] = STORERA;
+					match(input,STORERA,FOLLOW_STORERA_in_assembly942); 
+
+					                    code[i++] = STORERA;
+					                
 					}
 					break;
 				case 17 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:56:6: LOADRV
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:126:17: LOADRV
 					{
-					match(input,LOADRV,FOLLOW_LOADRV_in_assembly289); 
-					code[i++] = LOADRV;
+					match(input,LOADRV,FOLLOW_LOADRV_in_assembly991); 
+
+					                    code[i++] = LOADRV;
+					                
 					}
 					break;
 				case 18 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:57:6: STORERV
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:131:17: STORERV
 					{
-					match(input,STORERV,FOLLOW_STORERV_in_assembly307); 
-					code[i++] = STORERV;
+					match(input,STORERV,FOLLOW_STORERV_in_assembly1040); 
+
+					                    code[i++] = STORERV;
+					                
 					}
 					break;
 				case 19 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:58:6: LOADFP
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:136:17: LOADFP
 					{
-					match(input,LOADFP,FOLLOW_LOADFP_in_assembly325); 
-					code[i++] = LOADFP;
+					match(input,LOADFP,FOLLOW_LOADFP_in_assembly1089); 
+
+					                    code[i++] = LOADFP;
+					                
 					}
 					break;
 				case 20 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:59:6: STOREFP
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:141:17: STOREFP
 					{
-					match(input,STOREFP,FOLLOW_STOREFP_in_assembly343); 
-					code[i++] = STOREFP;
+					match(input,STOREFP,FOLLOW_STOREFP_in_assembly1138); 
+
+					                    code[i++] = STOREFP;
+					                
 					}
 					break;
 				case 21 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:60:6: COPYFP
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:146:17: COPYFP
 					{
-					match(input,COPYFP,FOLLOW_COPYFP_in_assembly360); 
-					code[i++] = COPYFP;
+					match(input,COPYFP,FOLLOW_COPYFP_in_assembly1186); 
+
+					                    code[i++] = COPYFP;
+					                
 					}
 					break;
 				case 22 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:61:6: LOADHP
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:151:17: LOADHP
 					{
-					match(input,LOADHP,FOLLOW_LOADHP_in_assembly378); 
-					code[i++] = LOADHP;
+					match(input,LOADHP,FOLLOW_LOADHP_in_assembly1235); 
+
+					                    code[i++] = LOADHP;
+					                
 					}
 					break;
 				case 23 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:62:6: STOREHP
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:156:17: STOREHP
 					{
-					match(input,STOREHP,FOLLOW_STOREHP_in_assembly396); 
-					code[i++] = STOREHP;
+					match(input,STOREHP,FOLLOW_STOREHP_in_assembly1284); 
+
+					                    code[i++] = STOREHP;
+					                
 					}
 					break;
 				case 24 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:63:6: PRINT
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:161:17: PRINT
 					{
-					match(input,PRINT,FOLLOW_PRINT_in_assembly413); 
-					code[i++] = PRINT;
+					match(input,PRINT,FOLLOW_PRINT_in_assembly1331); 
+
+					                    code[i++] = PRINT;
+					                
 					}
 					break;
 				case 25 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:64:6: HALT
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:166:17: HALT
 					{
-					match(input,HALT,FOLLOW_HALT_in_assembly432); 
-					code[i++] = HALT;
+					match(input,HALT,FOLLOW_HALT_in_assembly1381); 
+
+					                    code[i++] = HALT;
+					                
 					}
 					break;
 
@@ -427,12 +474,13 @@ public class VMParser extends Parser {
 				}
 			}
 
-			  for (int ind=0; ind<labels.size(); ind++) {
-			        	  Integer t = labelAddress.get(labels.get(ind));
-			        	  Integer a = addresses.get(ind);
-					  code[a.intValue()]=t.intValue(); 
-			                }
-			              
+			  
+			            for (int ind=0; ind<labels.size(); ind++) {
+			                Integer t = labelAddress.get(labels.get(ind));
+			                Integer a = addresses.get(ind);
+			                code[a.intValue()]=t.intValue(); 
+			            }
+			        
 			}
 
 		}
@@ -450,35 +498,35 @@ public class VMParser extends Parser {
 
 
 
-	public static final BitSet FOLLOW_PUSH_in_assembly26 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_NUMBER_in_assembly30 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_PUSH_in_assembly41 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_LABEL_in_assembly45 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_POP_in_assembly65 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_ADD_in_assembly80 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_SUB_in_assembly94 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_MULT_in_assembly108 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_DIV_in_assembly121 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_STOREW_in_assembly135 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_LOADW_in_assembly148 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_LABEL_in_assembly169 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_COL_in_assembly171 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_BRANCH_in_assembly184 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_LABEL_in_assembly188 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_BRANCHEQ_in_assembly198 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_LABEL_in_assembly202 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_BRANCHLESS_in_assembly211 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_LABEL_in_assembly215 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_JS_in_assembly224 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_LOADRA_in_assembly253 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_STORERA_in_assembly271 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_LOADRV_in_assembly289 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_STORERV_in_assembly307 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_LOADFP_in_assembly325 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_STOREFP_in_assembly343 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_COPYFP_in_assembly360 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_LOADHP_in_assembly378 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_STOREHP_in_assembly396 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_PRINT_in_assembly413 = new BitSet(new long[]{0x00000000FFBFECF2L});
-	public static final BitSet FOLLOW_HALT_in_assembly432 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_PUSH_in_assembly60 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_NUMBER_in_assembly64 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_PUSH_in_assembly120 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_LABEL_in_assembly124 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_POP_in_assembly173 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_ADD_in_assembly225 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_SUB_in_assembly276 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_MULT_in_assembly327 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_DIV_in_assembly390 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_STOREW_in_assembly441 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_LOADW_in_assembly502 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_LABEL_in_assembly566 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_COL_in_assembly568 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_BRANCH_in_assembly624 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_LABEL_in_assembly628 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_BRANCHEQ_in_assembly685 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_LABEL_in_assembly689 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_BRANCHLESS_in_assembly760 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_LABEL_in_assembly764 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_JS_in_assembly833 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_LOADRA_in_assembly893 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_STORERA_in_assembly942 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_LOADRV_in_assembly991 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_STORERV_in_assembly1040 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_LOADFP_in_assembly1089 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_STOREFP_in_assembly1138 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_COPYFP_in_assembly1186 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_LOADHP_in_assembly1235 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_STOREHP_in_assembly1284 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_PRINT_in_assembly1331 = new BitSet(new long[]{0x00000000FFBFECF2L});
+	public static final BitSet FOLLOW_HALT_in_assembly1381 = new BitSet(new long[]{0x00000000FFBFECF2L});
 }

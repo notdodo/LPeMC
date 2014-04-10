@@ -1,6 +1,9 @@
-package Grammar;
+// $ANTLR 3.5.1 /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g 2014-04-11 01:43:17
 
-// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/base/src/VM.g 2014-04-04 09:23:51
+    package Grammar;
+    
+    import java.util.HashMap;
+
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -53,15 +56,15 @@ public class VMLexer extends Lexer {
 	public VMLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "/home/edoardo/NetBeansProjects/base/src/VM.g"; }
+	@Override public String getGrammarFileName() { return "/home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g"; }
 
 	// $ANTLR start "PUSH"
 	public final void mPUSH() throws RecognitionException {
 		try {
 			int _type = PUSH;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:77:9: ( 'push' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:77:11: 'push'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:184:13: ( 'push' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:184:15: 'push'
 			{
 			match("push"); 
 
@@ -81,8 +84,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = POP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:78:6: ( 'pop' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:78:8: 'pop'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:185:13: ( 'pop' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:185:15: 'pop'
 			{
 			match("pop"); 
 
@@ -102,8 +105,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = ADD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:79:6: ( 'add' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:79:8: 'add'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:186:13: ( 'add' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:186:15: 'add'
 			{
 			match("add"); 
 
@@ -123,8 +126,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = SUB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:80:6: ( 'sub' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:80:8: 'sub'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:187:13: ( 'sub' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:187:15: 'sub'
 			{
 			match("sub"); 
 
@@ -144,8 +147,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = MULT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:81:7: ( 'mult' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:81:9: 'mult'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:188:13: ( 'mult' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:188:15: 'mult'
 			{
 			match("mult"); 
 
@@ -165,8 +168,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:82:6: ( 'div' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:82:8: 'div'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:189:13: ( 'div' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:189:15: 'div'
 			{
 			match("div"); 
 
@@ -186,8 +189,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = STOREW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:83:9: ( 'sw' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:83:11: 'sw'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:190:13: ( 'sw' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:190:15: 'sw'
 			{
 			match("sw"); 
 
@@ -207,8 +210,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = LOADW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:84:8: ( 'lw' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:84:10: 'lw'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:191:13: ( 'lw' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:191:15: 'lw'
 			{
 			match("lw"); 
 
@@ -228,8 +231,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = BRANCH;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:85:9: ( 'b' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:85:11: 'b'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:192:13: ( 'b' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:192:15: 'b'
 			{
 			match('b'); 
 			}
@@ -248,8 +251,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = BRANCHEQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:86:10: ( 'beq' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:86:12: 'beq'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:193:13: ( 'beq' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:193:15: 'beq'
 			{
 			match("beq"); 
 
@@ -269,8 +272,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = BRANCHLESS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:87:11: ( 'bless' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:87:12: 'bless'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:194:13: ( 'bless' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:194:14: 'bless'
 			{
 			match("bless"); 
 
@@ -290,8 +293,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = JS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:88:5: ( 'js' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:88:7: 'js'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:195:13: ( 'js' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:195:15: 'js'
 			{
 			match("js"); 
 
@@ -311,8 +314,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = LOADRA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:90:9: ( 'lra' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:90:11: 'lra'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:197:13: ( 'lra' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:197:15: 'lra'
 			{
 			match("lra"); 
 
@@ -332,8 +335,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = STORERA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:91:10: ( 'sra' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:91:12: 'sra'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:198:13: ( 'sra' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:198:15: 'sra'
 			{
 			match("sra"); 
 
@@ -353,8 +356,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = LOADRV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:92:9: ( 'lrv' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:92:11: 'lrv'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:199:13: ( 'lrv' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:199:15: 'lrv'
 			{
 			match("lrv"); 
 
@@ -374,8 +377,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = STORERV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:93:10: ( 'srv' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:93:12: 'srv'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:200:13: ( 'srv' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:200:15: 'srv'
 			{
 			match("srv"); 
 
@@ -395,8 +398,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = LOADFP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:94:9: ( 'lfp' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:94:11: 'lfp'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:201:13: ( 'lfp' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:201:15: 'lfp'
 			{
 			match("lfp"); 
 
@@ -416,8 +419,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = STOREFP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:95:10: ( 'sfp' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:95:12: 'sfp'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:202:13: ( 'sfp' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:202:15: 'sfp'
 			{
 			match("sfp"); 
 
@@ -437,8 +440,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = COPYFP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:96:10: ( 'cfp' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:96:12: 'cfp'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:203:13: ( 'cfp' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:203:15: 'cfp'
 			{
 			match("cfp"); 
 
@@ -458,8 +461,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = LOADHP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:97:9: ( 'lhp' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:97:11: 'lhp'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:204:13: ( 'lhp' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:204:15: 'lhp'
 			{
 			match("lhp"); 
 
@@ -479,8 +482,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = STOREHP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:98:10: ( 'shp' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:98:12: 'shp'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:205:13: ( 'shp' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:205:15: 'shp'
 			{
 			match("shp"); 
 
@@ -500,8 +503,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = PRINT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:99:8: ( 'print' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:99:10: 'print'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:206:13: ( 'print' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:206:15: 'print'
 			{
 			match("print"); 
 
@@ -521,8 +524,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = HALT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:100:7: ( 'halt' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:100:9: 'halt'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:207:13: ( 'halt' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:207:15: 'halt'
 			{
 			match("halt"); 
 
@@ -542,8 +545,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = COL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:102:6: ( ':' )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:102:8: ':'
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:209:13: ( ':' )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:209:15: ':'
 			{
 			match(':'); 
 			}
@@ -562,8 +565,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = LABEL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:103:8: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:103:10: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:210:13: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:210:15: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -573,7 +576,7 @@ public class VMLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:103:29: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:210:34: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -584,7 +587,7 @@ public class VMLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -618,7 +621,7 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = NUMBER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:104:9: ( '0' | ( '-' )? ( ( '1' .. '9' ) ( '0' .. '9' )* ) )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:211:13: ( '0' | ( '-' )? ( ( '1' .. '9' ) ( '0' .. '9' )* ) )
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0=='0') ) {
@@ -636,15 +639,15 @@ public class VMLexer extends Lexer {
 
 			switch (alt4) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:104:11: '0'
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:211:15: '0'
 					{
 					match('0'); 
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:104:17: ( '-' )? ( ( '1' .. '9' ) ( '0' .. '9' )* )
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:211:21: ( '-' )? ( ( '1' .. '9' ) ( '0' .. '9' )* )
 					{
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:104:17: ( '-' )?
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:211:21: ( '-' )?
 					int alt2=2;
 					int LA2_0 = input.LA(1);
 					if ( (LA2_0=='-') ) {
@@ -652,7 +655,7 @@ public class VMLexer extends Lexer {
 					}
 					switch (alt2) {
 						case 1 :
-							// /home/edoardo/NetBeansProjects/base/src/VM.g:104:18: '-'
+							// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:211:22: '-'
 							{
 							match('-'); 
 							}
@@ -660,8 +663,8 @@ public class VMLexer extends Lexer {
 
 					}
 
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:104:23: ( ( '1' .. '9' ) ( '0' .. '9' )* )
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:104:24: ( '1' .. '9' ) ( '0' .. '9' )*
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:211:27: ( ( '1' .. '9' ) ( '0' .. '9' )* )
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:211:28: ( '1' .. '9' ) ( '0' .. '9' )*
 					{
 					if ( (input.LA(1) >= '1' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -671,7 +674,7 @@ public class VMLexer extends Lexer {
 						recover(mse);
 						throw mse;
 					}
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:104:34: ( '0' .. '9' )*
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:211:38: ( '0' .. '9' )*
 					loop3:
 					while (true) {
 						int alt3=2;
@@ -682,7 +685,7 @@ public class VMLexer extends Lexer {
 
 						switch (alt3) {
 						case 1 :
-							// /home/edoardo/NetBeansProjects/base/src/VM.g:
+							// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:
 							{
 							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 								input.consume();
@@ -720,10 +723,10 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = WHITESP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:106:10: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:106:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:213:13: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:213:15: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			{
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:106:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:213:15: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			int cnt5=0;
 			loop5:
 			while (true) {
@@ -735,7 +738,7 @@ public class VMLexer extends Lexer {
 
 				switch (alt5) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 						input.consume();
@@ -773,10 +776,10 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:108:10: ( ( '// ' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )* )+ )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:108:12: ( '// ' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )* )+
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:215:13: ( ( '// ' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )* )+ )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:215:15: ( '// ' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )* )+
 			{
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:108:12: ( '// ' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )* )+
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:215:15: ( '// ' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )* )+
 			int cnt7=0;
 			loop7:
 			while (true) {
@@ -788,7 +791,7 @@ public class VMLexer extends Lexer {
 
 				switch (alt7) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:108:13: '// ' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )*
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:215:16: '// ' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )*
 					{
 					match("// "); 
 
@@ -800,7 +803,7 @@ public class VMLexer extends Lexer {
 						recover(mse);
 						throw mse;
 					}
-					// /home/edoardo/NetBeansProjects/base/src/VM.g:108:38: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )*
+					// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:216:17: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | ' ' )*
 					loop6:
 					while (true) {
 						int alt6=2;
@@ -811,7 +814,7 @@ public class VMLexer extends Lexer {
 
 						switch (alt6) {
 						case 1 :
-							// /home/edoardo/NetBeansProjects/base/src/VM.g:
+							// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:
 							{
 							if ( input.LA(1)==' '||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 								input.consume();
@@ -857,8 +860,8 @@ public class VMLexer extends Lexer {
 		try {
 			int _type = ERR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:110:9: ( . )
-			// /home/edoardo/NetBeansProjects/base/src/VM.g:110:11: .
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:218:13: ( . )
+			// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:218:15: .
 			{
 			matchAny(); 
 			 System.out.println("Invalid char: "+getText()); 
@@ -875,208 +878,208 @@ public class VMLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// /home/edoardo/NetBeansProjects/base/src/VM.g:1:8: ( PUSH | POP | ADD | SUB | MULT | DIV | STOREW | LOADW | BRANCH | BRANCHEQ | BRANCHLESS | JS | LOADRA | STORERA | LOADRV | STORERV | LOADFP | STOREFP | COPYFP | LOADHP | STOREHP | PRINT | HALT | COL | LABEL | NUMBER | WHITESP | COMMENT | ERR )
+		// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:8: ( PUSH | POP | ADD | SUB | MULT | DIV | STOREW | LOADW | BRANCH | BRANCHEQ | BRANCHLESS | JS | LOADRA | STORERA | LOADRV | STORERV | LOADFP | STOREFP | COPYFP | LOADHP | STOREHP | PRINT | HALT | COL | LABEL | NUMBER | WHITESP | COMMENT | ERR )
 		int alt8=29;
 		alt8 = dfa8.predict(input);
 		switch (alt8) {
 			case 1 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:10: PUSH
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:10: PUSH
 				{
 				mPUSH(); 
 
 				}
 				break;
 			case 2 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:15: POP
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:15: POP
 				{
 				mPOP(); 
 
 				}
 				break;
 			case 3 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:19: ADD
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:19: ADD
 				{
 				mADD(); 
 
 				}
 				break;
 			case 4 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:23: SUB
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:23: SUB
 				{
 				mSUB(); 
 
 				}
 				break;
 			case 5 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:27: MULT
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:27: MULT
 				{
 				mMULT(); 
 
 				}
 				break;
 			case 6 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:32: DIV
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:32: DIV
 				{
 				mDIV(); 
 
 				}
 				break;
 			case 7 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:36: STOREW
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:36: STOREW
 				{
 				mSTOREW(); 
 
 				}
 				break;
 			case 8 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:43: LOADW
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:43: LOADW
 				{
 				mLOADW(); 
 
 				}
 				break;
 			case 9 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:49: BRANCH
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:49: BRANCH
 				{
 				mBRANCH(); 
 
 				}
 				break;
 			case 10 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:56: BRANCHEQ
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:56: BRANCHEQ
 				{
 				mBRANCHEQ(); 
 
 				}
 				break;
 			case 11 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:65: BRANCHLESS
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:65: BRANCHLESS
 				{
 				mBRANCHLESS(); 
 
 				}
 				break;
 			case 12 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:76: JS
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:76: JS
 				{
 				mJS(); 
 
 				}
 				break;
 			case 13 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:79: LOADRA
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:79: LOADRA
 				{
 				mLOADRA(); 
 
 				}
 				break;
 			case 14 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:86: STORERA
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:86: STORERA
 				{
 				mSTORERA(); 
 
 				}
 				break;
 			case 15 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:94: LOADRV
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:94: LOADRV
 				{
 				mLOADRV(); 
 
 				}
 				break;
 			case 16 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:101: STORERV
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:101: STORERV
 				{
 				mSTORERV(); 
 
 				}
 				break;
 			case 17 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:109: LOADFP
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:109: LOADFP
 				{
 				mLOADFP(); 
 
 				}
 				break;
 			case 18 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:116: STOREFP
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:116: STOREFP
 				{
 				mSTOREFP(); 
 
 				}
 				break;
 			case 19 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:124: COPYFP
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:124: COPYFP
 				{
 				mCOPYFP(); 
 
 				}
 				break;
 			case 20 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:131: LOADHP
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:131: LOADHP
 				{
 				mLOADHP(); 
 
 				}
 				break;
 			case 21 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:138: STOREHP
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:138: STOREHP
 				{
 				mSTOREHP(); 
 
 				}
 				break;
 			case 22 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:146: PRINT
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:146: PRINT
 				{
 				mPRINT(); 
 
 				}
 				break;
 			case 23 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:152: HALT
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:152: HALT
 				{
 				mHALT(); 
 
 				}
 				break;
 			case 24 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:157: COL
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:157: COL
 				{
 				mCOL(); 
 
 				}
 				break;
 			case 25 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:161: LABEL
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:161: LABEL
 				{
 				mLABEL(); 
 
 				}
 				break;
 			case 26 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:167: NUMBER
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:167: NUMBER
 				{
 				mNUMBER(); 
 
 				}
 				break;
 			case 27 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:174: WHITESP
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:174: WHITESP
 				{
 				mWHITESP(); 
 
 				}
 				break;
 			case 28 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:182: COMMENT
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:182: COMMENT
 				{
 				mCOMMENT(); 
 
 				}
 				break;
 			case 29 :
-				// /home/edoardo/NetBeansProjects/base/src/VM.g:1:190: ERR
+				// /home/federico/NetBeansProjects/Est2_nostro/src/Grammar/VM.g:1:190: ERR
 				{
 				mERR(); 
 

@@ -1,5 +1,5 @@
 // LetNode
-push lab7 // noteq
+push lab10 // noteq
 lfp
 push 2
 push 2
@@ -10,7 +10,7 @@ sub
 lw
 js
 halt
-lab0: // somma
+lab0: // noteq
 cfp
 lra
 lfp
@@ -21,83 +21,21 @@ lfp
 push -2
 sub
 lw
-add
-lfp
-lw
-push 1
-sub
-lw
-add
-print
-srv
-sra
-pop
-pop
-pop
-sfp
-lrv
-lra
-js
-// END somma
-lab1: // applica
-cfp
-lra
-lfp
-lfp
-push -2
-sub
-lw
-lfp
-push -1
-sub
-lw
-lfp
-push -3
-sub
-lw
-lfp
-push -4
-sub
-lw
-js
-srv
-sra
-pop
-pop
-pop
-pop
-pop
-sfp
-lrv
-lra
-js
-// END applica
-lab2: // noteq
-cfp
-lra
-lfp
-push -1
-sub
-lw
-lfp
-push -2
-sub
-lw
-beq lab5
-push 1
-b lab6
-lab5:
-push 0
-lab6:
-push 1
 beq lab3
-push 20
-print
+push 1
 b lab4
 lab3:
+push 0
+lab4:
+push 1
+beq lab1
+push 20
+print
+b lab2
+lab1:
 push 10
 print
-lab4:
+lab2:
 srv
 sra
 pop
@@ -108,7 +46,7 @@ lrv
 lra
 js
 // END noteq
-lab7: // noteq
+lab5: // noteq
 cfp
 lra
 lfp
@@ -119,21 +57,57 @@ lfp
 push -2
 sub
 lw
-beq lab10
-push 1
-b lab11
-lab10:
-push 0
-lab11:
-push 1
 beq lab8
-push 20
-print
+push 0
 b lab9
 lab8:
+push 1
+lab9:
+push 1
+beq lab6
+push 20
+print
+b lab7
+lab6:
 push 10
 print
-lab9:
+lab7:
+srv
+sra
+pop
+pop
+pop
+sfp
+lrv
+lra
+js
+// END noteq
+lab10: // noteq
+cfp
+lra
+lfp
+push -1
+sub
+lw
+lfp
+push -2
+sub
+lw
+beq lab13
+push 1
+b lab14
+lab13:
+push 0
+lab14:
+push 1
+beq lab11
+push 20
+print
+b lab12
+lab11:
+push 10
+print
+lab12:
 srv
 sra
 pop
