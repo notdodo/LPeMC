@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g 2014-04-10 13:36:44
+// $ANTLR 3.5.1 C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g 2014-04-10 13:46:47
 
 package Grammar;
 
@@ -74,8 +74,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:231:6: ( 'let' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:231:8: 'let'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:228:6: ( 'let' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:228:8: 'let'
 			{
 			match("let"); 
 
@@ -95,8 +95,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = IN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:232:4: ( 'in' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:232:6: 'in'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:229:4: ( 'in' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:229:6: 'in'
 			{
 			match("in"); 
 
@@ -116,8 +116,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SEMIC;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:233:7: ( ';' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:233:9: ';'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:230:7: ( ';' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:230:9: ';'
 			{
 			match(';'); 
 			}
@@ -136,8 +136,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = COL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:234:5: ( ':' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:234:7: ':'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:231:5: ( ':' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:231:7: ':'
 			{
 			match(':'); 
 			}
@@ -156,8 +156,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = DOUBLCOL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:235:9: ( '::' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:235:11: '::'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:232:9: ( '::' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:232:11: '::'
 			{
 			match("::"); 
 
@@ -177,8 +177,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:236:7: ( ',' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:236:9: ','
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:233:7: ( ',' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:233:9: ','
 			{
 			match(','); 
 			}
@@ -197,8 +197,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ASS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:237:5: ( '=' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:237:7: '='
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:234:5: ( '=' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:234:7: '='
 			{
 			match('='); 
 			}
@@ -217,8 +217,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:238:4: ( '==' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:238:6: '=='
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:235:4: ( '==' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:235:6: '=='
 			{
 			match("=="); 
 
@@ -238,8 +238,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MINORE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:239:8: ( '<=' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:239:10: '<='
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:236:8: ( '<=' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:236:10: '<='
 			{
 			match("<="); 
 
@@ -259,8 +259,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MAGGIORE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:240:9: ( '>=' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:240:11: '>='
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:237:9: ( '>=' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:237:11: '>='
 			{
 			match(">="); 
 
@@ -280,8 +280,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = PLUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:241:6: ( '+' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:241:8: '+'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:238:6: ( '+' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:238:8: '+'
 			{
 			match('+'); 
 			}
@@ -300,8 +300,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = TIMES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:242:7: ( '*' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:242:9: '*'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:239:7: ( '*' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:239:9: '*'
 			{
 			match('*'); 
 			}
@@ -320,8 +320,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MINUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:243:7: ( '-' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:243:9: '-'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:240:7: ( '-' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:240:9: '-'
 			{
 			match('-'); 
 			}
@@ -340,8 +340,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = OR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:244:4: ( '||' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:244:6: '||'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:241:4: ( '||' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:241:6: '||'
 			{
 			match("||"); 
 
@@ -361,8 +361,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = AND;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:245:5: ( '&&' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:245:7: '&&'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:242:5: ( '&&' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:242:7: '&&'
 			{
 			match("&&"); 
 
@@ -382,8 +382,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:246:5: ( '/' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:246:7: '/'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:243:5: ( '/' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:243:7: '/'
 			{
 			match('/'); 
 			}
@@ -402,7 +402,7 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = NAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:5: ( ( ( '1' .. '9' ) ( '0' .. '9' )* ) | '0' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:244:5: ( ( ( '1' .. '9' ) ( '0' .. '9' )* ) | '0' )
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( ((LA2_0 >= '1' && LA2_0 <= '9')) ) {
@@ -420,10 +420,10 @@ public class MiniFunLexer extends Lexer {
 
 			switch (alt2) {
 				case 1 :
-					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:244:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
 					{
-					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
-					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:8: ( '1' .. '9' ) ( '0' .. '9' )*
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:244:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:244:8: ( '1' .. '9' ) ( '0' .. '9' )*
 					{
 					if ( (input.LA(1) >= '1' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -433,7 +433,7 @@ public class MiniFunLexer extends Lexer {
 						recover(mse);
 						throw mse;
 					}
-					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:18: ( '0' .. '9' )*
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:244:18: ( '0' .. '9' )*
 					loop1:
 					while (true) {
 						int alt1=2;
@@ -467,7 +467,7 @@ public class MiniFunLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:33: '0'
+					// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:244:33: '0'
 					{
 					match('0'); 
 					}
@@ -488,8 +488,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = TRUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:248:6: ( 'true' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:248:8: 'true'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:245:6: ( 'true' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:245:8: 'true'
 			{
 			match("true"); 
 
@@ -509,8 +509,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FALSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:249:7: ( 'false' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:249:9: 'false'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:246:7: ( 'false' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:246:9: 'false'
 			{
 			match("false"); 
 
@@ -530,8 +530,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = NOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:250:5: ( 'not' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:250:7: 'not'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:5: ( 'not' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:247:7: 'not'
 			{
 			match("not"); 
 
@@ -551,8 +551,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = EMPTY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:251:9: ( 'empty' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:251:11: 'empty'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:248:9: ( 'empty' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:248:11: 'empty'
 			{
 			match("empty"); 
 
@@ -572,8 +572,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:252:6: ( 'var' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:252:8: 'var'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:249:6: ( 'var' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:249:8: 'var'
 			{
 			match("var"); 
 
@@ -593,8 +593,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FUN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:253:6: ( 'fun' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:253:8: 'fun'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:250:6: ( 'fun' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:250:8: 'fun'
 			{
 			match("fun"); 
 
@@ -614,8 +614,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ARROW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:254:7: ( '->' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:254:9: '->'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:251:7: ( '->' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:251:9: '->'
 			{
 			match("->"); 
 
@@ -635,8 +635,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:255:7: ( '(' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:255:9: '('
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:252:7: ( '(' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:252:9: '('
 			{
 			match('('); 
 			}
@@ -655,8 +655,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = RPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:256:6: ( ')' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:256:8: ')'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:253:6: ( ')' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:253:8: ')'
 			{
 			match(')'); 
 			}
@@ -675,8 +675,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = CLPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:257:8: ( '{' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:257:10: '{'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:254:8: ( '{' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:254:10: '{'
 			{
 			match('{'); 
 			}
@@ -695,8 +695,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = CRPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:258:7: ( '}' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:258:9: '}'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:255:7: ( '}' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:255:9: '}'
 			{
 			match('}'); 
 			}
@@ -715,8 +715,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SLPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:259:8: ( '[' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:259:10: '['
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:256:8: ( '[' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:256:10: '['
 			{
 			match('['); 
 			}
@@ -735,8 +735,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SRPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:260:7: ( ']' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:260:9: ']'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:257:7: ( ']' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:257:9: ']'
 			{
 			match(']'); 
 			}
@@ -755,8 +755,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:261:5: ( 'if' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:261:7: 'if'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:258:5: ( 'if' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:258:7: 'if'
 			{
 			match("if"); 
 
@@ -776,8 +776,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = THEN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:262:7: ( 'then' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:262:9: 'then'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:259:7: ( 'then' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:259:9: 'then'
 			{
 			match("then"); 
 
@@ -797,8 +797,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ELSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:263:7: ( 'else' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:263:9: 'else'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:260:7: ( 'else' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:260:9: 'else'
 			{
 			match("else"); 
 
@@ -818,8 +818,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = PRINT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:264:7: ( 'print' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:264:9: 'print'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:261:7: ( 'print' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:261:9: 'print'
 			{
 			match("print"); 
 
@@ -839,8 +839,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FIRST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:265:9: ( 'first' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:265:11: 'first'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:262:9: ( 'first' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:262:11: 'first'
 			{
 			match("first"); 
 
@@ -860,8 +860,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = REST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:266:9: ( 'rest' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:266:11: 'rest'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:263:9: ( 'rest' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:263:11: 'rest'
 			{
 			match("rest"); 
 
@@ -881,8 +881,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = INTTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:267:9: ( 'int' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:267:11: 'int'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:264:9: ( 'int' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:264:11: 'int'
 			{
 			match("int"); 
 
@@ -902,8 +902,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = BOOLTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:268:9: ( 'bool' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:268:11: 'bool'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:265:9: ( 'bool' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:265:11: 'bool'
 			{
 			match("bool"); 
 
@@ -923,8 +923,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LISTTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:269:9: ( 'list' )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:269:11: 'list'
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:266:9: ( 'list' )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:266:11: 'list'
 			{
 			match("list"); 
 
@@ -944,8 +944,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:271:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:271:7: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:268:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:268:7: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -955,7 +955,7 @@ public class MiniFunLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:272:5: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:269:5: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -1000,10 +1000,10 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = WHITESP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:274:10: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:274:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:271:10: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:271:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			{
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:274:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:271:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -1053,8 +1053,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ERR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:276:9: ( . )
-			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:276:11: .
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:273:9: ( . )
+			// C:\\Users\\Edoardo\\Downloads\\Est2\\src\\Grammar\\MiniFun.g:273:11: .
 			{
 			matchAny(); 
 			 System.out.println("Invalid char: "+getText()); 

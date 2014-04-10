@@ -173,7 +173,6 @@ fatt	returns [Node ast]
 	   }
 	   if(entry.getDecl() instanceof DecFunNode || 
 	   	(entry.getDecl() instanceof DecParNode && ((DecParNode)entry.getDecl()).getType() instanceof FunParType)){
-	   	System.out.println("1 FunParNode "+ $i.text+" "+$i.line);
 	   	$ast = new FunParNode(entry,nestingLevel-declNL);
 	   }else {
 	   	//System.out.println("VarNode "+ $i.text+" "+$i.line);
@@ -187,11 +186,9 @@ fatt	returns [Node ast]
 	    )? 
 	    RPAR
 	    {
-	    	   	System.out.println("2 FunNode "+ $i.text+" "+$i.line);
 	    	$ast = new FunNode(entry,nestingLevel-declNL,parList);
 
 	    }
-	    	    	   	{System.out.println($ast);}
 	  )?
 	| IF x=exp THEN CLPAR y=exp CRPAR 
 		   ELSE CLPAR z=exp CRPAR 
