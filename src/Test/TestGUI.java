@@ -60,7 +60,7 @@ public class TestGUI extends JFrame {
     private static DefaultMutableTreeNode root;
     private static DefaultTreeModel treeModel;
 //    private String key1_;
-
+    JScrollPane jInputTextAreaScrollPane;
     // declare my variable at the top of my Java class    
     private Preferences userPreferences;
 //    JScrollPane jOutputTextAreaScrollPane;
@@ -132,7 +132,7 @@ public class TestGUI extends JFrame {
         jOutputTextAreaScrollPane.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createTitledBorder("Output"),
                 BorderFactory.createEmptyBorder(5, 5, 5, 5)));
-        JScrollPane jInputTextAreaScrollPane = new JScrollPane(jInputTextArea);
+        jInputTextAreaScrollPane = new JScrollPane(jInputTextArea);
         jInputTextAreaScrollPane.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createTitledBorder("Input Text"),
                 BorderFactory.createEmptyBorder(5, 5, 5, 5)));
@@ -368,69 +368,61 @@ public class TestGUI extends JFrame {
 
         JButton jProvaButton = new JButton("InputCodGen");
 
-        jProvaButton.addActionListener(
-                new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent evt) {
-//                        root.add(new DefaultMutableTreeNode("addNew"));
-//                        treeModel.reload();
+        jProvaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                try {
+                    String asm_ = jCodeGenArea.getText();
+                    FileWriter fstream;
 
-//                        String asm_ = ast.codeGen();
-                        try {
-                            String asm_ = jCodeGenArea.getText();
-                            FileWriter fstream;
+                    fstream = new FileWriter("PersonalOutputFile.asm");
 
-                            fstream = new FileWriter("PersonalOutputFile.asm");
-
-                            try (BufferedWriter out = new BufferedWriter(fstream)) {
-                                out.write(asm_);
-                                out.close();
-                            }
-                            VMLexer lex = new VMLexer(new ANTLRFileStream("PersonalOutputFile.asm"));
-                            CommonTokenStream tokensVM = new CommonTokenStream(lex);
-                            VMParser parserVM = new VMParser(tokensVM);
-                            ExecuteVM vm = new ExecuteVM(parserVM.createCode());
-                            vm.cpu();
-                        } catch (IOException ex) {
-                            Logger.getLogger(TestGUI.class.getName()).log(Level.SEVERE, null, ex);
-                        } catch (Exception ex) {
-                            Logger.getLogger(TestGUI.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-
+                    try (BufferedWriter out = new BufferedWriter(fstream)) {
+                        out.write(asm_);
+                        out.close();
                     }
+                    VMLexer lex = new VMLexer(new ANTLRFileStream("PersonalOutputFile.asm"));
+                    CommonTokenStream tokensVM = new CommonTokenStream(lex);
+                    VMParser parserVM = new VMParser(tokensVM);
+                    ExecuteVM vm = new ExecuteVM(parserVM.createCode());
+                    vm.cpu();
+                } catch (IOException ex) {
+                    Logger.getLogger(TestGUI.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (Exception ex) {
+                    Logger.getLogger(TestGUI.class.getName()).log(Level.SEVERE, null, ex);
                 }
+            }
+        }
         );
 
         JButton jProvaButton2 = new JButton("button2");
 
-        jProvaButton2.addActionListener(
-                new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent evt) {
-                        if (root.getChildCount() != 0) {
-                            DefaultMutableTreeNode newNode = new DefaultMutableTreeNode("gerChildCount");
-                            root.insert(newNode, root.getChildCount());
-                            treeModel.reload();
-                        }
-                    }
+        jProvaButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt) {
+                if (root.getChildCount() != 0) {
+                    DefaultMutableTreeNode newNode = new DefaultMutableTreeNode("gerChildCount");
+                    root.insert(newNode, root.getChildCount());
+                    treeModel.reload();
                 }
+            }
+        }
         );
 
         JButton jProvaButton3 = new JButton("button3");
 
-        jProvaButton3.addActionListener(
-                new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent evt
-                    ) {
-                        DefaultMutableTreeNode selectedNode = ((DefaultMutableTreeNode) root.getLastLeaf());
-                        TreePath treePath = new TreePath(selectedNode.getPath());
-                        jTree.setSelectionPath(treePath);
-                        DefaultMutableTreeNode newNode = new DefaultMutableTreeNode("getLastLeaf()");
-                        treeModel.insertNodeInto(newNode, selectedNode, selectedNode.getChildCount());
+        jProvaButton3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent evt
+            ) {
+                DefaultMutableTreeNode selectedNode = ((DefaultMutableTreeNode) root.getLastLeaf());
+                TreePath treePath = new TreePath(selectedNode.getPath());
+                jTree.setSelectionPath(treePath);
+                DefaultMutableTreeNode newNode = new DefaultMutableTreeNode("getLastLeaf()");
+                treeModel.insertNodeInto(newNode, selectedNode, selectedNode.getChildCount());
 //                        treeModel.reload();
-                    }
-                }
+            }
+        }
         );
 
         JPanel jPanelFull = new JPanel();
@@ -477,42 +469,18 @@ public class TestGUI extends JFrame {
         userPreferences = Preferences.userNodeForPackage(this.getClass());
         JFileChooser jFileChooser = new JFileChooser();
         String initialPathSystem_ = System.getProperty("user.home");
-//        FileObject a = ;
-//        String a = this.getClass().get;
-//        System.out.println(a + "aaaaaaaaaaaaaa");
-//        FileObject projectDirectory = Project  project.getProjectDirectory();
-//                return FileUtil.toFile(projectDirectory).getAbsolutePath();
-//        Project project;
-
-//        if (new File(initialPathSystem_ + "/NetBeansProjects").exists()) {
-//            jFileChooser.setCurrentDirectory(new File(initialPathSystem_ + "/NetBeansProjects"));
-//        }
         jFileChooser.setCurrentDirectory(new File(initialPathSystem_ + "/NetBeansProjects"));
-
-//        File filesDirectory1 = new File(userPreferences.toString());
-//        jFileChooser.setCurrentDirectory(filesDirectory1);
-//        userPreferences.get(keyA, keyA);
-//        if (key1_ != null) {
-//            File filesDirectory = new File(key1_);
-//            jFileChooser.setCurrentDirectory(filesDirectory);
-//            userPreferences.get(key1_, key1_);
-//        }
         jFileChooser.setFileFilter(new FileNameExtensionFilter("Open input file: \"*.TXT\", \"*.MF\"", "txt", "mf"));
         int returnVal = jFileChooser.showOpenDialog(jFileChooser);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-//            if (key1_ == null) {
-//                key1_ = jFileChooser.getSelectedFile().getParent();
-//                File filesDirectory = new File(key1_);
-//                userPreferences.put(key1_, key1_);
-//                jFileChooser.setCurrentDirectory(filesDirectory);
-//            }
-
             jStartByFileButton.setEnabled(true);
             jStartByFileItemMenu.setEnabled(true);
             jStartFromTextAreaButton.setEnabled(false);
             pathInputFile_ = jFileChooser.getSelectedFile().toString();
             fileNameOutput_ = jFileChooser.getSelectedFile().getName();
-
+            jInputTextAreaScrollPane.setBorder(
+                    BorderFactory.createTitledBorder("Input Text - Path file: \""
+                            + pathInputFile_ + "\""));
             File name = new File(pathInputFile_);
             try {
                 StringBuffer buffer;
@@ -525,8 +493,6 @@ public class TestGUI extends JFrame {
                 }
                 System.out.println(buffer.toString());
                 jDeleteAllButton.setEnabled(true);
-//                jInputTextArea.append("Selected file: \"" + jFileChooser.getSelectedFile().getName() + "\"\n\n");
-//                jInputTextArea.append("Path file: " + pathInputFile + "\n\n");
                 jInputTextArea.append(buffer.toString());
             } catch (IOException ioException) {
                 Logger.getLogger(TestGUI.class.getName()).log(Level.SEVERE, null, ioException);
@@ -619,6 +585,8 @@ public class TestGUI extends JFrame {
         jInputTextArea.setText("");
         jTypeCheckArea.setText("");
         jCodeGenArea.setText("");
+        jInputTextAreaScrollPane.setBorder(
+                BorderFactory.createTitledBorder("Input Text"));
 
         if (root.getChildCount() != 0) {
             root.removeAllChildren();
