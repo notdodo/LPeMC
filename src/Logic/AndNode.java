@@ -1,18 +1,17 @@
 package Logic;
 
-
 import Generics.MiniFunLib;
 import Generics.Node;
 import Type.BoolTypeNode;
-
 
 /**
  * Classe per la gestione del nodo And<br/>
  * ESEMPIO: a == b
  */
 public class AndNode extends Node {
-    private Node left;
-    private Node right;
+
+    private final Node left;
+    private final Node right;
 
     /**
      * @param l Albero sintattico del primo operatore
@@ -26,8 +25,9 @@ public class AndNode extends Node {
     /**
      * @return Stampa l'albero sintattico
      */
+    @Override
     public String toPrint() {
-        return "AndNode[" + left.toPrint() + ","
+        return this.getClass().getSimpleName() + "[" + left.toPrint() + ","
                 + right.toPrint() + "]";
 
     }
@@ -35,12 +35,13 @@ public class AndNode extends Node {
     /**
      * @return Controllo dei tipi dei parametri
      */
+    @Override
     public String typeCheck() {
         if ((MiniFunLib.isCompatible(left, new BoolTypeNode()))
                 && (MiniFunLib.isCompatible(right, new BoolTypeNode()))) {
             return MiniFunLib.BOOL;
         }
-        System.out.println("Type Error: AndNode");
+        System.out.println("Type Error: " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
     }
@@ -48,6 +49,7 @@ public class AndNode extends Node {
     /**
      * @return Codice eseguibile per il relativo nodo
      */
+    @Override
     public String codeGen() {
         return left.codeGen() + right.codeGen() + "mult\n";
     }

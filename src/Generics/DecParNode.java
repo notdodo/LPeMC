@@ -1,6 +1,5 @@
 package Generics;
 
-
 public class DecParNode extends Node {
 
     private String id;

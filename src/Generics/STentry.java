@@ -1,10 +1,9 @@
 package Generics;
 
-
 public class STentry {
 
-    private Node decl;
-    private int offSet;
+    private final Node decl;
+    private final int offSet;
 
     public STentry(Node d, int o) {
         decl = d;

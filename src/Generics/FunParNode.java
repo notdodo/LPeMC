@@ -1,6 +1,5 @@
 package Generics;
 
-
 import java.util.ArrayList;
 
 public class FunParNode extends Node {
@@ -35,7 +34,7 @@ public class FunParNode extends Node {
                 parString = parString + "," + (parList.get(i)).toPrint();
             }
         }
-        return this.getClass().getSimpleName() 
+        return this.getClass().getSimpleName()
                 + "[" + diffNesting + "," + (decl.getOffSet()) + "," + parString + "]";
     }
 

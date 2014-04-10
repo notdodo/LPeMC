@@ -1,16 +1,14 @@
 package Logic;
 
-
 import Generics.MiniFunLib;
 import Generics.Node;
 import Type.BoolTypeNode;
 
-
 public class IfNode extends Node {
 
-    private Node cond;
-    private Node th;
-    private Node el;
+    private final Node cond;
+    private final Node th;
+    private final Node el;
 
     public IfNode(Node c, Node t, Node e) {
         cond = c;
@@ -18,12 +16,14 @@ public class IfNode extends Node {
         el = e;
     }
 
+    @Override
     public String toPrint() {
-        return "IfNode[" + cond.toPrint() + ","
+        return this.getClass().getSimpleName() + "[" + cond.toPrint() + ","
                 + th.toPrint() + ","
                 + el.toPrint() + "]";
     }
 
+    @Override
     public String typeCheck() {
         if (MiniFunLib.isCompatible(cond, new BoolTypeNode())) {
             if (MiniFunLib.isCompatible(th, el)) {
@@ -32,11 +32,12 @@ public class IfNode extends Node {
                 return th.typeCheck();
             }
         }
-        System.out.println("Type Error IfNode");
+        System.out.println("Type Error " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
     }
 
+    @Override
     public String codeGen() {
         String lab1 = MiniFunLib.newLabel();
         String lab2 = MiniFunLib.newLabel();

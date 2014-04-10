@@ -3,25 +3,26 @@ package List;
 import Generics.MiniFunLib;
 import Generics.Node;
 
-
 public class ListNode extends Node {
 
-    private Node first;
-    private Node rest;
+    private final Node first;
+    private final Node rest;
     private boolean typeChecked = false;
-    private String typeString = "";
+    private final String typeString = "";
 
     public ListNode(Node f, Node r) {
         first = f;
         rest = r;
     }
 
+    @Override
     public String toPrint() {
         return "ListNode[" + first.toPrint() + ","
                 + rest.toPrint() + "]";
     }
 
     // genera ricorsione quindi mi serve un flag di stop
+    @Override
     public String typeCheck() {
         if (!this.typeChecked) {
             this.typeChecked = true;
@@ -34,12 +35,13 @@ public class ListNode extends Node {
                 return listFirst;
             }
         } else {
-            System.out.println("Type Error ListNode");
+            System.out.println("Type Error " + this.getClass().getSimpleName());
             System.exit(0);
         }
         return "";
     }
 
+    @Override
     public String codeGen() {
         return first.codeGen()
                 + rest.codeGen()

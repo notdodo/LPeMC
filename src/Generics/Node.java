@@ -1,6 +1,5 @@
 package Generics;
 
-
 public abstract class Node {
 
     abstract public String toPrint();

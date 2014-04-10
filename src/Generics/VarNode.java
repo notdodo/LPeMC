@@ -1,10 +1,9 @@
 package Generics;
 
-
 public class VarNode extends Node {
 
-    private STentry decl;
-    private int diffNesting;
+    private final STentry decl;
+    private final int diffNesting;
 
     public VarNode(STentry d, int dn) {
         decl = d;
@@ -13,7 +12,7 @@ public class VarNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() +"[" + diffNesting + "," + decl.getOffSet() + "]";
+        return this.getClass().getSimpleName() + "[" + diffNesting + "," + decl.getOffSet() + "]";
     }
 
     @Override
@@ -29,9 +28,9 @@ public class VarNode extends Node {
         for (int i = 0; i < diffNesting; i++) {
             lookupAL += "lw\n";
         }
-/*
-        Stessa logica del FunNode
-        */
+        /*
+         Stessa logica del FunNode
+         */
         return "lfp\n"
                 + lookupAL
                 + "push " + decl.getOffSet() + "\n"

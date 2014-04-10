@@ -1,14 +1,13 @@
 package Generics;
 
-
 import java.util.ArrayList;
 
 // creato per utilizzare funzioni e variabili locali
 public class LetNode extends Node {
 
-    private ArrayList<Node> astList;
-    private Node exp;
-    private boolean localLet;
+    private final ArrayList<Node> astList;
+    private final Node exp;
+    private final boolean localLet;
 
     public LetNode(ArrayList<Node> list, Node exp, boolean localLet) {
         this.astList = list;
@@ -18,8 +17,8 @@ public class LetNode extends Node {
 
     public ArrayList<Node> getDecl() {
         return this.astList;
-    } 
-    
+    }
+
     @Override
     public String toPrint() {
         String left = "";
@@ -45,11 +44,12 @@ public class LetNode extends Node {
         for (int i = 0; i < this.astList.size(); i++) {
             code += this.astList.get(i).codeGen();
         }
-        
-        if (localLet)
+
+        if (localLet) {
             return "// LetNode\n" + code + this.exp.codeGen() + "// END LetNode\n";
-        else
+        } else {
             return "// LetNode\n" + code + this.exp.codeGen() + "halt\n" + MiniFunLib.getFunctionCode() + "// END LetNode\n";
+        }
     }
 
 }

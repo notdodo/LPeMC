@@ -2,9 +2,9 @@ package Generics;
 
 public class DecVarNode extends Node {
 
-    private String id;
-    private Node type;
-    private Node exp;
+    private final String id;
+    private final Node type;
+    private final Node exp;
     private boolean typeChecked = false;
     private String typeString = "";
 

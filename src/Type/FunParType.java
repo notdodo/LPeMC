@@ -1,6 +1,5 @@
 package Type;
 
-
 import Generics.Node;
 import java.util.ArrayList;
 
@@ -16,7 +15,7 @@ import java.util.ArrayList;
 public class FunParType extends Node {
 
     private Node retType;
-    private ArrayList<Node> parList;
+    private final ArrayList<Node> parList;
 
     public FunParType() {
         this.parList = new ArrayList<>();
@@ -48,7 +47,7 @@ public class FunParType extends Node {
                 parString = parString + "," + (parList.get(i)).toPrint();
             }
         }
-        return "FunParType[" + parString + ", " + this.retType.toPrint() + "]";
+        return this.getClass().getSimpleName() + "[" + parString + ", " + this.retType.toPrint() + "]";
     }
 
     @Override

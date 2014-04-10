@@ -1,9 +1,8 @@
 package Generics;
 
-
 public class PrintNode extends Node {
 
-    private Node exp;
+    private final Node exp;
 
     public PrintNode(Node e) {
         exp = e;
@@ -11,7 +10,7 @@ public class PrintNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() +"[" + exp.toPrint() + "]";
+        return this.getClass().getSimpleName() + "[" + exp.toPrint() + "]";
     }
 
     @Override

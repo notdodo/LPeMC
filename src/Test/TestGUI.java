@@ -43,7 +43,6 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.MutableTreeNode;
 import javax.swing.tree.TreePath;
-import javax.tools.FileObject;
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CommonTokenStream;
@@ -474,8 +473,6 @@ public class TestGUI extends JFrame {
         jOutputTextArea.setFont(font);
     }
 
-
-    
     private void openFile() {
         userPreferences = Preferences.userNodeForPackage(this.getClass());
         JFileChooser jFileChooser = new JFileChooser();
@@ -486,7 +483,7 @@ public class TestGUI extends JFrame {
 //        FileObject projectDirectory = Project  project.getProjectDirectory();
 //                return FileUtil.toFile(projectDirectory).getAbsolutePath();
 //        Project project;
-        
+
 //        if (new File(initialPathSystem_ + "/NetBeansProjects").exists()) {
 //            jFileChooser.setCurrentDirectory(new File(initialPathSystem_ + "/NetBeansProjects"));
 //        }

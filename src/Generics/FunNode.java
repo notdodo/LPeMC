@@ -25,7 +25,7 @@ public class FunNode extends Node {
                 parString = parString + "," + (parList.get(i)).toPrint();
             }
         }
-        return this.getClass().getSimpleName() 
+        return this.getClass().getSimpleName()
                 + "[" + diffNesting + "," + (decl.getOffSet()) + "," + parString + "]";
     }
 
@@ -115,7 +115,7 @@ public class FunNode extends Node {
 
     private boolean parameterMatch(ArrayList<Node> declParameter, ArrayList<Node> passedParameter) {
         //controllare che se è un funparnode
-        System.out.println(declParameter+" "+ passedParameter);
+        System.out.println(declParameter + " " + passedParameter);
         if (declParameter.size() == passedParameter.size()) {
             // Controllo ad uno ad un la compatibilità dei Parametri con la
             // loro dichiarazione
