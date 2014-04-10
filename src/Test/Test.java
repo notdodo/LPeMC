@@ -1,6 +1,5 @@
 package Test;
 
-
 import Generics.Node;
 import Grammar.ExecuteVM;
 import Grammar.VMParser;
@@ -21,6 +20,8 @@ public class Test {
         Node ast = parser.prog();
         String alberoSintattico=ast.toPrint();
         //System.out.println(alberoSintattico);
+        System.out.println(alberoSintattico);
+
         //System.out.println(stringConverter(alberoSintattico));
         System.out.println(ast.typeCheck());  
         String asm = ast.codeGen();

@@ -10,7 +10,7 @@ package Grammar;
 import Generics.*;
 import Type.*;
 import Logic.*;
-import Math.*;
+import Op.*;
 import List.*;
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -113,17 +113,17 @@ exp	returns [Node ast]
  	     )*
  	     // a <= b
  	|    MINORE l=term
- 	     {$ast = new MinEqNode($ast, $l.ast);}
+ 	     {$ast = new MinNode($ast, $l.ast);}
  	     // a >= b
  	|    MAGGIORE l=term
- 	     {$ast = new MagEqNode($ast, $l.ast);}
+ 	     {$ast = new MagNode($ast, $l.ast);}
  	     );
  	
 term	returns [Node ast]
 	: f=value {$ast= $f.ast;}
 	    // a (+ b)*
 	    (PLUS l=value
-	     {$ast= new PlusNode ($ast, $l.ast);}
+	     {$ast= new PlusNode ($ast,$l.ast);}
 	    // a (- b)*
 	|   MINUS l=value
  	     {$ast = new MinusNode($ast, $l.ast);}
@@ -173,12 +173,13 @@ fatt	returns [Node ast]
 	   }
 	   if(entry.getDecl() instanceof DecFunNode || 
 	   	(entry.getDecl() instanceof DecParNode && ((DecParNode)entry.getDecl()).getType() instanceof FunParType)){
+	   	System.out.println("1 FunParNode "+ $i.text+" "+$i.line);
 	   	$ast = new FunParNode(entry,nestingLevel-declNL);
 	   }else {
 	   	//System.out.println("VarNode "+ $i.text+" "+$i.line);
 	 	$ast = new VarNode(entry,nestingLevel-declNL); 
 	   }	  }
-	  // l'ID Ã¨ una funzione -> controllo i parametri
+	  // l'ID è una funzione -> controllo i parametri
 	  (LPAR
 	    {ArrayList<Node> parList = new ArrayList<Node>();}
 	     (fp=exp {parList.add($fp.ast);}
@@ -186,9 +187,11 @@ fatt	returns [Node ast]
 	    )? 
 	    RPAR
 	    {
+	    	   	System.out.println("2 FunNode "+ $i.text+" "+$i.line);
 	    	$ast = new FunNode(entry,nestingLevel-declNL,parList);
 
 	    }
+	    	    	   	{System.out.println($ast);}
 	  )?
 	| IF x=exp THEN CLPAR y=exp CRPAR 
 		   ELSE CLPAR z=exp CRPAR 
