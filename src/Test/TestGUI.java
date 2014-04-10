@@ -59,11 +59,7 @@ public class TestGUI extends JFrame {
     private static JTree jTree;
     private static DefaultMutableTreeNode root;
     private static DefaultTreeModel treeModel;
-//    private String key1_;
-    JScrollPane jInputTextAreaScrollPane;
-    // declare my variable at the top of my Java class    
-    private Preferences userPreferences;
-//    JScrollPane jOutputTextAreaScrollPane;
+    private JScrollPane jInputTextAreaScrollPane;
 
     public static void main(String[] args) throws Exception {
         JFrame frame = new TestGUI();
@@ -72,17 +68,6 @@ public class TestGUI extends JFrame {
 
     @Override
     protected void frameInit() {
-        // create a Preferences instance (somewhere later in the code)
-//        userPreferences = Preferences.userRoot();
-//        userPreferences = Preferences.systemRoot();
-//        userPreferences = Preferences.userNodeForPackage(this.getClass());
-
-//        userPreferences = Preferences.userNodeForPackage(this.getClass());
-//        if (keyA != null) {
-//            userPreferences.put(keyA, "ENGLISH");
-//            String language_ = userPreferences.get(keyA, "JAVA");
-//            System.out.println(language_);
-//        }
         super.frameInit();
         setSize(1200, 750);
         setLocation(30, 20);
@@ -200,7 +185,7 @@ public class TestGUI extends JFrame {
         jOpenFileItemMenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                deleteAll();
+                deleteAll(true);
                 openFile();
 //                startByOpenFile();
             }
@@ -209,7 +194,6 @@ public class TestGUI extends JFrame {
 
         jStartByFileItemMenu = new JMenuItem("Start from the input file");
         jStartByFileItemMenu.setEnabled(false);
-
         jStartByFileItemMenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
@@ -222,7 +206,6 @@ public class TestGUI extends JFrame {
 
         jStartByTextAreaItemMenu = new JMenuItem("Start from the input text");
         jStartByTextAreaItemMenu.setEnabled(false);
-
         jStartByTextAreaItemMenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
@@ -303,7 +286,7 @@ public class TestGUI extends JFrame {
         jOpenFileButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                deleteAll();
+                deleteAll(true);
                 openFile();
 //                        startByOpenFile();
             }
@@ -343,7 +326,7 @@ public class TestGUI extends JFrame {
         jDeleteAllButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                deleteAll();
+                deleteAll(true);
             }
         }
         );
@@ -367,21 +350,20 @@ public class TestGUI extends JFrame {
         );
 
         JButton jProvaButton = new JButton("InputCodGen");
-
         jProvaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
                 try {
                     String asm_ = jCodeGenArea.getText();
+                    File f = new File("");
                     FileWriter fstream;
-
-                    fstream = new FileWriter("PersonalOutputFile.asm");
+                    fstream = new FileWriter(f.getCanonicalPath() + "/src/Test/PersonalOutputFile.asm");
 
                     try (BufferedWriter out = new BufferedWriter(fstream)) {
                         out.write(asm_);
                         out.close();
                     }
-                    VMLexer lex = new VMLexer(new ANTLRFileStream("PersonalOutputFile.asm"));
+                    VMLexer lex = new VMLexer(new ANTLRFileStream(f.getCanonicalPath() + "/src/Test/PersonalOutputFile.asm"));
                     CommonTokenStream tokensVM = new CommonTokenStream(lex);
                     VMParser parserVM = new VMParser(tokensVM);
                     ExecuteVM vm = new ExecuteVM(parserVM.createCode());
@@ -396,7 +378,6 @@ public class TestGUI extends JFrame {
         );
 
         JButton jProvaButton2 = new JButton("button2");
-
         jProvaButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
@@ -410,7 +391,6 @@ public class TestGUI extends JFrame {
         );
 
         JButton jProvaButton3 = new JButton("button3");
-
         jProvaButton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt
@@ -466,7 +446,6 @@ public class TestGUI extends JFrame {
     }
 
     private void openFile() {
-        userPreferences = Preferences.userNodeForPackage(this.getClass());
         JFileChooser jFileChooser = new JFileChooser();
         String initialPathSystem_ = System.getProperty("user.home");
         jFileChooser.setCurrentDirectory(new File(initialPathSystem_ + "/NetBeansProjects"));
@@ -501,35 +480,30 @@ public class TestGUI extends JFrame {
     }
 
     public void startByTextArea() {
+        deleteAll(false);
         try {
             ANTLRStringStream input_ = new ANTLRStringStream(jInputTextArea.getText());
             MiniFunLexer lexer = new MiniFunLexer(input_);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             MiniFunParser parser = new MiniFunParser(tokens);
-
             Node ast = parser.prog();
-            System.out.println(
-                    //                    new XmlFormatter().format(
-                    ast.toPrint()
-            //            )
-            );
-            appendOutputTextArea(
-                    //                    (new XmlFormatter().format(
-                    ast.toPrint()
-            //            ))
-            );
 
+            System.out.println(ast.toPrint());
+            appendOutputTextArea(ast.toPrint());
+            
             System.out.println(ast.typeCheck());
             appendTypeCheckTextArea(ast.typeCheck());
 
             String asm_ = ast.codeGen();
             appendCodeGenTextArea(asm_);
-            FileWriter fstream = new FileWriter("PersonalOutputFile.asm");
+            File f = new File("");
+            FileWriter fstream = new FileWriter(f.getCanonicalPath() + "/src/Test/PersonalOutputFile.asm");
             try (BufferedWriter out = new BufferedWriter(fstream)) {
                 out.write(asm_);
                 out.close();
             }
-            VMLexer lex = new VMLexer(new ANTLRFileStream("PersonalOutputFile.asm"));
+
+            VMLexer lex = new VMLexer(new ANTLRFileStream(f.getCanonicalPath() + "/src/Test/PersonalOutputFile.asm"));
             CommonTokenStream tokensVM = new CommonTokenStream(lex);
             VMParser parserVM = new VMParser(tokensVM);
             ExecuteVM vm = new ExecuteVM(parserVM.createCode());
@@ -540,28 +514,23 @@ public class TestGUI extends JFrame {
     }
 
     public void startByOpenFile() {
+        deleteAll(false);
         try {
             ANTLRFileStream input = new ANTLRFileStream(pathInputFile_);
             MiniFunLexer lexer = new MiniFunLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             MiniFunParser parser = new MiniFunParser(tokens);
-
             Node ast = parser.prog();
-            appendOutputTextArea(
-                    //                    (new XmlFormatter().format(
-                    ast.toPrint()
-            //            ))
-            );
-            if (ast.toPrint().contains("</ProgNode>")) {
-                System.out.println("<html><font color='blue'>This</font> is a "
-                        + "<font color='red'>test</font>!</html>");
-                jOutputTextArea.append("<html><font color='blue'>This</font> is a "
-                        + "<font color='red'>test</font>!</html>");
-            }
-
+            
+            System.out.println(ast.toPrint());
+            appendOutputTextArea(ast.toPrint());
+            
             System.out.println(ast.typeCheck());
             appendTypeCheckTextArea(ast.typeCheck());
-
+//            if (ast.toPrint().contains("</ProgNode>")) {
+////                jOutputTextArea.append("<html><font color='red'>This</font> is a "
+////                        + "<font color='red'>test</font>!</html>");
+//            }
             String asm_ = ast.codeGen();
             appendCodeGenTextArea(asm_);
             FileWriter fstream = new FileWriter(fileNameOutput_ + ".asm");
@@ -580,13 +549,15 @@ public class TestGUI extends JFrame {
 
     }
 
-    public void deleteAll() {
+    public void deleteAll(boolean saveInputInfo) {
+        if (saveInputInfo) {
+            jInputTextArea.setText("");
+            jInputTextAreaScrollPane.setBorder(
+                    BorderFactory.createTitledBorder("Input Text"));
+        }
         jOutputTextArea.setText("");
-        jInputTextArea.setText("");
         jTypeCheckArea.setText("");
         jCodeGenArea.setText("");
-        jInputTextAreaScrollPane.setBorder(
-                BorderFactory.createTitledBorder("Input Text"));
 
         if (root.getChildCount() != 0) {
             root.removeAllChildren();
