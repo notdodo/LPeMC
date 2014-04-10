@@ -1,11 +1,7 @@
 package Test;
 
 import Generics.Node;
-import Grammar.ExecuteVM;
-import Grammar.MiniFunLexer;
-import Grammar.MiniFunParser;
-import Grammar.VMLexer;
-import Grammar.VMParser;
+import Grammar.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -22,7 +18,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.prefs.Preferences;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -288,7 +283,7 @@ public class TestGUI extends JFrame {
             public void actionPerformed(ActionEvent evt) {
                 deleteAll(true);
                 openFile();
-//                        startByOpenFile();
+                //  startByOpenFile();
             }
         }
         );
@@ -400,7 +395,7 @@ public class TestGUI extends JFrame {
                 jTree.setSelectionPath(treePath);
                 DefaultMutableTreeNode newNode = new DefaultMutableTreeNode("getLastLeaf()");
                 treeModel.insertNodeInto(newNode, selectedNode, selectedNode.getChildCount());
-//                        treeModel.reload();
+                //      treeModel.reload();
             }
         }
         );
@@ -447,9 +442,10 @@ public class TestGUI extends JFrame {
 
     private void openFile() {
         JFileChooser jFileChooser = new JFileChooser();
-        String initialPathSystem_ = System.getProperty("user.home");
-        jFileChooser.setCurrentDirectory(new File(initialPathSystem_ + "/NetBeansProjects"));
-        jFileChooser.setFileFilter(new FileNameExtensionFilter("Open input file: \"*.TXT\", \"*.MF\"", "txt", "mf"));
+        File f = new File("");
+        jFileChooser.setCurrentDirectory(new File(f.getAbsolutePath()));
+        jFileChooser.setFileFilter(new FileNameExtensionFilter("Open input file: "
+                + "\"*.TXT\", \"*.MF\"", "txt", "mf"));
         int returnVal = jFileChooser.showOpenDialog(jFileChooser);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             jStartByFileButton.setEnabled(true);
@@ -490,20 +486,22 @@ public class TestGUI extends JFrame {
 
             System.out.println(ast.toPrint());
             appendOutputTextArea(ast.toPrint());
-            
+
             System.out.println(ast.typeCheck());
             appendTypeCheckTextArea(ast.typeCheck());
 
             String asm_ = ast.codeGen();
             appendCodeGenTextArea(asm_);
             File f = new File("");
-            FileWriter fstream = new FileWriter(f.getCanonicalPath() + "/src/Test/PersonalOutputFile.asm");
+            FileWriter fstream = new FileWriter(f.getCanonicalPath()
+                    + "/src/Test/PersonalOutputFile.asm");
             try (BufferedWriter out = new BufferedWriter(fstream)) {
                 out.write(asm_);
                 out.close();
             }
 
-            VMLexer lex = new VMLexer(new ANTLRFileStream(f.getCanonicalPath() + "/src/Test/PersonalOutputFile.asm"));
+            VMLexer lex = new VMLexer(new ANTLRFileStream(f.getCanonicalPath()
+                    + "/src/Test/PersonalOutputFile.asm"));
             CommonTokenStream tokensVM = new CommonTokenStream(lex);
             VMParser parserVM = new VMParser(tokensVM);
             ExecuteVM vm = new ExecuteVM(parserVM.createCode());
@@ -521,10 +519,10 @@ public class TestGUI extends JFrame {
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             MiniFunParser parser = new MiniFunParser(tokens);
             Node ast = parser.prog();
-            
+
             System.out.println(ast.toPrint());
             appendOutputTextArea(ast.toPrint());
-            
+
             System.out.println(ast.typeCheck());
             appendTypeCheckTextArea(ast.typeCheck());
 //            if (ast.toPrint().contains("</ProgNode>")) {
