@@ -1,10 +1,8 @@
 package Math;
 
-
 import Generics.MiniFunLib;
 import Generics.Node;
 import Type.IntTypeNode;
-
 
 public class DivNode extends Node {
 

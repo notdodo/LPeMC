@@ -1,10 +1,8 @@
 package Math;
 
-
 import Generics.Node;
 import Generics.MiniFunLib;
 import Type.IntTypeNode;
-
 
 public class TimesNode extends Node {
 
