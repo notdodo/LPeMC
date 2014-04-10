@@ -27,7 +27,7 @@ import java.util.ArrayList;
  prog    returns [Node ast]: 
         l=let // creo un nono Prog principale
             {$ast = new ProgNode($l.ast);};
-
+	
 let	returns [Node ast]:
         LET
            // creo un nodo Let figlio di Prog o figlio di un altro nodo Let
@@ -37,7 +37,7 @@ let	returns [Node ast]:
 	  else {localLet=true;}} 
           d=declist IN e=exp SEMIC
           {$ast= new LetNode($d.astList, $e.ast, localLet);};
-
+	
 declist returns [ArrayList<Node> astList]: 
         {$astList= new ArrayList<Node>();
 	int offSet;
@@ -67,7 +67,7 @@ declist returns [ArrayList<Node> astList]:
                                 System.exit(0);
 			      }
 			     } 
-
+	
             LPAR {int parOffSet = -1;
                   ArrayList<Node> parList = new ArrayList<Node>();
                   hm = new HashMap<String,STentry>();
@@ -104,20 +104,27 @@ declist returns [ArrayList<Node> astList]:
 	       	       symTable.remove(nestingLevel--);
 	       	       $astList.add(fn);}
 	  )*;
-
+	
 exp	returns [Node ast] 
  	: f=term {$ast = $f.ast;}
  	    // a (== b)*
- 	    ((EQ l=term
+ 	    (EQ l=term
  	     {$ast = new EqNode ($ast,$l.ast);}
- 	     )*
+ 	     
+        |    NOTEQ l=term
+ 	     {$ast = new NotEqNode($ast, $l.ast);}
  	     // a <= b
  	|    MINORE l=term
  	     {$ast = new MinEqNode($ast, $l.ast);}
  	     // a >= b
  	|    MAGGIORE l=term
  	     {$ast = new MagEqNode($ast, $l.ast);}
- 	     );
+ 	     // a <= b
+ 	|    MIN l=term
+ 	     {$ast = new MinNode($ast, $l.ast);} 
+        |    MAG l=term
+ 	     {$ast = new MagNode($ast, $l.ast);} 	     
+ 	     )* ;
  	
 term	returns [Node ast]
 	: f=value {$ast= $f.ast;}
@@ -131,7 +138,7 @@ term	returns [Node ast]
 	|   OR l=value
  	     {$ast = new OrNode($ast, $l.ast);}
  	     )*;
-
+	
 value	returns [Node ast]
 	: f=fatt {$ast= $f.ast;}
 	     // a (* b)*
@@ -173,12 +180,13 @@ fatt	returns [Node ast]
 	   }
 	   if(entry.getDecl() instanceof DecFunNode || 
 	   	(entry.getDecl() instanceof DecParNode && ((DecParNode)entry.getDecl()).getType() instanceof FunParType)){
+	   	System.out.println("1 FunParNode "+ $i.text+" "+$i.line);
 	   	$ast = new FunParNode(entry,nestingLevel-declNL);
 	   }else {
 	   	//System.out.println("VarNode "+ $i.text+" "+$i.line);
 	 	$ast = new VarNode(entry,nestingLevel-declNL); 
 	   }	  }
-	  // l'ID è una funzione -> controllo i parametri
+	  // l'ID e' una funzione -> controllo i parametri
 	  (LPAR
 	    {ArrayList<Node> parList = new ArrayList<Node>();}
 	     (fp=exp {parList.add($fp.ast);}
@@ -186,13 +194,16 @@ fatt	returns [Node ast]
 	    )? 
 	    RPAR
 	    {
+	    	   	System.out.println("2 FunNode "+ $i.text+" "+$i.line);
 	    	$ast = new FunNode(entry,nestingLevel-declNL,parList);
-
+	    
 	    }
+	    	    	   	{System.out.println($ast);}
 	  )?
 	| IF x=exp THEN CLPAR y=exp CRPAR 
 		   ELSE CLPAR z=exp CRPAR 
-	  {$ast= new IfNode($x.ast,$y.ast,$z.ast);}	 
+	  {$ast= new IfNode($x.ast,$y.ast,$z.ast);}	
+
 	| SLPAR e1=exp DOUBLCOL e2=exp SRPAR
 	  {$ast= new ListNode($e1.ast,$e2.ast);}
 	| FIRST LPAR e=exp RPAR
@@ -215,7 +226,7 @@ funParType returns [Node ast]:
             (t=type {fpt.addPar($t.ast);}
                 (COMMA t=type {fpt.addPar($t.ast);})*)?
         RPAR ARROW p=primType{fpt.addRet($p.ast); $ast=fpt;};
-
+	
 primType returns [Node ast]
 	: INTTYPE  {$ast= new IntTypeNode();}  
   	| BOOLTYPE {$ast= new BoolTypeNode();}
@@ -226,6 +237,8 @@ primType returns [Node ast]
  * LEXER RULES
  *------------------------------------------------------------------*/
 LET 	: 'let' ;
+APICI   : '"';
+
 IN	: 'in' ;
 SEMIC	: ';' ;
 COL	: ':' ;
@@ -235,6 +248,9 @@ ASS	: '=' ;
 EQ	: '==' ;
 MINORE	: '<='; //estensione1
 MAGGIORE: '>='; //estensione1
+MIN 	:	'<';
+MAG 	:	'>';
+NOTEQ   : '!=';
 PLUS	: '+' ;
 TIMES	: '*' ;
 MINUS	: '-'; //estensione1
@@ -267,6 +283,7 @@ LISTTYPE: 'list';
 
 ID 	: ('a'..'z'|'A'..'Z')
  	  ('a'..'z'|'A'..'Z'|'0'..'9')* ;
+ 	  
 
 WHITESP  : ( '\t' | ' ' | '\r' | '\n' )+    { skip(); } ;
  

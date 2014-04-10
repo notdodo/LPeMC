@@ -1,3 +1,15 @@
+let fun noteq:int(y:int, g:int) {
+        if (y!=g)   then {
+            print (10)
+        }
+        else{ 
+            print(20)
+        }
+    };
+
+in noteq(2,2);
+
+
 let fun applica:int(x:int, fo:(int)->int) {
         fo(x)
     };

@@ -1,21 +1,22 @@
 package Math;
 
+import Logic.*;
 import Generics.Node;
 import Generics.MiniFunLib;
 
 
-public class MagEqNode extends Node {
+public class NotEqNode extends Node {
 
-    private Node left;
+       private Node left;
     private Node right;
 
-    public MagEqNode(Node left, Node right) {
-        this.left = left;
+    public NotEqNode(Node left, Node right) {
+       this.left = left;
         this.right = right;
     }
 
     public String toPrint() {
-        return "MagNode[" + this.left.toPrint() + "," + this.right.toPrint() + "]";
+        return "NotEqNode[" + this.left.toPrint() + "," + this.right.toPrint() + "]";
     }
 
     public String typeCheck() {
@@ -24,20 +25,21 @@ public class MagEqNode extends Node {
         } else if (MiniFunLib.isCompatible(right, left)) {
             return MiniFunLib.BOOL;
         }
-        System.out.println("Type Error: MagNode");
+        System.out.println("Type Error NotEqNode");
         System.exit(0);
         return "";
     }
 
     public String codeGen() {
+
         String lab1 = MiniFunLib.newLabel();
         String lab2 = MiniFunLib.newLabel();
-        return this.right.codeGen() + this.left.codeGen()
-                + "bless " + lab1 + "\n"
-                + "push " + MiniFunLib.FALSE + "\n"
+        return left.codeGen() + right.codeGen()
+                + "beq " + lab1 + "\n"
+                + "push " + MiniFunLib.TRUE+  "\n"
                 + "b " + lab2 + "\n"
                 + lab1 + ":\n"
-                + "push " + MiniFunLib.TRUE + "\n"
+                + "push " + MiniFunLib.FALSE + "\n"
                 + lab2 + ":\n";
     }
 }

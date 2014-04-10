@@ -1,15 +1,14 @@
 package Math;
 
-import Generics.Node;
 import Generics.MiniFunLib;
+import Generics.Node;
 
-
-public class MagEqNode extends Node {
+public class MagNode extends Node {
 
     private Node left;
     private Node right;
 
-    public MagEqNode(Node left, Node right) {
+    public MagNode(Node left, Node right) {
         this.left = left;
         this.right = right;
     }
@@ -24,7 +23,7 @@ public class MagEqNode extends Node {
         } else if (MiniFunLib.isCompatible(right, left)) {
             return MiniFunLib.BOOL;
         }
-        System.out.println("Type Error: MagNode");
+        System.out.println("Type Error MinNode");
         System.exit(0);
         return "";
     }
