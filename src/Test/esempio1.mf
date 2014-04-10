@@ -1,0 +1,64 @@
+let fun applica:int(x:int, fo:(int)->int) {
+        fo(x)
+    };
+
+    fun fac:int(x:int) {
+        if (x==0) then {
+            1
+        }else {
+            x*fac(x-1)
+        }
+    };
+
+    fun lenght:int(x:list[int]) {
+        if (x==empty) then {
+            0
+        }else {
+            1+lenght(rest(x))
+        }
+    };
+
+    fun log:bool(x:int) {
+        if (x>=0) then {
+            true
+        }else {
+            false
+        }
+    };
+in print(applica(applica([1::[4::[1::empty]]],lenght),fac));
+
+let     var g:int=12;
+	var zz:int=4;
+	fun useFun:int(f2:(int,int)->int, a2:int, b2:int){
+		f2(a2,b2)   
+	};
+        
+        fun passofunz:int(f3:((int,int)->int, int, int)-> int){
+            let
+    		var g:int=2;
+    		var k:int=3;
+    		fun inside:int(c:int,y:int) { c+y };
+            in
+    		f3(inside,5,3);
+        };
+in
+	print(passofunz(useFun));
+
+let fun somma:int(y:int, g:int) {
+        y+g
+    };
+
+    fun a:int(y:int,x:int,fo:(int,int)->int) {
+        fo(x,y)
+    };
+in print(a(1,6,somma));
+
+let 
+	fun sqr:int(f2:(int,int)->int, x:int, y:int) { f2(x,y)*f2(x,y)};
+	fun sum:int(x:int, y:int) { x+y};
+	
+    fun passofunz:int(f1:((int,int)->int,int,int)->int, f2:(int,int)->int, x:int, y:int){
+    	f1(f2,x,y)
+    };
+in
+	print(passofunz(sqr, sum, 5, 1));
