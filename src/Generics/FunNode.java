@@ -15,6 +15,7 @@ public class FunNode extends Node {
         this.parList = pl;
     }
 
+    @Override
     public String toPrint() {
         String parString = "";
         for (int i = 0; i < parList.size(); i++) {
@@ -24,9 +25,11 @@ public class FunNode extends Node {
                 parString = parString + "," + (parList.get(i)).toPrint();
             }
         }
-        return "FunNode[" + diffNesting + "," + (decl.getOffSet()) + "," + parString + "]";
+        return this.getClass().getSimpleName() 
+                + "[" + diffNesting + "," + (decl.getOffSet()) + "," + parString + "]";
     }
 
+    @Override
     public String typeCheck() {
         if (decl.getDecl() instanceof DecParNode) {
             // Recupero parametri dalla dichiarazione della funzione
@@ -42,7 +45,7 @@ public class FunNode extends Node {
                 return ((DecFunNode) this.decl.getDecl()).getRetType().typeCheck();
             }
         }
-        System.out.println("Errore di dichiarazione FunNode");
+        System.out.println("Errore di dichiarazione " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
 

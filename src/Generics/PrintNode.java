@@ -9,14 +9,17 @@ public class PrintNode extends Node {
         exp = e;
     }
 
+    @Override
     public String toPrint() {
-        return "PrintNode[" + exp.toPrint() + "]";
+        return this.getClass().getSimpleName() +"[" + exp.toPrint() + "]";
     }
 
+    @Override
     public String typeCheck() {
         return exp.typeCheck();
     }
 
+    @Override
     public String codeGen() {
         return exp.codeGen()
                 + "print\n";

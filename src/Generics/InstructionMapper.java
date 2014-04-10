@@ -6,6 +6,7 @@ import Grammar.VMParser;
 import virtualMachine.viewers.IInstructionMapper;
 
 public class InstructionMapper implements IInstructionMapper{
+        @Override
 	public String currInstrucion(int instruction){
 		String ret = ""+instruction;
 		switch ( instruction ) {
@@ -86,6 +87,7 @@ public class InstructionMapper implements IInstructionMapper{
 		return ret;
 	}
 
+        @Override
 	public boolean needParam(int instruction){
 		switch ( instruction ) {
 		case VMParser.PUSH:

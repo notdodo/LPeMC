@@ -11,14 +11,17 @@ public class VarNode extends Node {
         diffNesting = dn;
     }
 
+    @Override
     public String toPrint() {
-        return "VarNode[" + diffNesting + "," + decl.getOffSet() + "]";
+        return this.getClass().getSimpleName() +"[" + diffNesting + "," + decl.getOffSet() + "]";
     }
 
+    @Override
     public String typeCheck() {
         return decl.getDecl().typeCheck();
     }
 
+    @Override
     public String codeGen() {
 
         String lookupAL = "";

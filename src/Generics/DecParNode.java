@@ -28,11 +28,13 @@ public class DecParNode extends Node {
         return this.type;
     }
 
+    @Override
     public String toPrint() {
-        return "DecParNode[" + id + ","
+        return this.getClass().getSimpleName() + "[" + id + ","
                 + type.toPrint() + "]";
     }
 
+    @Override
     public String typeCheck() {
         if (!typeChecked) {
             typeChecked = true;
@@ -41,6 +43,7 @@ public class DecParNode extends Node {
         return typeString;
     }
 
+    @Override
     public String codeGen() {
         return "";
     }

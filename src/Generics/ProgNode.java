@@ -1,8 +1,5 @@
 package Generics;
 
-
-import java.util.ArrayList;
-
 public class ProgNode extends Node {
 
     private Node let;
@@ -12,14 +9,17 @@ public class ProgNode extends Node {
         this.let = l;
     }
 
+    @Override
     public String toPrint() {
-        return "ProgNode[" + this.let.toPrint() + "]";
+        return this.getClass().getSimpleName() +"[" + this.let.toPrint() + "]";
     }
 
+    @Override
     public String typeCheck() {
         return this.let.typeCheck();
     }
 
+    @Override
     public String codeGen() {
         return this.let.codeGen();
     }

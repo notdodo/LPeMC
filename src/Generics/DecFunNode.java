@@ -15,7 +15,7 @@ public class DecFunNode extends Node {
     private boolean typeChecked = false;
     private String typeString = "";
     private ArrayList<Node> decList = new ArrayList<Node>();
-    
+
     /**
      * @param i Identificare del nome della funzione
      */
@@ -49,13 +49,16 @@ public class DecFunNode extends Node {
     public String getType() {
         return this.retType.typeCheck();
     }
-    public Node getRetType(){
+
+    public Node getRetType() {
         return this.retType;
-       }
-    public String getID(){
+    }
+
+    public String getID() {
         return this.id;
     }
 
+    @Override
     public String toPrint() {
         String parString = "";
         for (int i = 0; i < parList.size(); i++) {
@@ -66,15 +69,16 @@ public class DecFunNode extends Node {
             }
         }
 
-        return "DecFunNode[" + id + ","
+        return this.getClass().getSimpleName() + "[" + id + ","
                 + retType.toPrint() + ","
                 + parString + ","
                 + body.toPrint() + "]";
     }
 
+    @Override
     public String typeCheck() {
         if (!typeChecked) {
-            
+
             ///Questa non va bene
 //            // se è un FunParType controllo il num dei parametri
 //            if (this.retType instanceof FunParType ) {
@@ -84,12 +88,12 @@ public class DecFunNode extends Node {
 //                    System.exit(0);
 //                }
 //            }
-
             if (MiniFunLib.isCompatible(this.retType, this.body)) {
                 typeChecked = true;
                 typeString = this.body.typeCheck();
             } else {
-                System.out.println("Type Error: DecFunNode "+this.id+" Tipo ritorno incompatibile"+this.body.getClass());
+                System.out.println("Type Error: + " + this.getClass().getSimpleName()
+                        + " " + this.id + " Tipo ritorno incompatibile" + this.body.getClass());
                 System.exit(0);
             }
         }
@@ -99,23 +103,25 @@ public class DecFunNode extends Node {
     public void addLocal(ArrayList<Node> e) {
         this.decList = e;
     }
-    
+
     public String getId() {
         return this.id;
     }
-    
+
+    @Override
     public String codeGen() {
         String labelFun = MiniFunLib.newLabel();
 
         String popParSequence = "";
         String popListDec = "";
-        
+
         for (int i = 0; i < parList.size(); i++) {
             popParSequence += "pop\n";
-            if (((DecParNode)this.parList.get(i)).getType() instanceof FunParType) 
+            if (((DecParNode) this.parList.get(i)).getType() instanceof FunParType) {
                 popParSequence += "pop\n";
+            }
         }
-        
+
         for (int i = 0; i < this.decList.size(); i++) {
             popListDec += "pop\n";
         }
@@ -127,7 +133,7 @@ public class DecFunNode extends Node {
                 + body.codeGen() //verrà generato il valore di ritorno alla fine
                 /*
                  Ora bisogna ripulire lo stack e risaltare al chiamante
-                        */
+                 */
                 + "srv\n" //per salvare il valore
                 + popListDec //aggiunto per la seconda estensione
                 + "sra\n"

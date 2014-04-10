@@ -25,6 +25,7 @@ public class FunParNode extends Node {
         return this.parList;
     }
 
+    @Override
     public String toPrint() {
         String parString = "";
         for (int i = 0; i < parList.size(); i++) {
@@ -34,9 +35,11 @@ public class FunParNode extends Node {
                 parString = parString + "," + (parList.get(i)).toPrint();
             }
         }
-        return "FunParNode[" + diffNesting + "," + (decl.getOffSet()) + "," + parString + "]";
+        return this.getClass().getSimpleName() 
+                + "[" + diffNesting + "," + (decl.getOffSet()) + "," + parString + "]";
     }
 
+    @Override
     public String typeCheck() {
         return this.decl.getDecl().typeCheck();
     }

@@ -26,7 +26,7 @@ public class LetNode extends Node {
         for (Node obj : astList) {
             left += obj.toPrint();
         }
-        return "LetNode[" + left + "," + exp.toPrint() + "]";
+        return this.getClass().getSimpleName() + "[" + left + "," + exp.toPrint() + "]";
     }
 
     @Override
