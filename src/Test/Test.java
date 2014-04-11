@@ -29,7 +29,6 @@ public class Test {
         }
 
         VMLexer lex = new VMLexer(new ANTLRFileStream(args[0] + ".asm"));
-        //VMLexer lex = new VMLexer(new ANTLRFileStream(args[0]+".asm"));
         CommonTokenStream tokensVM = new CommonTokenStream(lex);
         VMParser parserVM = new VMParser(tokensVM);
 

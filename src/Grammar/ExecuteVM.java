@@ -122,7 +122,7 @@ public class ExecuteVM {
                     break;
                 case VMParser.PRINT:
                     System.out.println(memory[sp]);
-                    Test.TestGUI.appendTypeCheckTextArea(String.valueOf(memory[sp]));
+                    //Test.TestGUI.appendTypeCheckTextArea(String.valueOf(memory[sp]));
                     break;
                 case VMParser.HALT:
                     return;

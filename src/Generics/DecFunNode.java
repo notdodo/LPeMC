@@ -79,16 +79,6 @@ public class DecFunNode extends Node {
     @Override
     public String typeCheck() {
         if (!typeChecked) {
-
-            ///Questa non va bene
-//            // se è un FunParType controllo il num dei parametri
-//            if (this.retType instanceof FunParType ) {
-//                    FunParType fpt = (FunParType)this.retType;
-//                if (fpt.getPar().size() != this.parList.size()) {
-//                    System.out.println(this.getClass().getName() + " TypeCheck Error: DecFunNode "+this.id+" Numero parametri Errato");
-//                    System.exit(0);
-//                }
-//            }
             if (MiniFunLib.isCompatible(this.retType, this.body)) {
                 typeChecked = true;
                 typeString = this.body.typeCheck();
