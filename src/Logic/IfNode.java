@@ -18,7 +18,8 @@ public class IfNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + cond.toPrint() + ","
+        return this.getClass().getSimpleName() 
+                + "[" + cond.toPrint() + ","
                 + th.toPrint() + ","
                 + el.toPrint() + "]";
     }
@@ -42,10 +43,10 @@ public class IfNode extends Node {
         String lab1 = MiniFunLib.newLabel();
         String lab2 = MiniFunLib.newLabel();
         return cond.codeGen()
-                + "push " + MiniFunLib.TRUE + "\n"
-                + "beq " + lab1 + "\n"
+                + MiniFunLib.PUSH+ MiniFunLib.TRUE + "\n"
+                + MiniFunLib.BRANCHEQ + lab1 + "\n"
                 + el.codeGen()
-                + "b " + lab2 + "\n"
+                + MiniFunLib.BRANCH + lab2 + "\n"
                 + lab1 + ":\n"
                 + th.codeGen()
                 + lab2 + ":\n";

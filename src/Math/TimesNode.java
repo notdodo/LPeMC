@@ -16,7 +16,8 @@ public class TimesNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + left.toPrint() + ","
+        return this.getClass().getSimpleName() 
+                + "[" + left.toPrint() + ","
                 + right.toPrint() + "]";
     }
 
@@ -35,6 +36,6 @@ public class TimesNode extends Node {
     public String codeGen() {
         return left.codeGen()
                 + right.codeGen()
-                + "mult\n";
+                + MiniFunLib.MULT;
     }
 }

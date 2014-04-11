@@ -15,7 +15,10 @@ public class NotEqNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + this.left.toPrint() + "," + this.right.toPrint() + "]";
+        return this.getClass().getSimpleName() 
+                + "[" + this.left.toPrint() 
+                + "," + this.right.toPrint() 
+                + "]";
     }
 
     @Override
@@ -35,12 +38,14 @@ public class NotEqNode extends Node {
 
         String lab1 = MiniFunLib.newLabel();
         String lab2 = MiniFunLib.newLabel();
-        return left.codeGen() + right.codeGen()
-                + "beq " + lab1 + "\n"
-                + "push " + MiniFunLib.TRUE + "\n"
-                + "b " + lab2 + "\n"
+        return left.codeGen() 
+                + right.codeGen()
+                + MiniFunLib.BRANCHEQ + lab1 + "\n"
+                + MiniFunLib.PUSH  + MiniFunLib.TRUE + "\n"
+                + MiniFunLib.BRANCH + lab2 + "\n"
                 + lab1 + ":\n"
-                + "push " + MiniFunLib.FALSE + "\n"
-                + lab2 + ":\n";
+                + MiniFunLib.PUSH  + MiniFunLib.FALSE + "\n"
+                + lab2 + ":\n"
+                ;
     }
 }

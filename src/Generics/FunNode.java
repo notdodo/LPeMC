@@ -26,7 +26,9 @@ public class FunNode extends Node {
             }
         }
         return this.getClass().getSimpleName()
-                + "[" + diffNesting + "," + (decl.getOffSet()) + "," + parString + "]";
+                + "[" + diffNesting + ","
+                + (decl.getOffSet()) + ","
+                + parString + "]";
     }
 
     @Override
@@ -67,37 +69,38 @@ public class FunNode extends Node {
 
         // per recuperare AL del padre sintattico della funzione da invocare
         for (int i = 0; i < diffNesting; i++) {
-            lookupAL += "lw\n";
+            lookupAL += MiniFunLib.LOADW;
         }
         String accessLink = "";
         String codeAdress = "";
 
         if (decl.getDecl() instanceof DecFunNode) {
-            accessLink = "lfp\n" //ricarico il control link                
+            accessLink = MiniFunLib.LOADFP //ricarico il control link                
                     + lookupAL;
-            codeAdress = "lfp\n" //Anche stavolta andiamo indietro per cercare lo scope di definzione della funzione
+            codeAdress = MiniFunLib.LOADFP //Anche stavolta andiamo indietro per cercare lo scope di definzione della funzione
                     + lookupAL
                     /*
                      Trovato l'access link (frame pointer )dove è presente la dichiarazione della funzione
                      */
-                    + "push " + decl.getOffSet() + "\n" // ora posso caricare l'offset dove è dichiarata la funzione
-                    + "sub\n" // sottraggo e trovo l'indirizzo corretto
-                    + "lw\n"; // la loadword carica l'indirzzo della funzione
+                    // ora posso caricare l'offset dove è dichiarata la funzione
+                    + MiniFunLib.PUSH + decl.getOffSet() + "\n"
+                    + MiniFunLib.SUB // sottraggo e trovo l'indirizzo corretto
+                    + MiniFunLib.LOADW; // la loadword carica l'indirzzo della funzione
         } else {
-            accessLink = "lfp\n"// parte il codice per trovarci l'AL
+            accessLink = MiniFunLib.LOADFP// parte il codice per trovarci l'AL
                     + lookupAL
-                    + "push " + (this.decl.getOffSet() + 1) + "\n"
-                    + "sub\n"
-                    + "lw\n";
-
-            codeAdress = "lfp\n" //parte il codice per trovare l'indirizzo del codice della funzione chiamata
+                    + MiniFunLib.PUSH + (this.decl.getOffSet() + 1) + "\n"
+                    + MiniFunLib.SUB
+                    + MiniFunLib.LOADW;
+            //parte il codice per trovare l'indirizzo del codice della funzione chiamata
+            codeAdress = MiniFunLib.LOADFP
                     + lookupAL
-                    + "push " + this.decl.getOffSet() + "\n"
-                    + "sub\n"
-                    + "lw\n";//trovato!
+                    + MiniFunLib.PUSH + this.decl.getOffSet() + "\n"
+                    + MiniFunLib.SUB
+                    + MiniFunLib.LOADW;
         }
 
-        return "lfp\n" //  push control link (rif al AL (record di attivazione) del chiamante)
+        return MiniFunLib.LOADFP //  push control link (rif al AL (record di attivazione) del chiamante)
                 + parCode
                 /*
                  Ora dobbiamo inserire l'access link, eseguiamo una serie di operazioni che ci
@@ -110,7 +113,7 @@ public class FunNode extends Node {
                  vogliamo invocare
                  */
                 + codeAdress
-                + "js\n"; //effettua il salto all'indirizzo corretto
+                + MiniFunLib.JS; //effettua il salto all'indirizzo corretto
     }
 
     private boolean parameterMatch(ArrayList<Node> declParameter, ArrayList<Node> passedParameter) {

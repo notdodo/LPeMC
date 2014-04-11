@@ -22,7 +22,8 @@ public class BoolNode extends Node {
      */
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + val + "]";
+        return this.getClass().getSimpleName() 
+                + "[" + val + "]";
     }
 
     @Override

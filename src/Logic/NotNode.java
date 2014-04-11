@@ -13,7 +13,9 @@ public class NotNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + this.exp.toPrint() + "]";
+        return this.getClass().getSimpleName()
+                + "[" + this.exp.toPrint()
+                + "]";
     }
 
     @Override
@@ -26,12 +28,12 @@ public class NotNode extends Node {
         String lab1 = MiniFunLib.newLabel();
         String lab2 = MiniFunLib.newLabel();
         return this.exp.codeGen()
-                + "push " + MiniFunLib.TRUE + "\n"
-                + "beq " + lab1 + "\n"
-                + "push " + MiniFunLib.TRUE + "\n"
-                + "b " + lab2 + "\n"
+                + MiniFunLib.PUSH + MiniFunLib.TRUE + "\n"
+                + MiniFunLib.BRANCHEQ + lab1 + "\n"
+                + MiniFunLib.PUSH + MiniFunLib.TRUE + "\n"
+                + MiniFunLib.BRANCH + lab2 + "\n"
                 + lab1 + ":\n"
-                + "push " + MiniFunLib.FALSE + "\n"
+                + MiniFunLib.PUSH + MiniFunLib.FALSE + "\n"
                 + lab2 + ":\n";
     }
 }

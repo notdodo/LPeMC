@@ -16,7 +16,8 @@ public class OrNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + left.toPrint() + ","
+        return this.getClass().getSimpleName() 
+                + "[" + left.toPrint() + ","
                 + right.toPrint() + "]";
     }
 
@@ -33,7 +34,10 @@ public class OrNode extends Node {
 
     @Override
     public String codeGen() {
-        return left.codeGen() + right.codeGen() + "add\n";
+        return left.codeGen() 
+                + right.codeGen() 
+                + MiniFunLib.ADD
+                ;
     }
 
 }

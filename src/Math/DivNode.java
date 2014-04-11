@@ -16,7 +16,8 @@ public class DivNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + left.toPrint() + ","
+        return this.getClass().getSimpleName() 
+                + "[" + left.toPrint() + ","
                 + right.toPrint() + "]";
     }
 
@@ -37,12 +38,12 @@ public class DivNode extends Node {
         String lab2 = MiniFunLib.newLabel();
         return left.codeGen()
                 + right.codeGen()
-                + "push " + "0" + "\n"
-                + "beq " + lab1 + "\n"
-                + "div\n"
+                + "push 0\n"
+                + MiniFunLib.BRANCHEQ + lab1 + "\n"
+                + MiniFunLib.DIV
                 + "b " + lab2 + "\n"
                 + lab1 + ":\n"
-                + "halt\n"
+                + MiniFunLib.HALT
                 + lab2 + ":\n";
     }
 }

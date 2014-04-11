@@ -25,7 +25,9 @@ public class LetNode extends Node {
         for (Node obj : astList) {
             left += obj.toPrint();
         }
-        return this.getClass().getSimpleName() + "[" + left + "," + exp.toPrint() + "]";
+        return this.getClass().getSimpleName() 
+                + "[" + left + "," + exp.toPrint() 
+                + "]";
     }
 
     @Override
@@ -48,7 +50,9 @@ public class LetNode extends Node {
         if (localLet) {
             return "// LetNode\n" + code + this.exp.codeGen() + "// END LetNode\n";
         } else {
-            return "// LetNode\n" + code + this.exp.codeGen() + "halt\n" + MiniFunLib.getFunctionCode() + "// END LetNode\n";
+            return "// LetNode\n" + code + this.exp.codeGen() 
+                    + MiniFunLib.HALT
+                    + MiniFunLib.getFunctionCode() + "// END LetNode\n";
         }
     }
 

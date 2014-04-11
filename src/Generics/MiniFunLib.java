@@ -9,9 +9,33 @@ public class MiniFunLib {
     public static final int NULLPOINTER = -1;
     public static final String EMPTY = "Empty";
     public static final String LIST = "List:";
-
+    
     private static int labIndex = 0;
     private static String functionCode = "";
+    
+    public static final String PUSH = "push ";
+    public static final String POP = "pop\n";
+    public static final String ADD = "add\n";
+    public static final String SUB = "sub\n";
+    public static final String MULT = "mult\n";
+    public static final String DIV = "div\n";
+    public static final String STOREW = "sw\n";
+    public static final String LOADW = "lw\n";
+    public static final String BRANCH = "b ";
+    public static final String BRANCHEQ = "beq ";
+    public static final String BRANCHLESS = "bless ";
+    public static final String JS = "js\n";
+    public static final String LOADRA = "lra\n";
+    public static final String STORERA = "sra\n";
+    public static final String LOADRV = "lrv\n";
+    public static final String STORERV = "srv\n";
+    public static final String LOADFP = "lfp\n";
+    public static final String STOREFP = "sfp\n";
+    public static final String COPYFP  = "cfp\n";
+    public static final String LOADHP = "lhp\n";
+    public static final String STOREHP = "shp\n";
+    public static final String PRINT = "print\n";
+    public static final String HALT = "halt\n";
 
     // controlla il tipo di n1 e n2, se sono liste devo controllare che siano compatibili (EMPTY è una lista)
     public static boolean isCompatible(Node n1, Node n2) {

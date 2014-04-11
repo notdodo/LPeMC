@@ -15,7 +15,9 @@ public class MinNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + this.left.toPrint() + "," + this.right.toPrint() + "]";
+        return this.getClass().getSimpleName() 
+                + "[" + this.left.toPrint() + ","
+                + this.right.toPrint() + "]";
     }
 
     @Override
@@ -35,14 +37,14 @@ public class MinNode extends Node {
         String lab1 = MiniFunLib.newLabel();
         String lab2 = MiniFunLib.newLabel();
         return this.left.codeGen() + this.right.codeGen()
-                + "bless " + lab1 + "\n"
-                + "push " + MiniFunLib.FALSE + "\n"
-                + "b " + lab2 + "\n"
+                + MiniFunLib.BRANCHLESS + lab1 + "\n"
+                + MiniFunLib.PUSH  + MiniFunLib.FALSE + "\n"
+                + MiniFunLib.BRANCH + lab2 + "\n"
                 + lab1 + ":\n"
                 + this.left.codeGen()
                 + this.right.codeGen()
-                + "beq " + lab2 + "\n"
-                + "push " + MiniFunLib.TRUE + "\n"
+                + MiniFunLib.BRANCHEQ + lab2 + "\n"
+                + MiniFunLib.PUSH  + MiniFunLib.TRUE + "\n"
                 + lab2 + ":\n";
     }
 }

@@ -29,7 +29,8 @@ public class DecParNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + id + ","
+        return this.getClass().getSimpleName() 
+                + "[" + id + ","
                 + type.toPrint() + "]";
     }
 

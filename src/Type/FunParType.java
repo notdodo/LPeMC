@@ -47,7 +47,9 @@ public class FunParType extends Node {
                 parString = parString + "," + (parList.get(i)).toPrint();
             }
         }
-        return this.getClass().getSimpleName() + "[" + parString + ", " + this.retType.toPrint() + "]";
+        return this.getClass().getSimpleName() 
+                + "[" + parString + ", " 
+                + this.retType.toPrint() + "]";
     }
 
     @Override

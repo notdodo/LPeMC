@@ -69,7 +69,8 @@ public class DecFunNode extends Node {
             }
         }
 
-        return this.getClass().getSimpleName() + "[" + id + ","
+        return this.getClass().getSimpleName() 
+                + "[" + id + ","
                 + retType.toPrint() + ","
                 + parString + ","
                 + body.toPrint() + "]";
@@ -92,8 +93,10 @@ public class DecFunNode extends Node {
                 typeChecked = true;
                 typeString = this.body.typeCheck();
             } else {
-                System.out.println("Type Error: + " + this.getClass().getSimpleName()
-                        + " " + this.id + " Tipo ritorno incompatibile" + this.body.getClass());
+                System.out.println("Type Error: + " 
+                        + this.getClass().getSimpleName()
+                        + " " + this.id + " Tipo ritorno incompatibile" 
+                        + this.body.getClass());
                 System.exit(0);
             }
         }
@@ -116,36 +119,36 @@ public class DecFunNode extends Node {
         String popListDec = "";
 
         for (int i = 0; i < parList.size(); i++) {
-            popParSequence += "pop\n";
+            popParSequence += MiniFunLib.POP;
             if (((DecParNode) this.parList.get(i)).getType() instanceof FunParType) {
-                popParSequence += "pop\n";
+                popParSequence += MiniFunLib.POP;
             }
         }
 
         for (int i = 0; i < this.decList.size(); i++) {
-            popListDec += "pop\n";
+            popListDec += MiniFunLib.POP;
         }
 
         MiniFunLib.addFunctionCode(
                 labelFun + ": // " + this.id + "\n"
-                + "cfp\n" // prende il contenuto dello stack e lo copia nel FP che ora punta al nuovo AR
-                + "lra\n" // push RA del chiamante
+                + MiniFunLib.COPYFP// prende il contenuto dello stack e lo copia nel FP che ora punta al nuovo AR
+                + MiniFunLib.LOADRA // push RA del chiamante
                 + body.codeGen() //verrà generato il valore di ritorno alla fine
                 /*
                  Ora bisogna ripulire lo stack e risaltare al chiamante
                  */
-                + "srv\n" //per salvare il valore
+                + MiniFunLib.STORERV //per salvare il valore
                 + popListDec //aggiunto per la seconda estensione
-                + "sra\n"
-                + "pop\n" //cancelliamo AL
+                + MiniFunLib.STORERA
+                + MiniFunLib.POP //cancelliamo AL
                 + popParSequence //cancelliamo le variabili
-                + "sfp\n" // prendiamo il frame pointer e lo salviamo
-                + "lrv\n" //questo effettua l'unica operzione "utile" di una chiamata di funzione, ovvero aggiunge il valore di ritorno allo stack
-                + "lra\n" //carichiamo il return address
-                + "js\n" //effettuaiamo il jump e restituiamo il controllo al chiamante
+                + MiniFunLib.STOREFP // prendiamo il frame pointer e lo salviamo
+                + MiniFunLib.LOADRV //questo effettua l'unica operzione "utile" di una chiamata di funzione, ovvero aggiunge il valore di ritorno allo stack
+                + MiniFunLib.LOADRA //carichiamo il return address
+                + MiniFunLib.JS //effettuaiamo il jump e restituiamo il controllo al chiamante
                 + "// END " + this.id + "\n"
         );
 
-        return "push " + labelFun + " // " + this.id + "\n";
+        return MiniFunLib.PUSH + labelFun + " // " + this.id + "\n";
     }
 }

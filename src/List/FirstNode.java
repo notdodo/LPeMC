@@ -14,7 +14,9 @@ public class FirstNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + exp.toPrint() + "]";
+        return this.getClass().getSimpleName() 
+                + "[" + exp.toPrint() 
+                + "]";
     }
 
     // se non ho un LIST:type o empty non posso fare il type check
@@ -30,6 +32,6 @@ public class FirstNode extends Node {
     @Override
     public String codeGen() {
         return exp.codeGen()
-                + "lw\n";
+                + MiniFunLib.LOADW;
     }
 }

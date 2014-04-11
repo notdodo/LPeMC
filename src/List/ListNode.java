@@ -17,8 +17,10 @@ public class ListNode extends Node {
 
     @Override
     public String toPrint() {
-        return "ListNode[" + first.toPrint() + ","
-                + rest.toPrint() + "]";
+        return this.getClass().getSimpleName()
+                + "[" + first.toPrint() + ","
+                + rest.toPrint()
+                + "]";
     }
 
     // genera ricorsione quindi mi serve un flag di stop
@@ -45,10 +47,18 @@ public class ListNode extends Node {
     public String codeGen() {
         return first.codeGen()
                 + rest.codeGen()
-                + "push 1\n" + "lhp\n" + "add\n" + "sw\n"
-                + "lhp\n" + "sw\n"
-                + "lhp\n"
-                + "push 2\n" + "lhp\n" + "add\n" + "shp\n";
+                + "push 1\n"
+                + MiniFunLib.LOADHP
+                + MiniFunLib.ADD
+                + MiniFunLib.STOREW
+                + MiniFunLib.LOADHP
+                + MiniFunLib.STOREW
+                + MiniFunLib.LOADHP
+                + "push 2\n"
+                + MiniFunLib.LOADHP
+                + MiniFunLib.ADD
+                + MiniFunLib.STOREHP
+                ;
     }
 
 }

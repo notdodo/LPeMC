@@ -35,7 +35,9 @@ public class FunParNode extends Node {
             }
         }
         return this.getClass().getSimpleName()
-                + "[" + diffNesting + "," + (decl.getOffSet()) + "," + parString + "]";
+                + "[" + diffNesting + "," 
+                + (decl.getOffSet()) + "," 
+                + parString + "]";
     }
 
     @Override
@@ -47,31 +49,32 @@ public class FunParNode extends Node {
     public String codeGen() {
         String lookupAL = "";
         for (int i = 0; i < diffNesting; i++) {
-            lookupAL += "lw\n";
+            lookupAL += MiniFunLib.LOADW;
         }
 
         //il return va bene se la entry è un decFuNonde, se è un parametro allora recuperiamo AL e codice della funzione
         //bisogna prendere la chiusura
         if (decl.getDecl() instanceof DecFunNode) {
             return // Scorro AL per recuperare codice della funzione
-                    "lfp\n"
-                    + lookupAL + "push " + decl.getOffSet() + "\n"
-                    + "sub\n"
-                    + "lw\n"
+                    MiniFunLib.LOADFP
+                    + lookupAL + MiniFunLib.PUSH + decl.getOffSet() + "\n"
+                    + MiniFunLib.SUB
+                    + MiniFunLib.LOADW
                     // L' AL da passare è quello del padre sintattico
-                    + "lfp\n"
+                    + MiniFunLib.LOADFP
                     + lookupAL;
         } else {
-            return "lfp\n" //parte il codice per trovare l'indirizzo del codice della funzione chiamata
+            return MiniFunLib.LOADFP //parte il codice per trovare l'indirizzo del codice della funzione chiamata
                     + lookupAL
-                    + "push " + this.decl.getOffSet() + "\n"
-                    + "sub\n" + "lw\n" //trovato!
+                    + MiniFunLib.PUSH + this.decl.getOffSet() + "\n"
+                    + MiniFunLib.SUB 
+                    + MiniFunLib.LOADW
 
-                    + "lfp\n"// parte il codice per trovarci l'AL
+                    + MiniFunLib.LOADFP// parte il codice per trovarci l'AL
                     + lookupAL
-                    + "push " + (this.decl.getOffSet() + 1) + "\n"
-                    + "sub\n"
-                    + "lw\n" //abbiamo trovato l'access link
+                    + MiniFunLib.PUSH + (this.decl.getOffSet() + 1) + "\n"
+                    + MiniFunLib.SUB
+                    + MiniFunLib.LOADW //abbiamo trovato l'access link
                     ;
         }
     }

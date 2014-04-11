@@ -12,7 +12,9 @@ public class VarNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + diffNesting + "," + decl.getOffSet() + "]";
+        return this.getClass().getSimpleName() 
+                + "[" + diffNesting + "," 
+                + decl.getOffSet() + "]";
     }
 
     @Override
@@ -26,16 +28,16 @@ public class VarNode extends Node {
         String lookupAL = "";
 
         for (int i = 0; i < diffNesting; i++) {
-            lookupAL += "lw\n";
+            lookupAL += MiniFunLib.LOADW;
         }
         /*
          Stessa logica del FunNode
          */
-        return "lfp\n"
+        return MiniFunLib.LOADFP
                 + lookupAL
-                + "push " + decl.getOffSet() + "\n"
-                + "sub\n"
-                + "lw\n";
+                + MiniFunLib.PUSH+ decl.getOffSet() + "\n"
+                + MiniFunLib.SUB
+                + MiniFunLib.LOADW;
     }
 
 }

@@ -1,16 +1,56 @@
 // LetNode
-push lab10 // noteq
+push 12
+push 4
+push lab0 // useFun
+push lab1 // passofunz
 lfp
-push 2
-push 2
+lfp
+push 3
+sub
+lw
 lfp
 lfp
-push 1
+lfp
+push 4
 sub
 lw
 js
+print
 halt
-lab0: // noteq
+lab0: // useFun
+cfp
+lra
+lfp
+lfp
+push -4
+sub
+lw
+lfp
+push -3
+sub
+lw
+lfp
+push -1
+sub
+lw
+lfp
+push -2
+sub
+lw
+js
+srv
+sra
+pop
+pop
+pop
+pop
+pop
+sfp
+lrv
+lra
+js
+// END useFun
+lab2: // inside
 cfp
 lra
 lfp
@@ -21,21 +61,7 @@ lfp
 push -2
 sub
 lw
-beq lab3
-push 1
-b lab4
-lab3:
-push 0
-lab4:
-push 1
-beq lab1
-push 20
-print
-b lab2
-lab1:
-push 10
-print
-lab2:
+add
 srv
 sra
 pop
@@ -45,10 +71,22 @@ sfp
 lrv
 lra
 js
-// END noteq
-lab5: // noteq
+// END inside
+lab1: // passofunz
 cfp
 lra
+// LetNode
+push 2
+push 3
+push lab2 // inside
+lfp
+push 3
+push 5
+lfp
+push 4
+sub
+lw
+lfp
 lfp
 push -1
 sub
@@ -57,22 +95,12 @@ lfp
 push -2
 sub
 lw
-beq lab8
-push 0
-b lab9
-lab8:
-push 1
-lab9:
-push 1
-beq lab6
-push 20
-print
-b lab7
-lab6:
-push 10
-print
-lab7:
+js
+// END LetNode
 srv
+pop
+pop
+pop
 sra
 pop
 pop
@@ -81,41 +109,5 @@ sfp
 lrv
 lra
 js
-// END noteq
-lab10: // noteq
-cfp
-lra
-lfp
-push -1
-sub
-lw
-lfp
-push -2
-sub
-lw
-beq lab13
-push 1
-b lab14
-lab13:
-push 0
-lab14:
-push 1
-beq lab11
-push 20
-print
-b lab12
-lab11:
-push 10
-print
-lab12:
-srv
-sra
-pop
-pop
-pop
-sfp
-lrv
-lra
-js
-// END noteq
+// END passofunz
 // END LetNode

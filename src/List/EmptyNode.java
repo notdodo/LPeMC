@@ -20,6 +20,6 @@ public class EmptyNode extends Node {
 
     @Override
     public String codeGen() {
-        return "push " + MiniFunLib.NULLPOINTER + "\n";
+        return MiniFunLib.PUSH + MiniFunLib.NULLPOINTER + "\n";
     }
 }

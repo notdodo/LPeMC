@@ -1,6 +1,7 @@
 package List;
 
 // rest restituisce la code di una lista
+import Generics.MiniFunLib;
 import Generics.Node;
 
 public class RestNode extends Node {
@@ -13,7 +14,9 @@ public class RestNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + exp.toPrint() + "]";
+        return this.getClass().getSimpleName() 
+                + "[" + exp.toPrint() 
+                + "]";
     }
 
     // controllo ricorsivamente l'albero fino a fine lista
@@ -26,7 +29,7 @@ public class RestNode extends Node {
     public String codeGen() {
         return "push 1\n"
                 + exp.codeGen()
-                + "add\n"
-                + "lw\n";
+                + MiniFunLib.ADD
+                + MiniFunLib.LOADW;
     }
 }
