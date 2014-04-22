@@ -36,15 +36,20 @@ public class MinNode extends Node {
     public String codeGen() {
         String lab1 = MiniFunLib.newLabel();
         String lab2 = MiniFunLib.newLabel();
+        String lab3 = MiniFunLib.newLabel();
         return this.left.codeGen() + this.right.codeGen()
                 + MiniFunLib.BRANCHLESS + lab1 + "\n"
                 + MiniFunLib.PUSH  + MiniFunLib.FALSE + "\n"
-                + MiniFunLib.BRANCH + lab2 + "\n"
+                + MiniFunLib.BRANCH + lab3 + "\n"
                 + lab1 + ":\n"
                 + this.left.codeGen()
                 + this.right.codeGen()
                 + MiniFunLib.BRANCHEQ + lab2 + "\n"
                 + MiniFunLib.PUSH  + MiniFunLib.TRUE + "\n"
-                + lab2 + ":\n";
+                + MiniFunLib.BRANCH + lab3 + "\n"
+                + lab2 + ":\n"
+                + MiniFunLib.PUSH + MiniFunLib.FALSE + "\n"
+                + MiniFunLib.BRANCH + lab3 + "\n"
+                + lab3 + ":\n";
     }
 }
