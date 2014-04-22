@@ -1,4 +1,4 @@
-let fun prova:<X>(x:int,y:int) {
+let fun prova:bool(x:int,y:int) {
         if (x>y) then {
             true
         } else {

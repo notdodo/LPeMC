@@ -1,6 +1,8 @@
 // $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-04-22 11:49:18
 
 package Grammar;
+import Logic.NotEqNode;
+import Logic.NotNode;
 import Generics.*;
 import Type.*;
 import Logic.*;
