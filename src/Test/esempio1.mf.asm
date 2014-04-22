@@ -15,19 +15,32 @@ lab0: // prova
 cfp
 lra
 lfp
+push -2
+sub
+lw
+lfp
 push -1
 sub
 lw
+bless lab3
+push 0
+b lab5
+lab3:
 lfp
 push -2
 sub
 lw
-beq lab3
+lfp
+push -1
+sub
+lw
+beq lab4
 push 1
-b lab4
-lab3:
-push 0
+b lab5
 lab4:
+push 0
+b lab5
+lab5:
 push 1
 beq lab1
 push 0
