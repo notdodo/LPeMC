@@ -1,7 +1,6 @@
-// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-04-22 10:29:21
+// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-04-22 11:49:18
 
 package Grammar;
-import Logic.NotEqNode;
 import Generics.*;
 import Type.*;
 import Logic.*;
@@ -185,7 +184,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "declist"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:48:1: declist returns [ArrayList<Node> astList] : ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN i= ID COL (rt= type |gt= genericType ) LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )* ;
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:48:1: declist returns [ArrayList<Node> astList] : ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN i= ID COL (rt= type |rt= genericType ) LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )* ;
 	public final ArrayList<Node> declist() throws RecognitionException {
 		ArrayList<Node> astList = null;
 
@@ -196,11 +195,10 @@ public class MiniFunParser extends Parser {
 		Node t =null;
 		Node e =null;
 		Node rt =null;
-		Node gt =null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:48:42: ( ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN i= ID COL (rt= type |gt= genericType ) LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )* )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:49:13: ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN i= ID COL (rt= type |gt= genericType ) LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )*
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:48:42: ( ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN i= ID COL (rt= type |rt= genericType ) LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )* )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:49:13: ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN i= ID COL (rt= type |rt= genericType ) LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )*
 			{
 
 			                astList = new ArrayList<Node>();
@@ -213,7 +211,7 @@ public class MiniFunParser extends Parser {
 			                    offSet = 2;
 			                }
 			            
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:61:13: ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN i= ID COL (rt= type |gt= genericType ) LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )*
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:61:13: ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN i= ID COL (rt= type |rt= genericType ) LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )*
 			loop5:
 			while (true) {
 				int alt5=3;
@@ -258,12 +256,12 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:77:21: FUN i= ID COL (rt= type |gt= genericType ) LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:77:21: FUN i= ID COL (rt= type |rt= genericType ) LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC
 					{
 					match(input,FUN,FOLLOW_FUN_in_declist305); 
 					i=(Token)match(input,ID,FOLLOW_ID_in_declist311); 
 					match(input,COL,FOLLOW_COL_in_declist313); 
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:77:36: (rt= type |gt= genericType )
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:77:36: (rt= type |rt= genericType )
 					int alt1=2;
 					int LA1_0 = input.LA(1);
 					if ( (LA1_0==BOOLTYPE||LA1_0==INTTYPE||(LA1_0 >= LISTTYPE && LA1_0 <= LPAR)) ) {
@@ -290,10 +288,10 @@ public class MiniFunParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:77:47: gt= genericType
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:77:47: rt= genericType
 							{
 							pushFollow(FOLLOW_genericType_in_declist324);
-							gt=genericType();
+							rt=genericType();
 							state._fsp--;
 
 							}
@@ -1438,21 +1436,20 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "genericType"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:393:1: genericType returns [Node ast] : ALPAR primType ARPAR ;
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:393:1: genericType returns [Node ast] : ALPAR i= ID ARPAR ;
 	public final Node genericType() throws RecognitionException {
 		Node ast = null;
 
 
+		Token i=null;
+
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:393:31: ( ALPAR primType ARPAR )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:394:2: ALPAR primType ARPAR
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:393:31: ( ALPAR i= ID ARPAR )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:394:2: ALPAR i= ID ARPAR
 			{
 			match(input,ALPAR,FOLLOW_ALPAR_in_genericType3544); 
-			pushFollow(FOLLOW_primType_in_genericType3546);
-			primType();
-			state._fsp--;
-
-			match(input,ARPAR,FOLLOW_ARPAR_in_genericType3548); 
+			i=(Token)match(input,ID,FOLLOW_ID_in_genericType3548); 
+			match(input,ARPAR,FOLLOW_ARPAR_in_genericType3550); 
 			}
 
 		}
@@ -1589,7 +1586,7 @@ public class MiniFunParser extends Parser {
 	public static final BitSet FOLLOW_SLPAR_in_primType3502 = new BitSet(new long[]{0x0000000028000400L});
 	public static final BitSet FOLLOW_primType_in_primType3506 = new BitSet(new long[]{0x0000100000000000L});
 	public static final BitSet FOLLOW_SRPAR_in_primType3508 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ALPAR_in_genericType3544 = new BitSet(new long[]{0x0000000028000400L});
-	public static final BitSet FOLLOW_primType_in_genericType3546 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_ARPAR_in_genericType3548 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ALPAR_in_genericType3544 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_ID_in_genericType3548 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_ARPAR_in_genericType3550 = new BitSet(new long[]{0x0000000000000002L});
 }

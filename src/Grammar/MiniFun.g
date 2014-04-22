@@ -74,7 +74,7 @@ declist returns [ArrayList<Node> astList]:
                         $astList.add(vn);
                     }
                 
-                |   FUN i = ID COL (rt=type | gt=genericType)  
+                |   FUN i = ID COL (rt=type | rt=genericType)  
                     {// dichiarazione di una funzione
                         DecFunNode fn = new DecFunNode($i.text, $rt.ast);
                         STentry entry = new STentry(fn,offSet++);
@@ -391,7 +391,7 @@ primType returns [Node ast]:
   	;
  
 genericType returns [Node ast]:
-	ALPAR primType ARPAR;
+	ALPAR i=ID ARPAR;
 /*------------------------------------------------------------------
  * LEXER RULES
  *------------------------------------------------------------------*/
