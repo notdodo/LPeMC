@@ -41,6 +41,9 @@ public class MagNode extends Node {
                 + MiniFunLib.PUSH  + MiniFunLib.FALSE + "\n"
                 + MiniFunLib.BRANCH + lab2 + "\n"
                 + lab1 + ":\n"
+                + this.left.codeGen()
+                + this.right.codeGen()
+                + MiniFunLib.BRANCHEQ + lab2 + "\n"
                 + MiniFunLib.PUSH  + MiniFunLib.TRUE + "\n"
                 + lab2 + ":\n";
     }
