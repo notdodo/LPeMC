@@ -74,7 +74,7 @@ declist returns [ArrayList<Node> astList]:
                         $astList.add(vn);
                     }
                 
-                |   FUN i = ID COL rt=type 
+                |   FUN i = ID COL (rt=type | gt=genericType)  
                     {// dichiarazione di una funzione
                         DecFunNode fn = new DecFunNode($i.text, $rt.ast);
                         STentry entry = new STentry(fn,offSet++);
@@ -148,6 +148,7 @@ declist returns [ArrayList<Node> astList]:
                     $astList.add(fn);
                 }
             )*;
+
 	
 exp	returns [Node ast]: 
             f=term 
@@ -179,12 +180,12 @@ exp	returns [Node ast]:
                     }
  	     
                     // a <= b
-                |   MIN l = term 
+                |   ALPAR l = term 
                     { 
                         $ast = new MinNode($ast, $l.ast); 
                     } 
                 
-                |   MAG l = term 
+                |   ARPAR l = term 
                     { 
                         $ast = new MagNode($ast, $l.ast); 
                     } 	     
@@ -388,6 +389,9 @@ primType returns [Node ast]:
                     $ast = new ListTypeNode($t.ast);
                 }
   	;
+ 
+genericType returns [Node ast]:
+	ALPAR primType ARPAR;
 /*------------------------------------------------------------------
  * LEXER RULES
  *------------------------------------------------------------------*/
@@ -403,8 +407,8 @@ ASS	: '=' ;
 EQ	: '==' ;
 MINEQ	: '<='; //estensione1
 MAGEQ	: '>='; //estensione1
-MIN 	: '<';
-MAG 	: '>';
+//MIN 	: '<';
+//MAG 	: '>';
 NOTEQ   : '!=';
 PLUS	: '+' ;
 TIMES	: '*' ;
@@ -426,6 +430,8 @@ CLPAR 	: '{' ;
 CRPAR	: '}' ;
 SLPAR 	: '[' ;
 SRPAR	: ']' ;
+ALPAR	: '<';
+ARPAR	: '>';
 IF 	: 'if' ;
 THEN 	: 'then' ;
 ELSE 	: 'else' ;

@@ -1,13 +1,11 @@
-let fun noteq:int(y:int, g:int) {
-        if (y!=g)   then {
-            print (10)
-        }
-        else{ 
-            print(20)
+let fun prova:bool(x:int,y:int) {
+        if (x<y) then {
+            true
+        } else {
+            false
         }
     };
-
-in noteq(2,2);
+in print(prova(3,5));
 
 
 let fun applica:int(x:int, fo:(int)->int) {
