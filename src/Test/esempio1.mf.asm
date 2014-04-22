@@ -35,7 +35,7 @@ push -2
 sub
 lw
 beq lab4
-push 0
+push 1
 lab4:
 push 1
 beq lab1
