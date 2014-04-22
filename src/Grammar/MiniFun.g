@@ -1,34 +1,31 @@
 grammar MiniFun;
 
 @lexer::header {
-    package Grammar;
+package Grammar;
 }
 
 @header {
-    package Grammar;
-    
-    import Generics.*;
-    import Type.*;
-    import Logic.*;
-    import Math.*;
-    import List.*;
-    import java.util.HashMap;
-    import java.util.ArrayList;
+package Grammar;
+import Generics.*;
+import Type.*;
+import Logic.*;
+import Math.*;
+import List.*;
+import java.util.HashMap;
+import java.util.ArrayList;
 }
 
 @members {
-    private ArrayList<HashMap<String,STentry>> symTable = new ArrayList<HashMap<String,STentry>>();    
-    private int nestingLevel = 0;
+private ArrayList<HashMap<String,STentry>> symTable = new ArrayList<HashMap<String,STentry>>();    
+private int nestingLevel = 0;
 }
 
 /*------------------------------------------------------------------
  * PARSER RULES
  *------------------------------------------------------------------*/
 prog    returns [Node ast]: 
-            l=let // creo un nono Prog principale
-            {
-                $ast = new ProgNode($l.ast);
-            };
+	l=let // creo un nono Prog principale
+	{$ast = new ProgNode($l.ast);};
 	
 let	returns [Node ast]:
             LET
