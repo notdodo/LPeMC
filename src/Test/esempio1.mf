@@ -1,5 +1,5 @@
 let fun prova:bool(x:int,y:int) {
-        if (x<y) then {
+        if (x!=y) then {
             true
         } else {
             false

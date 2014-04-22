@@ -22,20 +22,11 @@ lfp
 push -2
 sub
 lw
-bless lab3
-push 0
+beq lab3
+push 1
 b lab4
 lab3:
-lfp
-push -1
-sub
-lw
-lfp
-push -2
-sub
-lw
-beq lab4
-push 1
+push 0
 lab4:
 push 1
 beq lab1
