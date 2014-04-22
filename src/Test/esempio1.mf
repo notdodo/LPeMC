@@ -5,7 +5,7 @@ let fun prova:bool(x:int,y:int) {
             false
         }
     };
-in print(prova(3,5));
+in print(prova(5,5));
 
 
 let fun applica:int(x:int, fo:(int)->int) {

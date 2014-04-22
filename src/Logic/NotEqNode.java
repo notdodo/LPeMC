@@ -1,4 +1,4 @@
-package Math;
+package Logic;
 
 import Generics.Node;
 import Generics.MiniFunLib;

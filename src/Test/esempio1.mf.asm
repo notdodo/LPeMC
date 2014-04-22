@@ -2,7 +2,7 @@
 push lab0 // prova
 lfp
 push 5
-push 3
+push 5
 lfp
 lfp
 push 1
@@ -35,7 +35,7 @@ push -2
 sub
 lw
 beq lab4
-push 1
+push 0
 lab4:
 push 1
 beq lab1
