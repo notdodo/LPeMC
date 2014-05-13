@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g 2014-05-13 17:28:17
+// $ANTLR 3.5.1 D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g 2014-05-13 17:47:32
 
 package Grammar;
 import Generics.*;
@@ -1030,6 +1030,19 @@ public class MiniFunParser extends Parser {
 					                    
 					                    // controllo che esista una dichiarazione per quell'ID
 					                   
+					                   for (declNL = nestingLevel; declNL >= 0; declNL--) {
+					                   	hm = symTable.get(declNL);
+					                   	entry = hm.get((i!=null?i.getText():null));
+					                   	if (entry != null)
+					                   		break;
+					                   	hmp = symTableParType.get(declNL);
+					                   	entry = hmp.get((i!=null?i.getText():null));
+					                   	if (entry != null)
+					                   		break;
+					                   }
+					                   
+					                   
+					   /*                
 					                    for(declNL = nestingLevel; declNL >= 0; declNL--) {
 					                       hm = symTable.get(declNL);
 					                       //System.out.println(declNL+"hm:"+hm+"\n\n");
@@ -1072,17 +1085,17 @@ public class MiniFunParser extends Parser {
 					                    	
 					                     */
 					                    
-					                                        
+					                                   
 					                    if(entry.getDecl() instanceof DecFunNode || 
 					                        (entry.getDecl() instanceof DecParNode && 
-					                        ((DecParNode)entry.getDecl()).getType() instanceof FunParType)){
+					                        ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null){
 					                            ast = new FunParNode(entry,nestingLevel-declNL);
 					                    } else {
 					                    //System.out.println("VarNode "+ (i!=null?i.getText():null)+" "+(i!=null?i.getLine():0));
 					                        ast = new VarNode(entry,nestingLevel-declNL); 
 					                    }	  
 					                
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:383:17: ( LPAR (fp= exp ( COMMA p= exp )* )? RPAR )?
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:396:17: ( LPAR (fp= exp ( COMMA p= exp )* )? RPAR )?
 					int alt12=2;
 					int LA12_0 = input.LA(1);
 					if ( (LA12_0==LPAR) ) {
@@ -1090,11 +1103,11 @@ public class MiniFunParser extends Parser {
 					}
 					switch (alt12) {
 						case 1 :
-							// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:384:21: LPAR (fp= exp ( COMMA p= exp )* )? RPAR
+							// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:397:21: LPAR (fp= exp ( COMMA p= exp )* )? RPAR
 							{
 							match(input,LPAR,FOLLOW_LPAR_in_fatt2618); 
 							ArrayList<Node> parList = new ArrayList<Node>();
-							// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:385:21: (fp= exp ( COMMA p= exp )* )?
+							// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:398:21: (fp= exp ( COMMA p= exp )* )?
 							int alt11=2;
 							int LA11_0 = input.LA(1);
 							if ( (LA11_0==EMPTY||(LA11_0 >= FALSE && LA11_0 <= FIRST)||(LA11_0 >= ID && LA11_0 <= IF)||LA11_0==LPAR||(LA11_0 >= NAT && LA11_0 <= NOT)||(LA11_0 >= PRINT && LA11_0 <= REST)||LA11_0==SLPAR||LA11_0==TRUE) ) {
@@ -1102,14 +1115,14 @@ public class MiniFunParser extends Parser {
 							}
 							switch (alt11) {
 								case 1 :
-									// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:386:25: fp= exp ( COMMA p= exp )*
+									// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:399:25: fp= exp ( COMMA p= exp )*
 									{
 									pushFollow(FOLLOW_exp_in_fatt2672);
 									fp=exp();
 									state._fsp--;
 
 									parList.add(fp);
-									// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:387:25: ( COMMA p= exp )*
+									// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:400:25: ( COMMA p= exp )*
 									loop10:
 									while (true) {
 										int alt10=2;
@@ -1120,7 +1133,7 @@ public class MiniFunParser extends Parser {
 
 										switch (alt10) {
 										case 1 :
-											// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:388:29: COMMA p= exp
+											// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:401:29: COMMA p= exp
 											{
 											match(input,COMMA,FOLLOW_COMMA_in_fatt2730); 
 											pushFollow(FOLLOW_exp_in_fatt2736);
@@ -1153,7 +1166,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 7 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:397:17: IF x= exp THEN CLPAR y= exp CRPAR ELSE CLPAR z= exp CRPAR
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:410:17: IF x= exp THEN CLPAR y= exp CRPAR ELSE CLPAR z= exp CRPAR
 					{
 					match(input,IF,FOLLOW_IF_in_fatt2883); 
 					pushFollow(FOLLOW_exp_in_fatt2889);
@@ -1180,7 +1193,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 8 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:403:17: SLPAR e1= exp DOUBLCOL e2= exp SRPAR
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:416:17: SLPAR e1= exp DOUBLCOL e2= exp SRPAR
 					{
 					match(input,SLPAR,FOLLOW_SLPAR_in_fatt2981); 
 					pushFollow(FOLLOW_exp_in_fatt2987);
@@ -1199,7 +1212,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 9 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:408:17: FIRST LPAR e= exp RPAR
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:421:17: FIRST LPAR e= exp RPAR
 					{
 					match(input,FIRST,FOLLOW_FIRST_in_fatt3047); 
 					match(input,LPAR,FOLLOW_LPAR_in_fatt3049); 
@@ -1214,7 +1227,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 10 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:413:17: REST LPAR e= exp RPAR
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:426:17: REST LPAR e= exp RPAR
 					{
 					match(input,REST,FOLLOW_REST_in_fatt3107); 
 					match(input,LPAR,FOLLOW_LPAR_in_fatt3109); 
@@ -1229,7 +1242,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 11 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:418:17: PRINT LPAR e= exp RPAR
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:431:17: PRINT LPAR e= exp RPAR
 					{
 					match(input,PRINT,FOLLOW_PRINT_in_fatt3167); 
 					match(input,LPAR,FOLLOW_LPAR_in_fatt3169); 
@@ -1244,7 +1257,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 12 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:423:17: NOT LPAR e= exp RPAR
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:436:17: NOT LPAR e= exp RPAR
 					{
 					match(input,NOT,FOLLOW_NOT_in_fatt3231); 
 					match(input,LPAR,FOLLOW_LPAR_in_fatt3233); 
@@ -1275,7 +1288,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "type"
-	// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:429:1: type returns [Node ast] : (p= primType |f= funParType );
+	// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:442:1: type returns [Node ast] : (p= primType |f= funParType );
 	public final Node type() throws RecognitionException {
 		Node ast = null;
 
@@ -1284,7 +1297,7 @@ public class MiniFunParser extends Parser {
 		Node f =null;
 
 		try {
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:429:27: (p= primType |f= funParType )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:442:27: (p= primType |f= funParType )
 			int alt14=2;
 			int LA14_0 = input.LA(1);
 			if ( (LA14_0==BOOLTYPE||LA14_0==ID||LA14_0==INTTYPE||LA14_0==LISTTYPE) ) {
@@ -1302,7 +1315,7 @@ public class MiniFunParser extends Parser {
 
 			switch (alt14) {
 				case 1 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:430:17: p= primType
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:443:17: p= primType
 					{
 					pushFollow(FOLLOW_primType_in_type3301);
 					p=primType();
@@ -1314,7 +1327,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 2 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:435:17: f= funParType
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:448:17: f= funParType
 					{
 					pushFollow(FOLLOW_funParType_in_type3355);
 					f=funParType();
@@ -1342,7 +1355,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "funParType"
-	// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:441:1: funParType returns [Node ast] : LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType ;
+	// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:454:1: funParType returns [Node ast] : LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType ;
 	public final Node funParType() throws RecognitionException {
 		Node ast = null;
 
@@ -1351,14 +1364,14 @@ public class MiniFunParser extends Parser {
 		Node p =null;
 
 		try {
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:441:30: ( LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:442:13: LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:454:30: ( LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:455:13: LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType
 			{
 			match(input,LPAR,FOLLOW_LPAR_in_funParType3409); 
 
 			                FunParType fpt = new FunParType();
 			            
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:446:13: (t= type ( COMMA t= type )* )?
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:459:13: (t= type ( COMMA t= type )* )?
 			int alt16=2;
 			int LA16_0 = input.LA(1);
 			if ( (LA16_0==BOOLTYPE||LA16_0==ID||LA16_0==INTTYPE||(LA16_0 >= LISTTYPE && LA16_0 <= LPAR)) ) {
@@ -1366,7 +1379,7 @@ public class MiniFunParser extends Parser {
 			}
 			switch (alt16) {
 				case 1 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:447:17: t= type ( COMMA t= type )*
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:460:17: t= type ( COMMA t= type )*
 					{
 					pushFollow(FOLLOW_type_in_funParType3463);
 					t=type();
@@ -1375,7 +1388,7 @@ public class MiniFunParser extends Parser {
 
 					                    fpt.addPar(t);
 					                
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:451:17: ( COMMA t= type )*
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:464:17: ( COMMA t= type )*
 					loop15:
 					while (true) {
 						int alt15=2;
@@ -1386,7 +1399,7 @@ public class MiniFunParser extends Parser {
 
 						switch (alt15) {
 						case 1 :
-							// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:452:21: COMMA t= type
+							// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:465:21: COMMA t= type
 							{
 							match(input,COMMA,FOLLOW_COMMA_in_funParType3522); 
 							pushFollow(FOLLOW_type_in_funParType3528);
@@ -1435,7 +1448,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "primType"
-	// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:463:1: primType returns [Node ast] : ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType SRPAR |i= ID );
+	// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:476:1: primType returns [Node ast] : ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType SRPAR |i= ID );
 	public final Node primType() throws RecognitionException {
 		Node ast = null;
 
@@ -1444,7 +1457,7 @@ public class MiniFunParser extends Parser {
 		Node t =null;
 
 		try {
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:463:28: ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType SRPAR |i= ID )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:476:28: ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType SRPAR |i= ID )
 			int alt17=4;
 			switch ( input.LA(1) ) {
 			case INTTYPE:
@@ -1474,7 +1487,7 @@ public class MiniFunParser extends Parser {
 			}
 			switch (alt17) {
 				case 1 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:464:17: INTTYPE
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:477:17: INTTYPE
 					{
 					match(input,INTTYPE,FOLLOW_INTTYPE_in_primType3651); 
 
@@ -1483,7 +1496,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 2 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:469:17: BOOLTYPE
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:482:17: BOOLTYPE
 					{
 					match(input,BOOLTYPE,FOLLOW_BOOLTYPE_in_primType3704); 
 
@@ -1492,7 +1505,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 3 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:474:17: LISTTYPE SLPAR t= primType SRPAR
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:487:17: LISTTYPE SLPAR t= primType SRPAR
 					{
 					match(input,LISTTYPE,FOLLOW_LISTTYPE_in_primType3758); 
 					match(input,SLPAR,FOLLOW_SLPAR_in_primType3760); 
@@ -1507,7 +1520,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 4 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:478:15: i= ID
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:491:15: i= ID
 					{
 					i=(Token)match(input,ID,FOLLOW_ID_in_primType3804); 
 

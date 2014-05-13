@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g 2014-05-13 17:28:18
+// $ANTLR 3.5.1 D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g 2014-05-13 17:47:32
 
 package Grammar;
 
@@ -78,8 +78,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:521:6: ( 'let' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:521:8: 'let'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:534:6: ( 'let' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:534:8: 'let'
 			{
 			match("let"); 
 
@@ -99,8 +99,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = APICI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:522:9: ( '\"' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:522:11: '\"'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:535:9: ( '\"' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:535:11: '\"'
 			{
 			match('\"'); 
 			}
@@ -119,8 +119,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = IN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:524:4: ( 'in' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:524:6: 'in'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:537:4: ( 'in' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:537:6: 'in'
 			{
 			match("in"); 
 
@@ -140,8 +140,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SEMIC;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:525:7: ( ';' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:525:9: ';'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:538:7: ( ';' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:538:9: ';'
 			{
 			match(';'); 
 			}
@@ -160,8 +160,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = COL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:526:5: ( ':' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:526:7: ':'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:539:5: ( ':' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:539:7: ':'
 			{
 			match(':'); 
 			}
@@ -180,8 +180,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = DOUBLCOL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:527:9: ( '::' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:527:11: '::'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:540:9: ( '::' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:540:11: '::'
 			{
 			match("::"); 
 
@@ -201,8 +201,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:528:7: ( ',' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:528:9: ','
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:541:7: ( ',' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:541:9: ','
 			{
 			match(','); 
 			}
@@ -221,8 +221,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ASS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:529:5: ( '=' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:529:7: '='
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:542:5: ( '=' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:542:7: '='
 			{
 			match('='); 
 			}
@@ -241,8 +241,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:530:4: ( '==' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:530:6: '=='
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:543:4: ( '==' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:543:6: '=='
 			{
 			match("=="); 
 
@@ -262,8 +262,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MINEQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:531:7: ( '<=' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:531:9: '<='
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:544:7: ( '<=' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:544:9: '<='
 			{
 			match("<="); 
 
@@ -283,8 +283,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MAGEQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:532:7: ( '>=' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:532:9: '>='
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:545:7: ( '>=' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:545:9: '>='
 			{
 			match(">="); 
 
@@ -304,8 +304,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = NOTEQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:535:9: ( '!=' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:535:11: '!='
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:548:9: ( '!=' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:548:11: '!='
 			{
 			match("!="); 
 
@@ -325,8 +325,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = PLUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:536:6: ( '+' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:536:8: '+'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:549:6: ( '+' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:549:8: '+'
 			{
 			match('+'); 
 			}
@@ -345,8 +345,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = TIMES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:537:7: ( '*' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:537:9: '*'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:550:7: ( '*' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:550:9: '*'
 			{
 			match('*'); 
 			}
@@ -365,8 +365,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MINUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:538:7: ( '-' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:538:9: '-'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:551:7: ( '-' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:551:9: '-'
 			{
 			match('-'); 
 			}
@@ -385,8 +385,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = OR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:539:4: ( '||' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:539:6: '||'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:552:4: ( '||' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:552:6: '||'
 			{
 			match("||"); 
 
@@ -406,8 +406,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = AND;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:540:5: ( '&&' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:540:7: '&&'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:553:5: ( '&&' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:553:7: '&&'
 			{
 			match("&&"); 
 
@@ -427,8 +427,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:541:5: ( '/' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:541:7: '/'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:554:5: ( '/' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:554:7: '/'
 			{
 			match('/'); 
 			}
@@ -447,7 +447,7 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = NAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:542:5: ( ( ( '1' .. '9' ) ( '0' .. '9' )* ) | '0' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:555:5: ( ( ( '1' .. '9' ) ( '0' .. '9' )* ) | '0' )
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( ((LA2_0 >= '1' && LA2_0 <= '9')) ) {
@@ -465,10 +465,10 @@ public class MiniFunLexer extends Lexer {
 
 			switch (alt2) {
 				case 1 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:542:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:555:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
 					{
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:542:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:542:8: ( '1' .. '9' ) ( '0' .. '9' )*
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:555:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:555:8: ( '1' .. '9' ) ( '0' .. '9' )*
 					{
 					if ( (input.LA(1) >= '1' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -478,7 +478,7 @@ public class MiniFunLexer extends Lexer {
 						recover(mse);
 						throw mse;
 					}
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:542:18: ( '0' .. '9' )*
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:555:18: ( '0' .. '9' )*
 					loop1:
 					while (true) {
 						int alt1=2;
@@ -512,7 +512,7 @@ public class MiniFunLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:542:33: '0'
+					// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:555:33: '0'
 					{
 					match('0'); 
 					}
@@ -533,8 +533,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = TRUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:543:6: ( 'true' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:543:8: 'true'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:556:6: ( 'true' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:556:8: 'true'
 			{
 			match("true"); 
 
@@ -554,8 +554,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FALSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:544:7: ( 'false' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:544:9: 'false'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:557:7: ( 'false' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:557:9: 'false'
 			{
 			match("false"); 
 
@@ -575,8 +575,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = NOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:545:5: ( 'not' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:545:7: 'not'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:558:5: ( 'not' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:558:7: 'not'
 			{
 			match("not"); 
 
@@ -596,8 +596,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = EMPTY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:546:9: ( 'empty' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:546:11: 'empty'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:559:9: ( 'empty' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:559:11: 'empty'
 			{
 			match("empty"); 
 
@@ -617,8 +617,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:547:6: ( 'var' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:547:8: 'var'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:560:6: ( 'var' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:560:8: 'var'
 			{
 			match("var"); 
 
@@ -638,8 +638,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FUN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:548:6: ( 'fun' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:548:8: 'fun'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:561:6: ( 'fun' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:561:8: 'fun'
 			{
 			match("fun"); 
 
@@ -659,8 +659,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ARROW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:549:7: ( '->' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:549:9: '->'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:562:7: ( '->' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:562:9: '->'
 			{
 			match("->"); 
 
@@ -680,8 +680,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:550:7: ( '(' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:550:9: '('
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:563:7: ( '(' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:563:9: '('
 			{
 			match('('); 
 			}
@@ -700,8 +700,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = RPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:551:6: ( ')' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:551:8: ')'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:564:6: ( ')' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:564:8: ')'
 			{
 			match(')'); 
 			}
@@ -720,8 +720,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = CLPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:552:8: ( '{' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:552:10: '{'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:565:8: ( '{' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:565:10: '{'
 			{
 			match('{'); 
 			}
@@ -740,8 +740,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = CRPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:553:7: ( '}' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:553:9: '}'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:566:7: ( '}' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:566:9: '}'
 			{
 			match('}'); 
 			}
@@ -760,8 +760,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SLPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:554:8: ( '[' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:554:10: '['
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:567:8: ( '[' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:567:10: '['
 			{
 			match('['); 
 			}
@@ -780,8 +780,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SRPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:555:7: ( ']' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:555:9: ']'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:568:7: ( ']' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:568:9: ']'
 			{
 			match(']'); 
 			}
@@ -800,8 +800,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ALPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:556:7: ( '<' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:556:9: '<'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:569:7: ( '<' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:569:9: '<'
 			{
 			match('<'); 
 			}
@@ -820,8 +820,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ARPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:557:7: ( '>' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:557:9: '>'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:570:7: ( '>' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:570:9: '>'
 			{
 			match('>'); 
 			}
@@ -840,8 +840,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:558:5: ( 'if' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:558:7: 'if'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:571:5: ( 'if' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:571:7: 'if'
 			{
 			match("if"); 
 
@@ -861,8 +861,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = THEN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:559:7: ( 'then' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:559:9: 'then'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:572:7: ( 'then' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:572:9: 'then'
 			{
 			match("then"); 
 
@@ -882,8 +882,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ELSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:560:7: ( 'else' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:560:9: 'else'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:573:7: ( 'else' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:573:9: 'else'
 			{
 			match("else"); 
 
@@ -903,8 +903,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = PRINT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:561:7: ( 'print' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:561:9: 'print'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:574:7: ( 'print' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:574:9: 'print'
 			{
 			match("print"); 
 
@@ -924,8 +924,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FIRST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:562:9: ( 'first' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:562:11: 'first'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:575:9: ( 'first' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:575:11: 'first'
 			{
 			match("first"); 
 
@@ -945,8 +945,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = REST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:563:9: ( 'rest' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:563:11: 'rest'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:576:9: ( 'rest' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:576:11: 'rest'
 			{
 			match("rest"); 
 
@@ -966,8 +966,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = INTTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:564:9: ( 'int' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:564:11: 'int'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:577:9: ( 'int' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:577:11: 'int'
 			{
 			match("int"); 
 
@@ -987,8 +987,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = BOOLTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:565:9: ( 'bool' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:565:11: 'bool'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:578:9: ( 'bool' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:578:11: 'bool'
 			{
 			match("bool"); 
 
@@ -1008,8 +1008,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LISTTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:566:9: ( 'list' )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:566:11: 'list'
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:579:9: ( 'list' )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:579:11: 'list'
 			{
 			match("list"); 
 
@@ -1029,8 +1029,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:568:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:568:7: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:581:5: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:581:7: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -1040,7 +1040,7 @@ public class MiniFunLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:569:5: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:582:5: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -1085,10 +1085,10 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = WHITESP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:572:10: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:572:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:585:10: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:585:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			{
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:572:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:585:12: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -1138,8 +1138,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ERR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:574:9: ( . )
-			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:574:11: .
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:587:9: ( . )
+			// D:\\Develop\\NetBeans\\MiniFun_Project\\src\\Grammar\\MiniFun.g:587:11: .
 			{
 			matchAny(); 
 			 System.out.println("Invalid char: "+getText()); 

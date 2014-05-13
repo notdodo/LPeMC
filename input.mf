@@ -7,7 +7,7 @@ let
     else { [f(first(l)) :: map<X,Y>(rest(l),f)] } 
   };
 
-  fun id:int(n:int) = n+5;
+  fun id:int(n:int) { n+5 };
 
 in print(map<int,int>([1 :: [12 :: empty]],id));
 
