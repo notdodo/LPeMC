@@ -15,6 +15,8 @@ public class DecFunNode extends Node {
     private boolean typeChecked = false;
     private String typeString = "";
     private ArrayList<Node> decList = new ArrayList<Node>();
+    private Node decType;
+    
 
     /**
      * @param i Identificare del nome della funzione
@@ -57,7 +59,10 @@ public class DecFunNode extends Node {
     public String getID() {
         return this.id;
     }
-
+    
+    public void addParType(Node apt){
+        decType=apt;
+    }
     @Override
     public String toPrint() {
         String parString = "";

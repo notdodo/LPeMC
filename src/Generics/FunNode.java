@@ -14,7 +14,11 @@ public class FunNode extends Node {
         this.diffNesting = dn;
         this.parList = pl;
     }
-
+    
+    public STentry getDecl(){
+    return this.decl;
+    }
+    
     @Override
     public String toPrint() {
         String parString = "";

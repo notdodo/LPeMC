@@ -8,7 +8,7 @@ public class ListNode extends Node {
     private final Node first;
     private final Node rest;
     private boolean typeChecked = false;
-    private final String typeString = "";
+    private String typeString = "";
 
     public ListNode(Node f, Node r) {
         first = f;
@@ -26,21 +26,40 @@ public class ListNode extends Node {
     // genera ricorsione quindi mi serve un flag di stop
     @Override
     public String typeCheck() {
+//        if (MiniFunLib.isCompatible(first, rest))
+//			if (first.typeCheck() == MiniFunLib.EMPTY)
+//				return rest.typeCheck();
+//			else
+//				return first.typeCheck();
+//
+//		System.out
+//		.println("Listnode TypeCheck Error: List operands are incompatible: "
+//				+ first.typeCheck()
+//				+ ", "
+//				+ rest.typeCheck()
+//				+ ".Shutdown parser");
+//		System.exit(0);
+//		return "";
+        
+        
         if (!this.typeChecked) {
             this.typeChecked = true;
             // type check della lista meno il first
             String listRest = this.rest.typeCheck();
+            System.out.println(listRest);
             // creo il tipo LIST:type
             String listFirst = MiniFunLib.LIST + this.first.typeCheck();
+            System.out.println(listFirst);
             // se la lista è vuota (EMPTY) o i tipi di first e rest sono uguali
             if (this.rest instanceof EmptyNode || (listFirst).equals(listRest)) {
+                typeString = listFirst;
                 return listFirst;
+            }else {
+                System.out.println("Type Error " + this.getClass().getSimpleName());
+                System.exit(0);
             }
-        } else {
-            System.out.println("Type Error " + this.getClass().getSimpleName());
-            System.exit(0);
-        }
-        return "";
+        } 
+        return typeString;
     }
 
     @Override
