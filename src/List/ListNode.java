@@ -26,22 +26,6 @@ public class ListNode extends Node {
     // genera ricorsione quindi mi serve un flag di stop
     @Override
     public String typeCheck() {
-//        if (MiniFunLib.isCompatible(first, rest))
-//			if (first.typeCheck() == MiniFunLib.EMPTY)
-//				return rest.typeCheck();
-//			else
-//				return first.typeCheck();
-//
-//		System.out
-//		.println("Listnode TypeCheck Error: List operands are incompatible: "
-//				+ first.typeCheck()
-//				+ ", "
-//				+ rest.typeCheck()
-//				+ ".Shutdown parser");
-//		System.exit(0);
-//		return "";
-        
-        
         if (!this.typeChecked) {
             this.typeChecked = true;
             // type check della lista meno il first
