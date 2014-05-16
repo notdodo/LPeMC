@@ -39,8 +39,7 @@ public class MinNode extends Node {
         String lab3 = MiniFunLib.newLabel();
         return this.left.codeGen() + this.right.codeGen()
                 + MiniFunLib.BRANCHLESS + lab1 + "\n"
-                + MiniFunLib.PUSH  + MiniFunLib.FALSE + "\n"
-                + MiniFunLib.BRANCH + lab3 + "\n"
+                + MiniFunLib.BRANCH + lab2 + "\n"
                 + lab1 + ":\n"
                 + this.left.codeGen()
                 + this.right.codeGen()

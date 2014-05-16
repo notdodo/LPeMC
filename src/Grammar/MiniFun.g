@@ -74,7 +74,7 @@ declist returns [ArrayList<Node> astList]:
                         $astList.add(vn);
                     }
                 
-                |   FUN i = ID COL (rt=type | rt=genericType)  
+                |   FUN i = ID COL rt=type  
                     {// dichiarazione di una funzione
                         DecFunNode fn = new DecFunNode($i.text, $rt.ast);
                         STentry entry = new STentry(fn,offSet++);
@@ -127,7 +127,7 @@ declist returns [ArrayList<Node> astList]:
                                 parList.add(dpn);
                             }
                         )*
-                    )? 
+                    )?
                 {
                     fn.addPar(parList);
                 } 
@@ -144,7 +144,8 @@ declist returns [ArrayList<Node> astList]:
                 CRPAR SEMIC 
                 {
                     fn.addBody($e.ast); // aggiungo il body alla funzione (Let o espressione)
-                    symTable.remove(nestingLevel--);
+                    symTable.remove(nestingLevel);
+                    nestingLevel--;
                     $astList.add(fn);
                 }
             )*;

@@ -39,8 +39,7 @@ public class MagNode extends Node {
         String lab3 = MiniFunLib.newLabel();
         return this.right.codeGen() + this.left.codeGen()
                 + MiniFunLib.BRANCHLESS + lab1 + "\n"
-                + MiniFunLib.PUSH  + MiniFunLib.FALSE + "\n"
-                + MiniFunLib.BRANCH + lab3 + "\n"
+                + MiniFunLib.BRANCH + lab2 + "\n"
                 + lab1 + ":\n"
                 + this.right.codeGen()
                 + this.left.codeGen()
