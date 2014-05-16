@@ -29,11 +29,16 @@ public class IfNode extends Node {
         if (MiniFunLib.isCompatible(cond, new BoolTypeNode())) {
             if (MiniFunLib.isCompatible(th, el)) {
                 return el.typeCheck();
-            } else if (MiniFunLib.isCompatible(el, th)) {
-                return th.typeCheck();
+            } else {
+                if (MiniFunLib.isCompatible(el, th)) {
+                    return th.typeCheck();
+                } else {
+                    System.out.println("Type Error Else/Then " + this.getClass().getSimpleName());
+                    System.exit(0);
+                }
             }
         }
-        System.out.println("Type Error " + this.getClass().getSimpleName());
+        System.out.println("Type Error Condition " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
     }

@@ -44,6 +44,7 @@ public class MiniFunLib {
                 || (n2.typeCheck().indexOf(MiniFunLib.LIST) == 0 && n1.typeCheck().equals(MiniFunLib.EMPTY))) {
             return true;
         }
+        System.out.println("===\nn1.typeCheck = "+n1.typeCheck()+"\nn2.typeCheck = "+n2.typeCheck()+"\nn1.getClass = "+n1.getClass()+"\nn2.getClass = "+n2.getClass());
         return false;
     }
 

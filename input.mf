@@ -1,0 +1,49 @@
+
+
+let 
+  fun map<X,Y>:list[Y] (l:list[X],f:(X)->Y){ 
+    if (l==empty) 
+    then {empty}
+    else { [f(first(l)) :: map<X,Y>(rest(l),f)] } 
+  };
+
+  fun id:int(n:int) { n+5 };
+
+in print(map<int,int>([1 :: [12 :: empty]],id));
+
+let
+    var a:list[int] = [3::[15::empty]];
+
+    fun pList:int(x:list[int]) {
+        if (x==empty) then {
+            0
+        }else { print(first(x)) + pList(rest(x)) }
+    };
+in pList(a);
+
+
+
+
+let 
+	var g:int=12; 
+	var zz:int=4;
+	fun useFun:int(f2:(int,int)->int, a2:int, b2:int){
+		f2(a2,b2)   
+	};
+    fun passofunz:int(f3:((int,int)->int, int, int)-> int){
+    	let
+    		var g:int=2;
+    		var k:int=3;
+    		fun inside:int(c:int,y:int) {c+y}; 
+    	in
+    		f3(inside,5,6);
+    };
+in
+	print(passofunz(useFun));
+
+
+
+
+
+
+
