@@ -7,6 +7,7 @@ public class LetNode extends Node {
 
     private final ArrayList<Node> astList;
     private final Node exp;
+    // se si tratta di un let dichiarato internamente ad una funzione
     private final boolean localLet;
 
     public LetNode(ArrayList<Node> list, Node exp, boolean localLet) {
@@ -47,7 +48,7 @@ public class LetNode extends Node {
             code += this.astList.get(i).codeGen();
         }
 
-        if (localLet) {
+        if (this.localLet) {
             return "// LetNode\n" + code + this.exp.codeGen() + "// END LetNode\n";
         } else {
             return "// LetNode\n" + code + this.exp.codeGen() 
