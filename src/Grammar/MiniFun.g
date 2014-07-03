@@ -484,7 +484,7 @@ primType returns [Node ast]:
                     $ast = new BoolTypeNode();
                 }
                 // tipo lista LIST:bool, LIST:int
-            | LISTTYPE SLPAR t=primType SRPAR
+            | LISTTYPE SLPAR t=primType (COMMA t2=primType)* SRPAR
                 {
                     $ast = new ListTypeNode($t.ast);
                 }
