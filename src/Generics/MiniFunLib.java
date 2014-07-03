@@ -41,7 +41,10 @@ public class MiniFunLib {
     public static boolean isCompatible(Node n1, Node n2) {
         if ((n1.typeCheck().equals(n2.typeCheck())
                 || (n1.typeCheck().indexOf(MiniFunLib.LIST) == 0 && n2.typeCheck().equals(MiniFunLib.EMPTY)))
-                || (n2.typeCheck().indexOf(MiniFunLib.LIST) == 0 && n1.typeCheck().equals(MiniFunLib.EMPTY))) {
+                || (n2.typeCheck().indexOf(MiniFunLib.LIST) == 0 && n1.typeCheck().equals(MiniFunLib.EMPTY))
+                || (n1.typeCheck().equals(MiniFunLib.INT) && n2.typeCheck().equals(MiniFunLib.EMPTY))
+                || (n2.typeCheck().equals(MiniFunLib.INT) && n1.typeCheck().equals(MiniFunLib.EMPTY))
+                ) {
             return true;
         }
         System.out.println("===\nn1.typeCheck = "+n1.typeCheck()+"\nn2.typeCheck = "+n2.typeCheck()+"\nn1.getClass = "+n1.getClass()+"\nn2.getClass = "+n2.getClass());

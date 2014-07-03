@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-03 15:15:33
+// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-03 16:18:44
 
 package Grammar;
 import Generics.*;
@@ -339,7 +339,7 @@ public class MiniFunParser extends Parser {
 					                        STentry entry = new STentry(fn,offSet++);
 					                        HashMap<String, STentry> hm = symTable.get(nestingLevel);
 					                        HashMap<String, STentry> hmp = symTableParType.get(nestingLevel);
-					                        System.out.println((f!=null?f.getText():null));
+					                        //System.out.println((f!=null?f.getText():null));
 					                        if (hm.put((f!=null?f.getText():null), entry) != null) {
 					                            System.out.println("Identifier " + (f!=null?f.getText():null)
 					                            + " at line " + (f!=null?f.getLine():0) + " is already defined");

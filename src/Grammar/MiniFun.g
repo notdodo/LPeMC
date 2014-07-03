@@ -120,7 +120,7 @@ offSetParType=1;
                         STentry entry = new STentry(fn,offSet++);
                         HashMap<String, STentry> hm = symTable.get(nestingLevel);
                         HashMap<String, STentry> hmp = symTableParType.get(nestingLevel);
-                        System.out.println($f.text);
+                        //System.out.println($f.text);
                         if (hm.put($f.text, entry) != null) {
                             System.out.println("Identifier " + $f.text
                             + " at line " + $f.line + " is already defined");

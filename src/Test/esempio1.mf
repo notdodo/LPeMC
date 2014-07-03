@@ -1,12 +1,16 @@
-let var lista:list[int] = [1 :: [2 :: empty]];
+let var lista:list[int] = [1 :: [2 :: Empty]];
     fun printl:int(l:list[int]) {
-        if (first(l) == empty) then
+        if (first(l) == Empty) then
            { 0 }
         else
            { print(first(l) + printl(rest(l))) }
     };
-in printl(lista);
-
+    fun lenght:int(l:list[int]) {
+        if (first(l) == Empty) then
+        { 0 }
+        else { 1+lenght(rest(l)) }
+    };
+in lenght(lista);
 
 let fun applica:int(x:int, fo:(int)->int) {
         fo(x)
