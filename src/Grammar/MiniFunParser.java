@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-05-26 09:34:35
+// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-03 15:15:33
 
 package Grammar;
 import Generics.*;
@@ -1448,44 +1448,45 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "primType"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:476:1: primType returns [Node ast] : ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType SRPAR |i= ID );
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:476:1: primType returns [Node ast] : ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType ( COMMA t2= primType )* SRPAR |i= ID );
 	public final Node primType() throws RecognitionException {
 		Node ast = null;
 
 
 		Token i=null;
 		Node t =null;
+		Node t2 =null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:476:28: ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType SRPAR |i= ID )
-			int alt17=4;
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:476:28: ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType ( COMMA t2= primType )* SRPAR |i= ID )
+			int alt18=4;
 			switch ( input.LA(1) ) {
 			case INTTYPE:
 				{
-				alt17=1;
+				alt18=1;
 				}
 				break;
 			case BOOLTYPE:
 				{
-				alt17=2;
+				alt18=2;
 				}
 				break;
 			case LISTTYPE:
 				{
-				alt17=3;
+				alt18=3;
 				}
 				break;
 			case ID:
 				{
-				alt17=4;
+				alt18=4;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 17, 0, input);
+					new NoViableAltException("", 18, 0, input);
 				throw nvae;
 			}
-			switch (alt17) {
+			switch (alt18) {
 				case 1 :
 					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:477:17: INTTYPE
 					{
@@ -1505,7 +1506,7 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:487:15: LISTTYPE SLPAR t= primType SRPAR
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:487:15: LISTTYPE SLPAR t= primType ( COMMA t2= primType )* SRPAR
 					{
 					match(input,LISTTYPE,FOLLOW_LISTTYPE_in_primType3506); 
 					match(input,SLPAR,FOLLOW_SLPAR_in_primType3508); 
@@ -1513,7 +1514,33 @@ public class MiniFunParser extends Parser {
 					t=primType();
 					state._fsp--;
 
-					match(input,SRPAR,FOLLOW_SRPAR_in_primType3514); 
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:487:41: ( COMMA t2= primType )*
+					loop17:
+					while (true) {
+						int alt17=2;
+						int LA17_0 = input.LA(1);
+						if ( (LA17_0==COMMA) ) {
+							alt17=1;
+						}
+
+						switch (alt17) {
+						case 1 :
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:487:42: COMMA t2= primType
+							{
+							match(input,COMMA,FOLLOW_COMMA_in_primType3515); 
+							pushFollow(FOLLOW_primType_in_primType3519);
+							t2=primType();
+							state._fsp--;
+
+							}
+							break;
+
+						default :
+							break loop17;
+						}
+					}
+
+					match(input,SRPAR,FOLLOW_SRPAR_in_primType3523); 
 
 					                    ast = new ListTypeNode(t);
 					                
@@ -1522,7 +1549,7 @@ public class MiniFunParser extends Parser {
 				case 4 :
 					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:491:15: i= ID
 					{
-					i=(Token)match(input,ID,FOLLOW_ID_in_primType3550); 
+					i=(Token)match(input,ID,FOLLOW_ID_in_primType3559); 
 
 					             ast = new IdTypeNode((i!=null?i.getText():null));
 					             
@@ -1666,7 +1693,9 @@ public class MiniFunParser extends Parser {
 	public static final BitSet FOLLOW_BOOLTYPE_in_primType3455 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_LISTTYPE_in_primType3506 = new BitSet(new long[]{0x0000080000000000L});
 	public static final BitSet FOLLOW_SLPAR_in_primType3508 = new BitSet(new long[]{0x0000000029000400L});
-	public static final BitSet FOLLOW_primType_in_primType3512 = new BitSet(new long[]{0x0000100000000000L});
-	public static final BitSet FOLLOW_SRPAR_in_primType3514 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_primType3550 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_primType_in_primType3512 = new BitSet(new long[]{0x0000100000002000L});
+	public static final BitSet FOLLOW_COMMA_in_primType3515 = new BitSet(new long[]{0x0000000029000400L});
+	public static final BitSet FOLLOW_primType_in_primType3519 = new BitSet(new long[]{0x0000100000002000L});
+	public static final BitSet FOLLOW_SRPAR_in_primType3523 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_primType3559 = new BitSet(new long[]{0x0000000000000002L});
 }
