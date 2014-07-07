@@ -6,8 +6,7 @@ let fun caller<Y>:int(lista:list[Y]){
         }
         in length<Y>(lista);
     }
-in
-	print(caller<bool>([true ::[false :: empty]]));
+in print(caller<bool>([true ::[false :: empty]]));
 
 let fun applica:int(x:int, fo:(int)->int) {
         fo(x)
