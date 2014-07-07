@@ -15,6 +15,7 @@ public class DecFunNode extends Node {
     private boolean typeChecked = false;
     private String typeString = "";
     private ArrayList<Node> decList = new ArrayList<Node>();
+    private ArrayList<Node> paramTypes = new ArrayList<Node>();
     private Node decType;
     
 
@@ -60,8 +61,8 @@ public class DecFunNode extends Node {
         return this.id;
     }
     
-    public void addParType(Node apt){
-        decType=apt;
+    public void addParType(ArrayList<Node> apt){
+        this.paramTypes=apt;
     }
     @Override
     public String toPrint() {

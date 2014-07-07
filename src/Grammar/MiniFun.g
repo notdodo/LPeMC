@@ -80,65 +80,52 @@ declist returns [ArrayList<Node> astList]:
                 
                 | FUN f = ID
                  {
+                 ArrayList<Node> paramTypes = new ArrayList<Node>();
                  DecFunNode fn = new DecFunNode($f.text);
-                 }
-                ( //inizio parte opzionale per la dichiarazione dei tipi parametrici
-                 ALPAR i=ID
-{
-offSetParType=1;
-                         DecTypeNode tn = new DecTypeNode($i.text);
-                         STentry entry = new STentry(tn,offSet++);
-                         HashMap<String,STentry> hmType = symTableParType.get(nestingLevel);
-                         hmType.put($i.text,entry);
-                     }
-          (
-            COMMA i = ID
-            {
-            entry = new STentry(tn,offSet++);
-                         if (hmType.put($i.text,entry) != null) {
-                             System.out.println("Parameter " + $i.text
-                                + " at line "+$i.line+" already defined");
-                             System.exit(0);
-                         }
-           
-           }
-           
-           )*
-           
-         ARPAR
-         {
-         fn.addParType(tn);
-        
-         }
-        
-                )?
-
-                
-                        COL rt=type
-                    {// dichiarazione di una funzione
-                        fn.addRet($rt.ast);
-                        STentry entry = new STentry(fn,offSet++);
-                        HashMap<String, STentry> hm = symTable.get(nestingLevel);
-                        HashMap<String, STentry> hmp = symTableParType.get(nestingLevel);
-                        //System.out.println($f.text);
-                        if (hm.put($f.text, entry) != null) {
+                 
+                 STentry entry = new STentry(fn,offSet++);
+                 HashMap<String, STentry> hm = symTable.get(nestingLevel);
+                 if (hm.put($f.text, entry) != null) {
                             System.out.println("Identifier " + $f.text
                             + " at line " + $f.line + " is already defined");
                             System.exit(0);
-                        }
-                        
-                        
-                       
+                 }
+                 hm = new HashMap<String, STentry>();
+                 symTable.add(hm);
+                 HashMap<String,STentry> hmType = new HashMap<String, STentry>();
+                 symTableParType.add(hmType);
+                                                   nestingLevel++;
+                 }
+                ( //inizio parte opzionale per la dichiarazione dei tipi parametrici
+                 ALPAR i=ID {
+                         DecTypeNode tn = new DecTypeNode($i.text);
+                         paramTypes.add(tn);
+                         entry = new STentry(tn, 0);
+                         hmType.put($i.text, entry);}
+          	(COMMA i2 = ID
+            	{
+            	 DecTypeNode tn2 = new DecTypeNode($i2.text);
+            	 paramTypes.add(tn2);
+            	 entry = new STentry(tn2, 0);
+                       if (hmType.put($i2.text,entry) != null) {
+                             System.out.println("Parameter " + $i.text
+                                + " at line "+$i.line+" already defined");
+                             System.exit(0);
+                       }
+           	}
+           	)*
+         	ARPAR
+         	{fn.addParType(paramTypes);}
+         	)?            
+                    COL rt=type
+                    {   // dichiarazione di una funzione
+                        fn.addRet($rt.ast);
                     }
                     LPAR
                     {
                         int parOffSet = -1;
                         ArrayList<Node> parList = new ArrayList<Node>();
-                        hm = new HashMap<String,STentry>();
-                        hmp = new HashMap<String,STentry>();
-                        symTable.add(hm);
-                        symTableParType.add(hmp); //Chiedere a Massi se e' corretto, dovrebbe esserlo
-                        nestingLevel++;
+
                     }
                     (
                         fp=ID COL t=type
@@ -229,7 +216,7 @@ exp returns [Node ast]:
                     }
  
                     // a <= b
-                | ALPAR l = term
+               /* | ALPAR l = term
                     {
                         $ast = new MinNode($ast, $l.ast);
                     }
@@ -237,7 +224,7 @@ exp returns [Node ast]:
                 | ARPAR l = term
                     {
                         $ast = new MagNode($ast, $l.ast);
-                    }
+                    }*/
             )*;
  
 term returns [Node ast]:
@@ -326,66 +313,21 @@ fatt returns [Node ast]:
                     int declNLPar;
                     
                     // controllo che esista una dichiarazione per quell'ID
-                   
                    for (declNL = nestingLevel; declNL >= 0; declNL--) {
-                   	hm = symTable.get(declNL);
-                    	entry = hm.get($i.text);
-                    	if (entry != null)
-                    		break;
-                    	//hmp = symTableParType.get(declNL);
-                    	//entry = hmp.get($i.text);
-                    	//if (entry != null)
-                    		//break;
+                    hm = symTable.get(declNL);
+                    entry = hm.get($i.text);
+                    if (entry != null)
+                    break;
+                  }
+                  if (entry == null) {
+                    System.out.println("Identifier "+$i.text+
+                             " at line "+$i.line+" is not defined");
+                     System.exit(0);
                    }
                    
-                   
-   /*
-                    for(declNL = nestingLevel; declNL >= 0; declNL--) {
-                       hm = symTable.get(declNL);
-                       //System.out.println(declNL+"hm:"+hm+"\n\n");
-                       entry = hm.get($i.text);
-                        if (entry != null)
-                            break;
-                    }
-                    if (entry == null){
-System.out.println("Identifier "+$i.text+
-                             " at line "+$i.line+" is not defined");
-                         //System.exit(0);
-                        
-                    }
-                    
-                    for(declNLPar = nestingLevel; declNLPar >= 0; declNLPar--) {
-                        hmp = symTableParType.get(declNLPar);
-                        //System.out.println(declNLPar+"hmp:"+hmp);
-                         entryPar = hmp.get($i.text);
-                         if (entryPar != null)
-                             break;
-                             }
-                   if (entryPar == null){
-System.out.println("Type "+$i.text+
-                             " at line "+$i.line+" is not defined");
-                         //System.exit(0);
-                         }
-                   /* if (entry == null){
-                     for(declNLPar = nestingLevel; declNLPar >= 0; declNLPar--) {
-                        hmp = symTableParType.get(declNLPar);
-                         entryPar = hmp.get($i.text);
-                         if (entryPar != null)
-                             break;
-                             }}
-                     if(entryPar==null){
-                    //Non ci credo neanche un po'
-                                    System.out.println("Parameter "+$i.text+
-                             " at line "+$i.line+" is not defined");
-                         System.exit(0);
-                     }
-                    
-                     */
-                    
-                                   
-                    if (entry.getDecl() instanceof DecFunNode ||
+                    if(entry.getDecl() instanceof DecFunNode ||
                         (entry.getDecl() instanceof DecParNode &&
-                        ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null) {
+                        ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null){
                             $ast = new FunParNode(entry,nestingLevel-declNL);
                     } else {
                     //System.out.println("VarNode "+ $i.text+" "+$i.line);
@@ -394,7 +336,8 @@ System.out.println("Type "+$i.text+
                 }
                 // l'ID e' una funzione -> controllo i parametri
                 (
-                    LPAR {ArrayList<Node> parList = new ArrayList<Node>();}
+                	(ALPAR cane=primType (COMMA p=primType)* ARPAR)?
+	 LPAR {ArrayList<Node> parList = new ArrayList<Node>();}
                     (
                         fp = exp {parList.add($fp.ast);}
                         (
@@ -490,6 +433,21 @@ primType returns [Node ast]:
                 }
             | i=ID
              {
+             HashMap<String,STentry> hmp;
+             STentry entryPar=null;
+                                 		
+             for(int declNLPar = nestingLevel; declNLPar >= 0; declNLPar--) {
+             	hmp = symTableParType.get(declNLPar);
+                      entryPar = hmp.get($i.text);
+                      if (entryPar != null)
+                          break;
+             }
+             if (entryPar == null){
+	System.out.println("Parameter Type "+$i.text+
+                              " at line "+$i.line+" is not defined");
+                          System.exit(0);
+             }
+             //System.out.println("Trovato: \""+$i.text+"\"");
              $ast= new IdTypeNode($i.text);
              }
             

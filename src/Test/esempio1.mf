@@ -1,11 +1,11 @@
 let fun caller<Y>:int(lista:list[Y]){
         let fun length<X>:int(l:list[X]){
-            if (l==empty) then 
-                {0}
-            else {1 + length<X>(rest(l))}
-        }
+                if (l==empty) then 
+                    {0}
+                else {1 + length<X>(rest(l))}
+            };
         in length<Y>(lista);
-    }
+    };
 in print(caller<bool>([true ::[false :: empty]]));
 
 let 
