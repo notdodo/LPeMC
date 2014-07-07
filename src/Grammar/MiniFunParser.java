@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-03 16:18:44
+// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-07 14:17:49
 
 package Grammar;
 import Generics.*;
@@ -1031,14 +1031,14 @@ public class MiniFunParser extends Parser {
 					                    // controllo che esista una dichiarazione per quell'ID
 					                   
 					                   for (declNL = nestingLevel; declNL >= 0; declNL--) {
-					                    hm = symTable.get(declNL);
-					                    entry = hm.get((i!=null?i.getText():null));
-					                    if (entry != null)
-					                    break;
-					                    hmp = symTableParType.get(declNL);
-					                    entry = hmp.get((i!=null?i.getText():null));
-					                    if (entry != null)
-					                    break;
+					                   	hm = symTable.get(declNL);
+					                    	entry = hm.get((i!=null?i.getText():null));
+					                    	if (entry != null)
+					                    		break;
+					                    	//hmp = symTableParType.get(declNL);
+					                    	//entry = hmp.get((i!=null?i.getText():null));
+					                    	//if (entry != null)
+					                    		//break;
 					                   }
 					                   
 					                   
@@ -1086,9 +1086,9 @@ public class MiniFunParser extends Parser {
 					                     */
 					                    
 					                                   
-					                    if(entry.getDecl() instanceof DecFunNode ||
+					                    if (entry.getDecl() instanceof DecFunNode ||
 					                        (entry.getDecl() instanceof DecParNode &&
-					                        ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null){
+					                        ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null) {
 					                            ast = new FunParNode(entry,nestingLevel-declNL);
 					                    } else {
 					                    //System.out.println("VarNode "+ (i!=null?i.getText():null)+" "+(i!=null?i.getLine():0));

@@ -28,7 +28,6 @@ public class ExecuteVM {
         if (debug) {
             vmv = new VMViewer(new InstructionMapper());
         }
-
         while (ip < code.length) {
             if (debug) {
                 vmv.updateGraphic(code, memory, ip, sp, ra, rv, hp, fp);

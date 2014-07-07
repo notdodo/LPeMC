@@ -328,14 +328,14 @@ fatt returns [Node ast]:
                     // controllo che esista una dichiarazione per quell'ID
                    
                    for (declNL = nestingLevel; declNL >= 0; declNL--) {
-                    hm = symTable.get(declNL);
-                    entry = hm.get($i.text);
-                    if (entry != null)
-                    break;
-                    hmp = symTableParType.get(declNL);
-                    entry = hmp.get($i.text);
-                    if (entry != null)
-                    break;
+                   	hm = symTable.get(declNL);
+                    	entry = hm.get($i.text);
+                    	if (entry != null)
+                    		break;
+                    	//hmp = symTableParType.get(declNL);
+                    	//entry = hmp.get($i.text);
+                    	//if (entry != null)
+                    		//break;
                    }
                    
                    
@@ -383,9 +383,9 @@ System.out.println("Type "+$i.text+
                      */
                     
                                    
-                    if(entry.getDecl() instanceof DecFunNode ||
+                    if (entry.getDecl() instanceof DecFunNode ||
                         (entry.getDecl() instanceof DecParNode &&
-                        ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null){
+                        ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null) {
                             $ast = new FunParNode(entry,nestingLevel-declNL);
                     } else {
                     //System.out.println("VarNode "+ $i.text+" "+$i.line);

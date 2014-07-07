@@ -37,6 +37,7 @@ push 3
 sub
 lw
 js
+print
 halt
 lab0: // printl
 cfp
@@ -44,7 +45,6 @@ lra
 lfp
 push -1
 sub
-lw
 lw
 push -1
 beq lab3
@@ -98,7 +98,6 @@ lfp
 push -1
 sub
 lw
-lw
 push -1
 beq lab8
 push 0
@@ -126,7 +125,6 @@ sub
 lw
 js
 add
-print
 b lab7
 lab6:
 push 0
