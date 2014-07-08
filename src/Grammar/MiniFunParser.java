@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-07 19:22:46
+// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-08 21:31:00
 
 package Grammar;
 import Generics.*;
@@ -108,9 +108,9 @@ public class MiniFunParser extends Parser {
 
 		try {
 			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:27:24: (l= let )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:28:2: l= let
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:29:2: l= let
 			{
-			pushFollow(FOLLOW_let_in_prog38);
+			pushFollow(FOLLOW_let_in_prog41);
 			l=let();
 			state._fsp--;
 
@@ -142,34 +142,30 @@ public class MiniFunParser extends Parser {
 
 		try {
 			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:31:23: ( LET d= declist IN e= exp SEMIC )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:32:13: LET d= declist IN e= exp SEMIC
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:33:13: LET d= declist IN e= exp SEMIC
 			{
-			match(input,LET,FOLLOW_LET_in_let64); 
-
-			                boolean localLet = false;
-			                HashMap<String,STentry> hm = new HashMap<String,STentry>();
-			                HashMap<String,STentry> hmp = new HashMap<String,STentry>();
-			                // creo una hashmap per lo scope attuale
-			                if (nestingLevel == 0){
-			                    symTable.add(hm);
-			                    symTableParType.add(hmp);
-			                } else {
-			                    localLet=true;
-			                }
-			            
-			pushFollow(FOLLOW_declist_in_let109);
+			match(input,LET,FOLLOW_LET_in_let68); 
+			boolean localLet = false;
+			            	 HashMap<String,STentry> hm = new HashMap<String,STentry>();
+			            	 HashMap<String,STentry> hmp = new HashMap<String,STentry>();
+			            	 // creo una hashmap per lo scope attuale
+			            	 if (nestingLevel == 0){
+			            	 	symTable.add(hm);
+			            	 	symTableParType.add(hmp);
+			                	} else {
+			                		localLet=true;
+			                	}
+			pushFollow(FOLLOW_declist_in_let93);
 			d=declist();
 			state._fsp--;
 
-			match(input,IN,FOLLOW_IN_in_let111); 
-			pushFollow(FOLLOW_exp_in_let117);
+			match(input,IN,FOLLOW_IN_in_let95); 
+			pushFollow(FOLLOW_exp_in_let101);
 			e=exp();
 			state._fsp--;
 
-			match(input,SEMIC,FOLLOW_SEMIC_in_let119); 
-
-			                ast = new LetNode(d, e, localLet);
-			            
+			match(input,SEMIC,FOLLOW_SEMIC_in_let103); 
+			ast = new LetNode(d, e, localLet);
 			}
 
 		}
@@ -187,7 +183,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "declist"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:51:1: declist returns [ArrayList<Node> astList] : ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN f= ID ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )? COL rt= type LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )* ;
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:45:1: declist returns [ArrayList<Node> astList] : ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN f= ID ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )? COL rt= type LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )* ;
 	public final ArrayList<Node> declist() throws RecognitionException {
 		ArrayList<Node> astList = null;
 
@@ -202,22 +198,20 @@ public class MiniFunParser extends Parser {
 		Node rt =null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:51:42: ( ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN f= ID ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )? COL rt= type LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )* )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:52:13: ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN f= ID ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )? COL rt= type LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )*
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:45:42: ( ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN f= ID ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )? COL rt= type LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )* )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:46:12: ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN f= ID ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )? COL rt= type LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )*
 			{
-
-			                astList = new ArrayList<Node>();
-			                int offSet;
-			                int offSetParType;
-			                // dal nestingLevel capisco se sono in una dichiarazione locale o gloabel
-			                // per la globale l'offSet va a 2 per l'indirizzamento dell'ActivationRecord
-			                if (nestingLevel == 0){
-			                    offSet = 1;
-			                } else {
-			                    offSet = 2;
-			                }
-			            
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:65:13: ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN f= ID ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )? COL rt= type LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )*
+			astList = new ArrayList<Node>();
+				int offSet;
+			            int offSetParType;
+			            // dal nestingLevel capisco se sono in una dichiarazione locale o gloabel
+			            // per la globale l'offSet va a 2 per l'indirizzamento dell'ActivationRecord
+			            if (nestingLevel == 0) {
+			            	offSet = 1;
+				} else {
+			            	offSet = 2;
+			            }
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:57:13: ( VAR i= ID COL t= primType ASS e= exp SEMIC | FUN f= ID ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )? COL rt= type LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC )*
 			loop6:
 			while (true) {
 				int alt6=3;
@@ -231,59 +225,51 @@ public class MiniFunParser extends Parser {
 
 				switch (alt6) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:66:21: VAR i= ID COL t= primType ASS e= exp SEMIC
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:57:14: VAR i= ID COL t= primType ASS e= exp SEMIC
 					{
-					match(input,VAR,FOLLOW_VAR_in_declist209); 
-					i=(Token)match(input,ID,FOLLOW_ID_in_declist215); 
-					match(input,COL,FOLLOW_COL_in_declist217); 
-					pushFollow(FOLLOW_primType_in_declist223);
+					match(input,VAR,FOLLOW_VAR_in_declist155); 
+					i=(Token)match(input,ID,FOLLOW_ID_in_declist161); 
+					match(input,COL,FOLLOW_COL_in_declist163); 
+					pushFollow(FOLLOW_primType_in_declist169);
 					t=primType();
 					state._fsp--;
 
-					match(input,ASS,FOLLOW_ASS_in_declist225); 
-					pushFollow(FOLLOW_exp_in_declist231);
+					match(input,ASS,FOLLOW_ASS_in_declist171); 
+					pushFollow(FOLLOW_exp_in_declist177);
 					e=exp();
 					state._fsp--;
 
-					match(input,SEMIC,FOLLOW_SEMIC_in_declist233); 
-
-					                        DecVarNode vn = new DecVarNode((i!=null?i.getText():null),t,e);
-					                        STentry entry = new STentry(vn,offSet++);
-					                        HashMap<String,STentry> hm = symTable.get(nestingLevel);
-					                        if (hm.put((i!=null?i.getText():null),entry) != null) {
-					                            System.out.println("Identifier " + (i!=null?i.getText():null)
-					                               + " at line "+(i!=null?i.getLine():0)+" already defined");
-					                            System.exit(0);
-					                        }
-					                        // la dichiarazione viene aggiunta alla hashmap
-					                        //come il riferimento al nodo DecVar
-					                        astList.add(vn);
-					                    
+					match(input,SEMIC,FOLLOW_SEMIC_in_declist179); 
+					DecVarNode vn = new DecVarNode((i!=null?i.getText():null),t,e);
+					            							STentry entry = new STentry(vn,offSet++);
+					                        						HashMap<String,STentry> hm = symTable.get(nestingLevel);
+					                        						if (hm.put((i!=null?i.getText():null),entry) != null) {
+					                            							System.out.println("Identifier " + (i!=null?i.getText():null) + " at line "+(i!=null?i.getLine():0)+" already defined");
+					                           							System.exit(0);
+					                           						}
+					                           						// la dichiarazione viene aggiunta alla hashmap, come il riferimento al nodo DecVar
+					                        						astList.add(vn);
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:81:19: FUN f= ID ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )? COL rt= type LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:66:19: FUN f= ID ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )? COL rt= type LPAR (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )? RPAR CLPAR (e= let |e= exp ) CRPAR SEMIC
 					{
-					match(input,FUN,FOLLOW_FUN_in_declist292); 
-					f=(Token)match(input,ID,FOLLOW_ID_in_declist298); 
-
-					                 ArrayList<Node> paramTypes = new ArrayList<Node>();
-					                 DecFunNode fn = new DecFunNode((f!=null?f.getText():null));
-					                 
-					                 STentry entry = new STentry(fn,offSet++);
-					                 HashMap<String, STentry> hm = symTable.get(nestingLevel);
-					                 if (hm.put((f!=null?f.getText():null), entry) != null) {
-					                            System.out.println("Identifier " + (f!=null?f.getText():null)
-					                            + " at line " + (f!=null?f.getLine():0) + " is already defined");
-					                            System.exit(0);
-					                 }
-					                 hm = new HashMap<String, STentry>();
-					                 symTable.add(hm);
-					                 HashMap<String,STentry> hmType = new HashMap<String, STentry>();
-					                 symTableParType.add(hmType);
-					                                                   nestingLevel++;
-					                 
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:99:17: ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )?
+					match(input,FUN,FOLLOW_FUN_in_declist203); 
+					f=(Token)match(input,ID,FOLLOW_ID_in_declist209); 
+					ArrayList<Node> paramTypes = new ArrayList<Node>();
+					                 		 DecFunNode fn = new DecFunNode((f!=null?f.getText():null));
+					                 		 STentry entry = new STentry(fn,offSet++);
+					                 		 HashMap<String, STentry> hm = symTable.get(nestingLevel);
+					                 		 if (hm.put((f!=null?f.getText():null), entry) != null) {
+					                 		 	System.out.println("Identifier " + (f!=null?f.getText():null) + " at line " + (f!=null?f.getLine():0) + " is already defined");
+					                            		System.exit(0);
+					                 		 }
+					                 		 hm = new HashMap<String, STentry>();
+					                 		 symTable.add(hm);
+					                 		 HashMap<String,STentry> hmType = new HashMap<String, STentry>();
+					                 		 symTableParType.add(hmType);
+					                 		 nestingLevel++;
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:80:18: ( ALPAR i= ID ( COMMA i2= ID )* ARPAR )?
 					int alt2=2;
 					int LA2_0 = input.LA(1);
 					if ( (LA2_0==ALPAR) ) {
@@ -291,16 +277,15 @@ public class MiniFunParser extends Parser {
 					}
 					switch (alt2) {
 						case 1 :
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:100:18: ALPAR i= ID ( COMMA i2= ID )* ARPAR
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:80:19: ALPAR i= ID ( COMMA i2= ID )* ARPAR
 							{
-							match(input,ALPAR,FOLLOW_ALPAR_in_declist355); 
-							i=(Token)match(input,ID,FOLLOW_ID_in_declist359); 
-
-							                         DecTypeNode tn = new DecTypeNode((i!=null?i.getText():null));
-							                         paramTypes.add(tn);
-							                         entry = new STentry(tn, 0);
-							                         hmType.put((i!=null?i.getText():null), entry);
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:105:12: ( COMMA i2= ID )*
+							match(input,ALPAR,FOLLOW_ALPAR_in_declist249); 
+							i=(Token)match(input,ID,FOLLOW_ID_in_declist253); 
+							DecTypeNode tn = new DecTypeNode((i!=null?i.getText():null));
+							                			paramTypes.add(tn);
+							                			entry = new STentry(tn, 0);
+							                         		hmType.put((i!=null?i.getText():null), entry);
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:84:15: ( COMMA i2= ID )*
 							loop1:
 							while (true) {
 								int alt1=2;
@@ -311,20 +296,17 @@ public class MiniFunParser extends Parser {
 
 								switch (alt1) {
 								case 1 :
-									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:105:13: COMMA i2= ID
+									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:84:16: COMMA i2= ID
 									{
-									match(input,COMMA,FOLLOW_COMMA_in_declist375); 
-									i2=(Token)match(input,ID,FOLLOW_ID_in_declist381); 
-
-									            	 DecTypeNode tn2 = new DecTypeNode((i2!=null?i2.getText():null));
-									            	 paramTypes.add(tn2);
-									            	 entry = new STentry(tn2, 0);
-									                       if (hmType.put((i2!=null?i2.getText():null),entry) != null) {
-									                             System.out.println("Parameter " + (i!=null?i.getText():null)
-									                                + " at line "+(i!=null?i.getLine():0)+" already defined");
-									                             System.exit(0);
-									                       }
-									           	
+									match(input,COMMA,FOLLOW_COMMA_in_declist274); 
+									i2=(Token)match(input,ID,FOLLOW_ID_in_declist280); 
+									DecTypeNode tn2 = new DecTypeNode((i2!=null?i2.getText():null));
+									             				    paramTypes.add(tn2);
+									             				    entry = new STentry(tn2, 0);
+									             				    if (hmType.put((i2!=null?i2.getText():null),entry) != null) {
+									                             				System.out.println("Parameter " + (i!=null?i.getText():null) + " at line "+(i!=null?i.getLine():0)+" already defined");
+									                             				System.exit(0);
+									                       				    }
 									}
 									break;
 
@@ -333,28 +315,23 @@ public class MiniFunParser extends Parser {
 								}
 							}
 
-							match(input,ARPAR,FOLLOW_ARPAR_in_declist423); 
+							match(input,ARPAR,FOLLOW_ARPAR_in_declist310); 
 							fn.addParType(paramTypes);
 							}
 							break;
 
 					}
 
-					match(input,COL,FOLLOW_COL_in_declist482); 
-					pushFollow(FOLLOW_type_in_declist486);
+					match(input,COL,FOLLOW_COL_in_declist341); 
+					pushFollow(FOLLOW_type_in_declist345);
 					rt=type();
 					state._fsp--;
 
-					   // dichiarazione di una funzione
-					                        fn.addRet(rt);
-					                    
-					match(input,LPAR,FOLLOW_LPAR_in_declist530); 
-
-					                        int parOffSet = -1;
-					                        ArrayList<Node> parList = new ArrayList<Node>();
-
-					                    
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:130:21: (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )?
+					fn.addRet(rt);
+					match(input,LPAR,FOLLOW_LPAR_in_declist349); 
+					int parOffSet = -1;
+					                       							     ArrayList<Node> parList = new ArrayList<Node>();
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:94:24: (fp= ID COL t= type ( COMMA fpi= ID COL t= type )* )?
 					int alt4=2;
 					int LA4_0 = input.LA(1);
 					if ( (LA4_0==ID) ) {
@@ -362,27 +339,25 @@ public class MiniFunParser extends Parser {
 					}
 					switch (alt4) {
 						case 1 :
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:131:25: fp= ID COL t= type ( COMMA fpi= ID COL t= type )*
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:94:25: fp= ID COL t= type ( COMMA fpi= ID COL t= type )*
 							{
-							fp=(Token)match(input,ID,FOLLOW_ID_in_declist602); 
-							match(input,COL,FOLLOW_COL_in_declist604); 
-							pushFollow(FOLLOW_type_in_declist608);
+							fp=(Token)match(input,ID,FOLLOW_ID_in_declist379); 
+							match(input,COL,FOLLOW_COL_in_declist381); 
+							pushFollow(FOLLOW_type_in_declist385);
 							t=type();
 							state._fsp--;
 
-
-							                            DecParNode dpn;
-							                            if (t instanceof FunParType) {
-							                                parOffSet--;
-							                                dpn = new DecParNode((fp!=null?fp.getText():null), t, true);
-							                            }else {
-							                                dpn = new DecParNode((fp!=null?fp.getText():null), t);
-							                            }
-							                            entry = new STentry(dpn, parOffSet--);
-							                            hm.put((fp!=null?fp.getText():null),entry);
-							                            parList.add(dpn);
-							                        
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:144:25: ( COMMA fpi= ID COL t= type )*
+							DecParNode dpn;
+							                    						if (t instanceof FunParType) {
+							                    							parOffSet--;
+							                                						dpn = new DecParNode((fp!=null?fp.getText():null), t, true);
+							                            					}else {
+							                                						dpn = new DecParNode((fp!=null?fp.getText():null), t);
+							                            					}
+							                            					entry = new STentry(dpn, parOffSet--);
+							                            					hm.put((fp!=null?fp.getText():null),entry);
+							                            					parList.add(dpn);
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:104:28: ( COMMA fpi= ID COL t= type )*
 							loop3:
 							while (true) {
 								int alt3=2;
@@ -393,32 +368,29 @@ public class MiniFunParser extends Parser {
 
 								switch (alt3) {
 								case 1 :
-									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:145:29: COMMA fpi= ID COL t= type
+									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:104:29: COMMA fpi= ID COL t= type
 									{
-									match(input,COMMA,FOLLOW_COMMA_in_declist690); 
-									fpi=(Token)match(input,ID,FOLLOW_ID_in_declist694); 
-									match(input,COL,FOLLOW_COL_in_declist696); 
-									pushFollow(FOLLOW_type_in_declist700);
+									match(input,COMMA,FOLLOW_COMMA_in_declist420); 
+									fpi=(Token)match(input,ID,FOLLOW_ID_in_declist424); 
+									match(input,COL,FOLLOW_COL_in_declist426); 
+									pushFollow(FOLLOW_type_in_declist430);
 									t=type();
 									state._fsp--;
 
-
-									                                if (t instanceof FunParType) {
-									                                    parOffSet--;
-									                                    //aggiunto fpi
-									                                    dpn = new DecParNode((fpi!=null?fpi.getText():null), t, true);
-									                                }else {
-									                                    //aggiunto fpi
-									                                    dpn = new DecParNode((fpi!=null?fpi.getText():null), t);
-									                                }
-									                                entry = new STentry(dpn, parOffSet--);
-									                                if (hm.put((fpi!=null?fpi.getText():null),entry) != null) {
-									                                    System.out.println("Identifier "+(fpi!=null?fpi.getText():null)+
-									                                        " at line "+(fpi!=null?fpi.getLine():0)+" already defined");
-									                                    System.exit(0);
-									                                }
-									                                parList.add(dpn);
-									                            
+									if (t instanceof FunParType) {
+									                                    							parOffSet--;
+									                                    							//aggiunto fpi
+									                                    							dpn = new DecParNode((fpi!=null?fpi.getText():null), t, true);
+									                                							} else {
+									                                    							//aggiunto fpi
+									                                    							dpn = new DecParNode((fpi!=null?fpi.getText():null), t);
+									                                							}
+									                                							entry = new STentry(dpn, parOffSet--);
+									                                							if (hm.put((fpi!=null?fpi.getText():null),entry) != null) {
+									                                    							System.out.println("Identifier " + (fpi!=null?fpi.getText():null) + " at line " + (fpi!=null?fpi.getLine():0) + " already defined");
+									                                    							System.exit(0);
+									                                							}
+									                                							parList.add(dpn);
 									}
 									break;
 
@@ -432,12 +404,10 @@ public class MiniFunParser extends Parser {
 
 					}
 
-
-					                    fn.addPar(parList);
-					                
-					match(input,RPAR,FOLLOW_RPAR_in_declist816); 
-					match(input,CLPAR,FOLLOW_CLPAR_in_declist818); 
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:170:17: (e= let |e= exp )
+					fn.addPar(parList);
+					match(input,RPAR,FOLLOW_RPAR_in_declist508); 
+					match(input,CLPAR,FOLLOW_CLPAR_in_declist510); 
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:121:20: (e= let |e= exp )
 					int alt5=2;
 					int LA5_0 = input.LA(1);
 					if ( (LA5_0==LET) ) {
@@ -455,21 +425,19 @@ public class MiniFunParser extends Parser {
 
 					switch (alt5) {
 						case 1 :
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:171:21: e= let
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:121:21: e= let
 							{
-							pushFollow(FOLLOW_let_in_declist877);
+							pushFollow(FOLLOW_let_in_declist553);
 							e=let();
 							state._fsp--;
 
-
-							                        fn.addLocal(((LetNode)e).getDecl());
-							                    
+							fn.addLocal(((LetNode)e).getDecl());
 							}
 							break;
 						case 2 :
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:176:21: e= exp
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:123:21: e= exp
 							{
-							pushFollow(FOLLOW_exp_in_declist945);
+							pushFollow(FOLLOW_exp_in_declist601);
 							e=exp();
 							state._fsp--;
 
@@ -478,15 +446,13 @@ public class MiniFunParser extends Parser {
 
 					}
 
-					match(input,CRPAR,FOLLOW_CRPAR_in_declist981); 
-					match(input,SEMIC,FOLLOW_SEMIC_in_declist983); 
-
-					                    fn.addBody(e); // aggiungo il body alla funzione (Let o espressione)
-					                    symTable.remove(nestingLevel);
-					                    symTableParType.remove(nestingLevel);
-					                    nestingLevel--;
-					                    astList.add(fn);
-					                
+					match(input,CRPAR,FOLLOW_CRPAR_in_declist624); 
+					match(input,SEMIC,FOLLOW_SEMIC_in_declist626); 
+					fn.addBody(e);
+					                			 		  symTable.remove(nestingLevel);
+					                			 		  symTableParType.remove(nestingLevel);
+					                			 		  nestingLevel--;
+					                			 		  astList.add(fn);
 					}
 					break;
 
@@ -512,7 +478,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "exp"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:189:1: exp returns [Node ast] : f= term ( EQ l= term | NOTEQ l= term | MINEQ l= term | MAGEQ l= term )* ;
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:132:1: exp returns [Node ast] : f= term ( EQ l= term | NOTEQ l= term | MINEQ l= term | MAGEQ l= term )* ;
 	public final Node exp() throws RecognitionException {
 		Node ast = null;
 
@@ -521,17 +487,15 @@ public class MiniFunParser extends Parser {
 		Node l =null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:189:23: (f= term ( EQ l= term | NOTEQ l= term | MINEQ l= term | MAGEQ l= term )* )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:190:13: f= term ( EQ l= term | NOTEQ l= term | MINEQ l= term | MAGEQ l= term )*
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:132:23: (f= term ( EQ l= term | NOTEQ l= term | MINEQ l= term | MAGEQ l= term )* )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:133:2: f= term ( EQ l= term | NOTEQ l= term | MINEQ l= term | MAGEQ l= term )*
 			{
-			pushFollow(FOLLOW_term_in_exp1042);
+			pushFollow(FOLLOW_term_in_exp647);
 			f=term();
 			state._fsp--;
 
-
-			                ast = f;
-			            
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:195:13: ( EQ l= term | NOTEQ l= term | MINEQ l= term | MAGEQ l= term )*
+			ast = f;
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:134:3: ( EQ l= term | NOTEQ l= term | MINEQ l= term | MAGEQ l= term )*
 			loop7:
 			while (true) {
 				int alt7=5;
@@ -559,55 +523,47 @@ public class MiniFunParser extends Parser {
 				}
 				switch (alt7) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:196:21: EQ l= term
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:134:4: EQ l= term
 					{
-					match(input,EQ,FOLLOW_EQ_in_exp1095); 
-					pushFollow(FOLLOW_term_in_exp1101);
+					match(input,EQ,FOLLOW_EQ_in_exp654); 
+					pushFollow(FOLLOW_term_in_exp660);
 					l=term();
 					state._fsp--;
 
-
-					                        ast = new EqNode (ast,l);
-					                    
+					ast = new EqNode (ast,l);
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:201:19: NOTEQ l= term
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:135:20: NOTEQ l= term
 					{
-					match(input,NOTEQ,FOLLOW_NOTEQ_in_exp1157); 
-					pushFollow(FOLLOW_term_in_exp1163);
+					match(input,NOTEQ,FOLLOW_NOTEQ_in_exp696); 
+					pushFollow(FOLLOW_term_in_exp702);
 					l=term();
 					state._fsp--;
 
-
-					                        ast = new NotEqNode(ast, l);
-					                    
+					ast = new NotEqNode(ast, l);
 					}
 					break;
 				case 3 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:207:19: MINEQ l= term
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:136:6: MINEQ l= term
 					{
-					match(input,MINEQ,FOLLOW_MINEQ_in_exp1228); 
-					pushFollow(FOLLOW_term_in_exp1234);
+					match(input,MINEQ,FOLLOW_MINEQ_in_exp711); 
+					pushFollow(FOLLOW_term_in_exp717);
 					l=term();
 					state._fsp--;
 
-
-					                        ast = new MinEqNode(ast, l);
-					                    
+					ast = new MinEqNode(ast, l);
 					}
 					break;
 				case 4 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:213:19: MAGEQ l= term
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:137:6: MAGEQ l= term
 					{
-					match(input,MAGEQ,FOLLOW_MAGEQ_in_exp1299); 
-					pushFollow(FOLLOW_term_in_exp1305);
+					match(input,MAGEQ,FOLLOW_MAGEQ_in_exp726); 
+					pushFollow(FOLLOW_term_in_exp732);
 					l=term();
 					state._fsp--;
 
-
-					                        ast = new MagEqNode(ast, l);
-					                    
+					ast = new MagEqNode(ast, l);
 					}
 					break;
 
@@ -633,7 +589,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "term"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:230:1: term returns [Node ast] : f= value ( PLUS l= value | MINUS l= value | OR l= value )* ;
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:140:1: term returns [Node ast] : f= value ( PLUS l= value | MINUS l= value | OR l= value )* ;
 	public final Node term() throws RecognitionException {
 		Node ast = null;
 
@@ -642,17 +598,15 @@ public class MiniFunParser extends Parser {
 		Node l =null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:230:24: (f= value ( PLUS l= value | MINUS l= value | OR l= value )* )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:231:13: f= value ( PLUS l= value | MINUS l= value | OR l= value )*
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:140:24: (f= value ( PLUS l= value | MINUS l= value | OR l= value )* )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:141:2: f= value ( PLUS l= value | MINUS l= value | OR l= value )*
 			{
-			pushFollow(FOLLOW_value_in_term1408);
+			pushFollow(FOLLOW_value_in_term764);
 			f=value();
 			state._fsp--;
 
-
-			                ast = f;
-			            
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:236:21: ( PLUS l= value | MINUS l= value | OR l= value )*
+			ast = f;
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:142:3: ( PLUS l= value | MINUS l= value | OR l= value )*
 			loop8:
 			while (true) {
 				int alt8=4;
@@ -675,42 +629,36 @@ public class MiniFunParser extends Parser {
 				}
 				switch (alt8) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:237:21: PLUS l= value
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:142:4: PLUS l= value
 					{
-					match(input,PLUS,FOLLOW_PLUS_in_term1448); 
-					pushFollow(FOLLOW_value_in_term1454);
+					match(input,PLUS,FOLLOW_PLUS_in_term771); 
+					pushFollow(FOLLOW_value_in_term777);
 					l=value();
 					state._fsp--;
 
-
-					                        ast = new PlusNode (ast,l);
-					                    
+					ast = new PlusNode (ast,l);
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:243:19: MINUS l= value
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:143:24: MINUS l= value
 					{
-					match(input,MINUS,FOLLOW_MINUS_in_term1538); 
-					pushFollow(FOLLOW_value_in_term1544);
+					match(input,MINUS,FOLLOW_MINUS_in_term804); 
+					pushFollow(FOLLOW_value_in_term810);
 					l=value();
 					state._fsp--;
 
-
-					                        ast = new MinusNode(ast, l);
-					                    
+					ast = new MinusNode(ast, l);
 					}
 					break;
 				case 3 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:249:19: OR l= value
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:144:24: OR l= value
 					{
-					match(input,OR,FOLLOW_OR_in_term1628); 
-					pushFollow(FOLLOW_value_in_term1634);
+					match(input,OR,FOLLOW_OR_in_term837); 
+					pushFollow(FOLLOW_value_in_term843);
 					l=value();
 					state._fsp--;
 
-
-					                        ast = new OrNode(ast, l);
-					                    
+					ast = new OrNode(ast, l);
 					}
 					break;
 
@@ -736,7 +684,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "value"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:255:1: value returns [Node ast] : f= fatt ( TIMES l= fatt | DIV l= fatt | AND l= fatt )* ;
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:147:1: value returns [Node ast] : f= fatt ( TIMES l= fatt | DIV l= fatt | AND l= fatt )* ;
 	public final Node value() throws RecognitionException {
 		Node ast = null;
 
@@ -745,17 +693,15 @@ public class MiniFunParser extends Parser {
 		Node l =null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:255:25: (f= fatt ( TIMES l= fatt | DIV l= fatt | AND l= fatt )* )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:256:13: f= fatt ( TIMES l= fatt | DIV l= fatt | AND l= fatt )*
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:147:25: (f= fatt ( TIMES l= fatt | DIV l= fatt | AND l= fatt )* )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:148:13: f= fatt ( TIMES l= fatt | DIV l= fatt | AND l= fatt )*
 			{
-			pushFollow(FOLLOW_fatt_in_value1688);
+			pushFollow(FOLLOW_fatt_in_value887);
 			f=fatt();
 			state._fsp--;
 
-
-			                ast = f;
-			            
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:261:21: ( TIMES l= fatt | DIV l= fatt | AND l= fatt )*
+			ast = f;
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:149:3: ( TIMES l= fatt | DIV l= fatt | AND l= fatt )*
 			loop9:
 			while (true) {
 				int alt9=4;
@@ -778,42 +724,36 @@ public class MiniFunParser extends Parser {
 				}
 				switch (alt9) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:262:21: TIMES l= fatt
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:149:4: TIMES l= fatt
 					{
-					match(input,TIMES,FOLLOW_TIMES_in_value1728); 
-					pushFollow(FOLLOW_fatt_in_value1734);
+					match(input,TIMES,FOLLOW_TIMES_in_value894); 
+					pushFollow(FOLLOW_fatt_in_value900);
 					l=fatt();
 					state._fsp--;
 
-
-					                        ast = new TimesNode (ast,l);
-					                    
+					ast = new TimesNode (ast,l);
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:268:19: DIV l= fatt
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:150:24: DIV l= fatt
 					{
-					match(input,DIV,FOLLOW_DIV_in_value1818); 
-					pushFollow(FOLLOW_fatt_in_value1824);
+					match(input,DIV,FOLLOW_DIV_in_value927); 
+					pushFollow(FOLLOW_fatt_in_value933);
 					l=fatt();
 					state._fsp--;
 
-
-					                        ast = new DivNode(ast, l);
-					                    
+					ast = new DivNode(ast, l);
 					}
 					break;
 				case 3 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:274:19: AND l= fatt
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:151:20: AND l= fatt
 					{
-					match(input,AND,FOLLOW_AND_in_value1904); 
-					pushFollow(FOLLOW_fatt_in_value1910);
+					match(input,AND,FOLLOW_AND_in_value956); 
+					pushFollow(FOLLOW_fatt_in_value962);
 					l=fatt();
 					state._fsp--;
 
-
-					                        ast = new AndNode(ast, l);
-					                    
+					ast = new AndNode(ast, l);
 					}
 					break;
 
@@ -839,7 +779,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "fatt"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:280:1: fatt returns [Node ast] : (n= NAT | TRUE | FALSE | EMPTY | LPAR e= exp RPAR |i= ID ( ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )? LPAR (fp= exp ( COMMA p= exp )* )? RPAR )? | IF x= exp THEN CLPAR y= exp CRPAR ELSE CLPAR z= exp CRPAR | SLPAR e1= exp DOUBLCOL e2= exp SRPAR | FIRST LPAR e= exp RPAR | REST LPAR e= exp RPAR | PRINT LPAR e= exp RPAR | NOT LPAR e= exp RPAR );
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:154:1: fatt returns [Node ast] : (n= NAT | TRUE | FALSE | EMPTY | LPAR e= exp RPAR |i= ID ( ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )? LPAR (fp= exp ( COMMA p= exp )* )? RPAR )? | IF x= exp THEN CLPAR y= exp CRPAR ELSE CLPAR z= exp CRPAR | SLPAR e1= exp DOUBLCOL e2= exp SRPAR | FIRST LPAR e= exp RPAR | REST LPAR e= exp RPAR | PRINT LPAR e= exp RPAR | NOT LPAR e= exp RPAR );
 	public final Node fatt() throws RecognitionException {
 		Node ast = null;
 
@@ -857,7 +797,7 @@ public class MiniFunParser extends Parser {
 		Node e2 =null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:280:24: (n= NAT | TRUE | FALSE | EMPTY | LPAR e= exp RPAR |i= ID ( ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )? LPAR (fp= exp ( COMMA p= exp )* )? RPAR )? | IF x= exp THEN CLPAR y= exp CRPAR ELSE CLPAR z= exp CRPAR | SLPAR e1= exp DOUBLCOL e2= exp SRPAR | FIRST LPAR e= exp RPAR | REST LPAR e= exp RPAR | PRINT LPAR e= exp RPAR | NOT LPAR e= exp RPAR )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:154:24: (n= NAT | TRUE | FALSE | EMPTY | LPAR e= exp RPAR |i= ID ( ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )? LPAR (fp= exp ( COMMA p= exp )* )? RPAR )? | IF x= exp THEN CLPAR y= exp CRPAR ELSE CLPAR z= exp CRPAR | SLPAR e1= exp DOUBLCOL e2= exp SRPAR | FIRST LPAR e= exp RPAR | REST LPAR e= exp RPAR | PRINT LPAR e= exp RPAR | NOT LPAR e= exp RPAR )
 			int alt15=12;
 			switch ( input.LA(1) ) {
 			case NAT:
@@ -927,90 +867,70 @@ public class MiniFunParser extends Parser {
 			}
 			switch (alt15) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:281:17: n= NAT
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:155:2: n= NAT
 					{
-					n=(Token)match(input,NAT,FOLLOW_NAT_in_fatt1967); 
-
-					                    ast = new NatNode(Integer.parseInt((n!=null?n.getText():null)));
-					                
+					n=(Token)match(input,NAT,FOLLOW_NAT_in_fatt994); 
+					ast = new NatNode(Integer.parseInt((n!=null?n.getText():null)));
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:286:15: TRUE
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:156:5: TRUE
 					{
-					match(input,TRUE,FOLLOW_TRUE_in_fatt2003); 
-
-					                    ast = new BoolNode(true);
-					                
+					match(input,TRUE,FOLLOW_TRUE_in_fatt1002); 
+					ast = new BoolNode(true);
 					}
 					break;
 				case 3 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:291:15: FALSE
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:157:15: FALSE
 					{
-					match(input,FALSE,FOLLOW_FALSE_in_fatt2050); 
-
-					                    ast = new BoolNode(false);
-					                
+					match(input,FALSE,FOLLOW_FALSE_in_fatt1032); 
+					ast = new BoolNode(false);
 					}
 					break;
 				case 4 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:296:15: EMPTY
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:158:15: EMPTY
 					{
-					match(input,EMPTY,FOLLOW_EMPTY_in_fatt2097); 
-
-					                    ast = new EmptyNode();
-					                
+					match(input,EMPTY,FOLLOW_EMPTY_in_fatt1050); 
+					ast = new EmptyNode();
 					}
 					break;
 				case 5 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:301:15: LPAR e= exp RPAR
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:159:15: LPAR e= exp RPAR
 					{
-					match(input,LPAR,FOLLOW_LPAR_in_fatt2144); 
-					pushFollow(FOLLOW_exp_in_fatt2150);
+					match(input,LPAR,FOLLOW_LPAR_in_fatt1080); 
+					pushFollow(FOLLOW_exp_in_fatt1086);
 					e=exp();
 					state._fsp--;
 
-					match(input,RPAR,FOLLOW_RPAR_in_fatt2152); 
-
-					                    ast = e;
-					                
+					match(input,RPAR,FOLLOW_RPAR_in_fatt1088); 
+					ast = e;
 					}
 					break;
 				case 6 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:306:15: i= ID ( ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )? LPAR (fp= exp ( COMMA p= exp )* )? RPAR )?
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:160:15: i= ID ( ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )? LPAR (fp= exp ( COMMA p= exp )* )? RPAR )?
 					{
-					i=(Token)match(input,ID,FOLLOW_ID_in_fatt2191); 
-
-					                    HashMap<String,STentry> hm;
-					                    HashMap<String,STentry> hmp;
-					                    STentry entry = null;
-					                    STentry entryPar=null;
-					                    int declNL;
-					                    int declNLPar;
-					                    
-					                    // controllo che esista una dichiarazione per quell'ID
-					                   for (declNL = nestingLevel; declNL >= 0; declNL--) {
-					                    hm = symTable.get(declNL);
-					                    entry = hm.get((i!=null?i.getText():null));
-					                    if (entry != null)
-					                    break;
-					                  }
-					                  if (entry == null) {
-					                    System.out.println("Identifier "+(i!=null?i.getText():null)+
-					                             " at line "+(i!=null?i.getLine():0)+" is not defined");
-					                     System.exit(0);
-					                   }
-					                   
-					                    if(entry.getDecl() instanceof DecFunNode ||
-					                        (entry.getDecl() instanceof DecParNode &&
-					                        ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null){
-					                            ast = new FunParNode(entry,nestingLevel-declNL);
-					                    } else {
-					                    //System.out.println("VarNode "+ (i!=null?i.getText():null)+" "+(i!=null?i.getLine():0));
-					                        ast = new VarNode(entry,nestingLevel-declNL);
-					                    }
-					                
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:338:17: ( ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )? LPAR (fp= exp ( COMMA p= exp )* )? RPAR )?
+					i=(Token)match(input,ID,FOLLOW_ID_in_fatt1110); 
+					HashMap<String,STentry> hm;
+					                    	STentry entry = null;
+					                    	int declNL;                    
+					                   	 // controllo che esista una dichiarazione per quell'ID
+					                   	for (declNL = nestingLevel; declNL >= 0; declNL--) {
+					                    		hm = symTable.get(declNL);
+					                    		entry = hm.get((i!=null?i.getText():null));
+					                    		if (entry != null)
+					                    			break;
+					                  	}
+					                  	if (entry == null) {
+					                    		System.out.println("Identifier " + (i!=null?i.getText():null) + " at line " + (i!=null?i.getLine():0) + " is not defined");
+					                     		System.exit(0);
+					                   	}
+					                   	if(entry.getDecl() instanceof DecFunNode ||
+					                        	(entry.getDecl() instanceof DecParNode && ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null) {
+					                        	ast = new FunParNode(entry,nestingLevel-declNL);
+					                    	} else {
+					                    		ast = new VarNode(entry,nestingLevel-declNL);
+					                    	}
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:181:18: ( ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )? LPAR (fp= exp ( COMMA p= exp )* )? RPAR )?
 					int alt14=2;
 					int LA14_0 = input.LA(1);
 					if ( (LA14_0==ALPAR||LA14_0==LPAR) ) {
@@ -1018,9 +938,9 @@ public class MiniFunParser extends Parser {
 					}
 					switch (alt14) {
 						case 1 :
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:339:18: ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )? LPAR (fp= exp ( COMMA p= exp )* )? RPAR
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:181:19: ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )? LPAR (fp= exp ( COMMA p= exp )* )? RPAR
 							{
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:339:18: ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )?
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:181:19: ( ALPAR cane= primType ( COMMA p= primType )* ARPAR )?
 							int alt11=2;
 							int LA11_0 = input.LA(1);
 							if ( (LA11_0==ALPAR) ) {
@@ -1028,14 +948,14 @@ public class MiniFunParser extends Parser {
 							}
 							switch (alt11) {
 								case 1 :
-									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:339:19: ALPAR cane= primType ( COMMA p= primType )* ARPAR
+									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:181:20: ALPAR cane= primType ( COMMA p= primType )* ARPAR
 									{
-									match(input,ALPAR,FOLLOW_ALPAR_in_fatt2264); 
-									pushFollow(FOLLOW_primType_in_fatt2268);
+									match(input,ALPAR,FOLLOW_ALPAR_in_fatt1152); 
+									pushFollow(FOLLOW_primType_in_fatt1156);
 									cane=primType();
 									state._fsp--;
 
-									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:339:39: ( COMMA p= primType )*
+									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:182:19: ( COMMA p= primType )*
 									loop10:
 									while (true) {
 										int alt10=2;
@@ -1046,10 +966,10 @@ public class MiniFunParser extends Parser {
 
 										switch (alt10) {
 										case 1 :
-											// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:339:40: COMMA p= primType
+											// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:182:20: COMMA p= primType
 											{
-											match(input,COMMA,FOLLOW_COMMA_in_fatt2271); 
-											pushFollow(FOLLOW_primType_in_fatt2275);
+											match(input,COMMA,FOLLOW_COMMA_in_fatt1178); 
+											pushFollow(FOLLOW_primType_in_fatt1182);
 											p=primType();
 											state._fsp--;
 
@@ -1061,15 +981,15 @@ public class MiniFunParser extends Parser {
 										}
 									}
 
-									match(input,ARPAR,FOLLOW_ARPAR_in_fatt2279); 
+									match(input,ARPAR,FOLLOW_ARPAR_in_fatt1204); 
 									}
 									break;
 
 							}
 
-							match(input,LPAR,FOLLOW_LPAR_in_fatt2285); 
+							match(input,LPAR,FOLLOW_LPAR_in_fatt1210); 
 							ArrayList<Node> parList = new ArrayList<Node>();
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:341:21: (fp= exp ( COMMA p= exp )* )?
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:185:23: (fp= exp ( COMMA p= exp )* )?
 							int alt13=2;
 							int LA13_0 = input.LA(1);
 							if ( (LA13_0==EMPTY||(LA13_0 >= FALSE && LA13_0 <= FIRST)||(LA13_0 >= ID && LA13_0 <= IF)||LA13_0==LPAR||(LA13_0 >= NAT && LA13_0 <= NOT)||(LA13_0 >= PRINT && LA13_0 <= REST)||LA13_0==SLPAR||LA13_0==TRUE) ) {
@@ -1077,14 +997,14 @@ public class MiniFunParser extends Parser {
 							}
 							switch (alt13) {
 								case 1 :
-									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:342:25: fp= exp ( COMMA p= exp )*
+									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:185:24: fp= exp ( COMMA p= exp )*
 									{
-									pushFollow(FOLLOW_exp_in_fatt2339);
+									pushFollow(FOLLOW_exp_in_fatt1241);
 									fp=exp();
 									state._fsp--;
 
 									parList.add(fp);
-									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:343:25: ( COMMA p= exp )*
+									// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:186:24: ( COMMA p= exp )*
 									loop12:
 									while (true) {
 										int alt12=2;
@@ -1095,10 +1015,10 @@ public class MiniFunParser extends Parser {
 
 										switch (alt12) {
 										case 1 :
-											// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:344:29: COMMA p= exp
+											// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:186:25: COMMA p= exp
 											{
-											match(input,COMMA,FOLLOW_COMMA_in_fatt2397); 
-											pushFollow(FOLLOW_exp_in_fatt2403);
+											match(input,COMMA,FOLLOW_COMMA_in_fatt1269); 
+											pushFollow(FOLLOW_exp_in_fatt1275);
 											p=exp();
 											state._fsp--;
 
@@ -1116,10 +1036,8 @@ public class MiniFunParser extends Parser {
 
 							}
 
-							match(input,RPAR,FOLLOW_RPAR_in_fatt2477); 
-
-							                        ast = new FunNode(entry,nestingLevel-declNL,parList);
-							                    
+							match(input,RPAR,FOLLOW_RPAR_in_fatt1327); 
+							ast = new FunNode(entry,nestingLevel-declNL,parList);
 							}
 							break;
 
@@ -1128,109 +1046,97 @@ public class MiniFunParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:353:15: IF x= exp THEN CLPAR y= exp CRPAR ELSE CLPAR z= exp CRPAR
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:190:15: IF x= exp THEN CLPAR y= exp CRPAR ELSE CLPAR z= exp CRPAR
 					{
-					match(input,IF,FOLLOW_IF_in_fatt2547); 
-					pushFollow(FOLLOW_exp_in_fatt2553);
+					match(input,IF,FOLLOW_IF_in_fatt1369); 
+					pushFollow(FOLLOW_exp_in_fatt1375);
 					x=exp();
 					state._fsp--;
 
-					match(input,THEN,FOLLOW_THEN_in_fatt2555); 
-					match(input,CLPAR,FOLLOW_CLPAR_in_fatt2557); 
-					pushFollow(FOLLOW_exp_in_fatt2563);
+					match(input,THEN,FOLLOW_THEN_in_fatt1377); 
+					match(input,CLPAR,FOLLOW_CLPAR_in_fatt1379); 
+					pushFollow(FOLLOW_exp_in_fatt1399);
 					y=exp();
 					state._fsp--;
 
-					match(input,CRPAR,FOLLOW_CRPAR_in_fatt2565); 
-					match(input,ELSE,FOLLOW_ELSE_in_fatt2583); 
-					match(input,CLPAR,FOLLOW_CLPAR_in_fatt2585); 
-					pushFollow(FOLLOW_exp_in_fatt2591);
+					match(input,CRPAR,FOLLOW_CRPAR_in_fatt1415); 
+					match(input,ELSE,FOLLOW_ELSE_in_fatt1417); 
+					match(input,CLPAR,FOLLOW_CLPAR_in_fatt1419); 
+					pushFollow(FOLLOW_exp_in_fatt1440);
 					z=exp();
 					state._fsp--;
 
-					match(input,CRPAR,FOLLOW_CRPAR_in_fatt2593); 
-
-					                    ast = new IfNode(x,y,z);
-					                
+					match(input,CRPAR,FOLLOW_CRPAR_in_fatt1456); 
+					ast = new IfNode(x,y,z);
 					}
 					break;
 				case 8 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:359:15: SLPAR e1= exp DOUBLCOL e2= exp SRPAR
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:195:15: SLPAR e1= exp DOUBLCOL e2= exp SRPAR
 					{
-					match(input,SLPAR,FOLLOW_SLPAR_in_fatt2640); 
-					pushFollow(FOLLOW_exp_in_fatt2646);
+					match(input,SLPAR,FOLLOW_SLPAR_in_fatt1474); 
+					pushFollow(FOLLOW_exp_in_fatt1480);
 					e1=exp();
 					state._fsp--;
 
-					match(input,DOUBLCOL,FOLLOW_DOUBLCOL_in_fatt2648); 
-					pushFollow(FOLLOW_exp_in_fatt2654);
+					match(input,DOUBLCOL,FOLLOW_DOUBLCOL_in_fatt1482); 
+					pushFollow(FOLLOW_exp_in_fatt1488);
 					e2=exp();
 					state._fsp--;
 
-					match(input,SRPAR,FOLLOW_SRPAR_in_fatt2656); 
-
-					                    ast = new ListNode(e1,e2);
-					                
+					match(input,SRPAR,FOLLOW_SRPAR_in_fatt1490); 
+					ast = new ListNode(e1,e2);
 					}
 					break;
 				case 9 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:364:15: FIRST LPAR e= exp RPAR
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:196:15: FIRST LPAR e= exp RPAR
 					{
-					match(input,FIRST,FOLLOW_FIRST_in_fatt2703); 
-					match(input,LPAR,FOLLOW_LPAR_in_fatt2705); 
-					pushFollow(FOLLOW_exp_in_fatt2711);
+					match(input,FIRST,FOLLOW_FIRST_in_fatt1520); 
+					match(input,LPAR,FOLLOW_LPAR_in_fatt1522); 
+					pushFollow(FOLLOW_exp_in_fatt1528);
 					e=exp();
 					state._fsp--;
 
-					match(input,RPAR,FOLLOW_RPAR_in_fatt2713); 
-
-					                    ast = new FirstNode(e);
-					                
+					match(input,RPAR,FOLLOW_RPAR_in_fatt1530); 
+					ast = new FirstNode(e);
 					}
 					break;
 				case 10 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:369:15: REST LPAR e= exp RPAR
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:197:15: REST LPAR e= exp RPAR
 					{
-					match(input,REST,FOLLOW_REST_in_fatt2760); 
-					match(input,LPAR,FOLLOW_LPAR_in_fatt2762); 
-					pushFollow(FOLLOW_exp_in_fatt2768);
+					match(input,REST,FOLLOW_REST_in_fatt1548); 
+					match(input,LPAR,FOLLOW_LPAR_in_fatt1550); 
+					pushFollow(FOLLOW_exp_in_fatt1556);
 					e=exp();
 					state._fsp--;
 
-					match(input,RPAR,FOLLOW_RPAR_in_fatt2770); 
-
-					                    ast = new RestNode(e);
-					                
+					match(input,RPAR,FOLLOW_RPAR_in_fatt1558); 
+					ast = new RestNode(e);
 					}
 					break;
 				case 11 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:374:15: PRINT LPAR e= exp RPAR
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:198:15: PRINT LPAR e= exp RPAR
 					{
-					match(input,PRINT,FOLLOW_PRINT_in_fatt2817); 
-					match(input,LPAR,FOLLOW_LPAR_in_fatt2819); 
-					pushFollow(FOLLOW_exp_in_fatt2825);
+					match(input,PRINT,FOLLOW_PRINT_in_fatt1588); 
+					match(input,LPAR,FOLLOW_LPAR_in_fatt1590); 
+					pushFollow(FOLLOW_exp_in_fatt1596);
 					e=exp();
 					state._fsp--;
 
-					match(input,RPAR,FOLLOW_RPAR_in_fatt2827); 
-
-					                    ast = new PrintNode(e);
-					                
+					match(input,RPAR,FOLLOW_RPAR_in_fatt1598); 
+					ast = new PrintNode(e);
 					}
 					break;
 				case 12 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:379:15: NOT LPAR e= exp RPAR
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:199:15: NOT LPAR e= exp RPAR
 					{
-					match(input,NOT,FOLLOW_NOT_in_fatt2874); 
-					match(input,LPAR,FOLLOW_LPAR_in_fatt2876); 
-					pushFollow(FOLLOW_exp_in_fatt2882);
+					match(input,NOT,FOLLOW_NOT_in_fatt1628); 
+					match(input,LPAR,FOLLOW_LPAR_in_fatt1630); 
+					pushFollow(FOLLOW_exp_in_fatt1636);
 					e=exp();
 					state._fsp--;
 
-					match(input,RPAR,FOLLOW_RPAR_in_fatt2884); 
-
-					                    ast = new NotNode(e);
-					                
+					match(input,RPAR,FOLLOW_RPAR_in_fatt1638); 
+					ast = new NotNode(e);
 					}
 					break;
 
@@ -1250,7 +1156,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "type"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:385:1: type returns [Node ast] : (p= primType |f= funParType );
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:202:1: type returns [Node ast] : (p= primType |f= funParType );
 	public final Node type() throws RecognitionException {
 		Node ast = null;
 
@@ -1259,7 +1165,7 @@ public class MiniFunParser extends Parser {
 		Node f =null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:385:24: (p= primType |f= funParType )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:202:24: (p= primType |f= funParType )
 			int alt16=2;
 			int LA16_0 = input.LA(1);
 			if ( (LA16_0==BOOLTYPE||LA16_0==ID||LA16_0==INTTYPE||LA16_0==LISTTYPE) ) {
@@ -1277,27 +1183,23 @@ public class MiniFunParser extends Parser {
 
 			switch (alt16) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:386:17: p= primType
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:203:2: p= primType
 					{
-					pushFollow(FOLLOW_primType_in_type2938);
+					pushFollow(FOLLOW_primType_in_type1671);
 					p=primType();
 					state._fsp--;
 
-
-					                    ast = p;
-					                
+					ast = p;
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:391:15: f= funParType
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:204:15: f= funParType
 					{
-					pushFollow(FOLLOW_funParType_in_type2989);
+					pushFollow(FOLLOW_funParType_in_type1705);
 					f=funParType();
 					state._fsp--;
 
-
-					                    ast = f;
-					                
+					ast = f;
 					}
 					break;
 
@@ -1317,7 +1219,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "funParType"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:397:1: funParType returns [Node ast] : LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType ;
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:206:1: funParType returns [Node ast] : LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType ;
 	public final Node funParType() throws RecognitionException {
 		Node ast = null;
 
@@ -1326,14 +1228,12 @@ public class MiniFunParser extends Parser {
 		Node p =null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:397:30: ( LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:398:13: LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:206:30: ( LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:207:13: LPAR (t= type ( COMMA t= type )* )? RPAR ARROW p= primType
 			{
-			match(input,LPAR,FOLLOW_LPAR_in_funParType3041); 
-
-			                FunParType fpt = new FunParType();
-			            
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:402:13: (t= type ( COMMA t= type )* )?
+			match(input,LPAR,FOLLOW_LPAR_in_funParType1750); 
+			FunParType fpt = new FunParType();
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:208:14: (t= type ( COMMA t= type )* )?
 			int alt18=2;
 			int LA18_0 = input.LA(1);
 			if ( (LA18_0==BOOLTYPE||LA18_0==ID||LA18_0==INTTYPE||(LA18_0 >= LISTTYPE && LA18_0 <= LPAR)) ) {
@@ -1341,16 +1241,14 @@ public class MiniFunParser extends Parser {
 			}
 			switch (alt18) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:403:17: t= type ( COMMA t= type )*
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:208:15: t= type ( COMMA t= type )*
 					{
-					pushFollow(FOLLOW_type_in_funParType3091);
+					pushFollow(FOLLOW_type_in_funParType1772);
 					t=type();
 					state._fsp--;
 
-
-					                    fpt.addPar(t);
-					                
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:407:17: ( COMMA t= type )*
+					fpt.addPar(t);
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:209:19: ( COMMA t= type )*
 					loop17:
 					while (true) {
 						int alt17=2;
@@ -1361,16 +1259,14 @@ public class MiniFunParser extends Parser {
 
 						switch (alt17) {
 						case 1 :
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:408:21: COMMA t= type
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:209:20: COMMA t= type
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_funParType3149); 
-							pushFollow(FOLLOW_type_in_funParType3155);
+							match(input,COMMA,FOLLOW_COMMA_in_funParType1795); 
+							pushFollow(FOLLOW_type_in_funParType1801);
 							t=type();
 							state._fsp--;
 
-
-							                        fpt.addPar(t);
-							                    
+							fpt.addPar(t);
 							}
 							break;
 
@@ -1384,15 +1280,13 @@ public class MiniFunParser extends Parser {
 
 			}
 
-			match(input,RPAR,FOLLOW_RPAR_in_funParType3225); 
-			match(input,ARROW,FOLLOW_ARROW_in_funParType3227); 
-			pushFollow(FOLLOW_primType_in_funParType3233);
+			match(input,RPAR,FOLLOW_RPAR_in_funParType1835); 
+			match(input,ARROW,FOLLOW_ARROW_in_funParType1837); 
+			pushFollow(FOLLOW_primType_in_funParType1843);
 			p=primType();
 			state._fsp--;
 
-
-			                fpt.addRet(p); ast =fpt;
-			            
+			fpt.addRet(p); ast =fpt;
 			}
 
 		}
@@ -1410,7 +1304,7 @@ public class MiniFunParser extends Parser {
 
 
 	// $ANTLR start "primType"
-	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:419:1: primType returns [Node ast] : ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType ( COMMA t2= primType )* SRPAR |i= ID );
+	// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:213:1: primType returns [Node ast] : ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType ( COMMA t2= primType )* SRPAR |i= ID );
 	public final Node primType() throws RecognitionException {
 		Node ast = null;
 
@@ -1420,7 +1314,7 @@ public class MiniFunParser extends Parser {
 		Node t2 =null;
 
 		try {
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:419:28: ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType ( COMMA t2= primType )* SRPAR |i= ID )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:213:28: ( INTTYPE | BOOLTYPE | LISTTYPE SLPAR t= primType ( COMMA t2= primType )* SRPAR |i= ID )
 			int alt20=4;
 			switch ( input.LA(1) ) {
 			case INTTYPE:
@@ -1450,33 +1344,29 @@ public class MiniFunParser extends Parser {
 			}
 			switch (alt20) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:420:17: INTTYPE
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:214:2: INTTYPE
 					{
-					match(input,INTTYPE,FOLLOW_INTTYPE_in_primType3274); 
-
-					                    ast = new IntTypeNode();
-					                
+					match(input,INTTYPE,FOLLOW_INTTYPE_in_primType1857); 
+					ast = new IntTypeNode();
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:425:15: BOOLTYPE
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:215:15: BOOLTYPE
 					{
-					match(input,BOOLTYPE,FOLLOW_BOOLTYPE_in_primType3321); 
-
-					                    ast = new BoolTypeNode();
-					                
+					match(input,BOOLTYPE,FOLLOW_BOOLTYPE_in_primType1875); 
+					ast = new BoolTypeNode();
 					}
 					break;
 				case 3 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:430:15: LISTTYPE SLPAR t= primType ( COMMA t2= primType )* SRPAR
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:216:15: LISTTYPE SLPAR t= primType ( COMMA t2= primType )* SRPAR
 					{
-					match(input,LISTTYPE,FOLLOW_LISTTYPE_in_primType3372); 
-					match(input,SLPAR,FOLLOW_SLPAR_in_primType3374); 
-					pushFollow(FOLLOW_primType_in_primType3378);
+					match(input,LISTTYPE,FOLLOW_LISTTYPE_in_primType1893); 
+					match(input,SLPAR,FOLLOW_SLPAR_in_primType1895); 
+					pushFollow(FOLLOW_primType_in_primType1899);
 					t=primType();
 					state._fsp--;
 
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:430:41: ( COMMA t2= primType )*
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:216:41: ( COMMA t2= primType )*
 					loop19:
 					while (true) {
 						int alt19=2;
@@ -1487,10 +1377,10 @@ public class MiniFunParser extends Parser {
 
 						switch (alt19) {
 						case 1 :
-							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:430:42: COMMA t2= primType
+							// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:216:42: COMMA t2= primType
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_primType3381); 
-							pushFollow(FOLLOW_primType_in_primType3385);
+							match(input,COMMA,FOLLOW_COMMA_in_primType1902); 
+							pushFollow(FOLLOW_primType_in_primType1906);
 							t2=primType();
 							state._fsp--;
 
@@ -1502,34 +1392,27 @@ public class MiniFunParser extends Parser {
 						}
 					}
 
-					match(input,SRPAR,FOLLOW_SRPAR_in_primType3389); 
-
-					                    ast = new ListTypeNode(t);
-					                
+					match(input,SRPAR,FOLLOW_SRPAR_in_primType1910); 
+					ast = new ListTypeNode(t);
 					}
 					break;
 				case 4 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:434:15: i= ID
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:217:15: i= ID
 					{
-					i=(Token)match(input,ID,FOLLOW_ID_in_primType3425); 
-
-					             HashMap<String,STentry> hmp;
-					             STentry entryPar=null;
-					                                 		
-					             for(int declNLPar = nestingLevel; declNLPar >= 0; declNLPar--) {
-					             	hmp = symTableParType.get(declNLPar);
-					                      entryPar = hmp.get((i!=null?i.getText():null));
-					                      if (entryPar != null)
-					                          break;
-					             }
-					             if (entryPar == null){
-						System.out.println("Parameter Type "+(i!=null?i.getText():null)+
-					                              " at line "+(i!=null?i.getLine():0)+" is not defined");
-					                          System.exit(0);
-					             }
-					             System.out.println("Trovato: \""+(i!=null?i.getText():null)+"\"");
-					             ast = new IdTypeNode((i!=null?i.getText():null));
-					             
+					i=(Token)match(input,ID,FOLLOW_ID_in_primType1930); 
+					HashMap<String,STentry> hmp;
+					                       STentry entryPar=null;
+					                       for(int declNLPar = nestingLevel; declNLPar >= 0; declNLPar--) {
+					              		hmp = symTableParType.get(declNLPar);
+					                      		entryPar = hmp.get((i!=null?i.getText():null));
+					                      		if (entryPar != null)
+					                          		break;
+					                       }
+					                       if (entryPar == null) {
+								System.out.println("Parameter Type " + (i!=null?i.getText():null) + " at line " + (i!=null?i.getLine():0) + " is not defined");
+					                          	System.exit(0);
+					                       }
+					                       ast = new IdTypeNode(entryPar);
 					}
 					break;
 
@@ -1550,130 +1433,130 @@ public class MiniFunParser extends Parser {
 
 
 
-	public static final BitSet FOLLOW_let_in_prog38 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LET_in_let64 = new BitSet(new long[]{0x0001000004800000L});
-	public static final BitSet FOLLOW_declist_in_let109 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_IN_in_let111 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_let117 = new BitSet(new long[]{0x0000040000000000L});
-	public static final BitSet FOLLOW_SEMIC_in_let119 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_VAR_in_declist209 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_ID_in_declist215 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_COL_in_declist217 = new BitSet(new long[]{0x0000000029000400L});
-	public static final BitSet FOLLOW_primType_in_declist223 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_ASS_in_declist225 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_declist231 = new BitSet(new long[]{0x0000040000000000L});
-	public static final BitSet FOLLOW_SEMIC_in_declist233 = new BitSet(new long[]{0x0001000000800002L});
-	public static final BitSet FOLLOW_FUN_in_declist292 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_ID_in_declist298 = new BitSet(new long[]{0x0000000000001010L});
-	public static final BitSet FOLLOW_ALPAR_in_declist355 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_ID_in_declist359 = new BitSet(new long[]{0x0000000000002080L});
-	public static final BitSet FOLLOW_COMMA_in_declist375 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_ID_in_declist381 = new BitSet(new long[]{0x0000000000002080L});
-	public static final BitSet FOLLOW_ARPAR_in_declist423 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_COL_in_declist482 = new BitSet(new long[]{0x0000000069000400L});
-	public static final BitSet FOLLOW_type_in_declist486 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_LPAR_in_declist530 = new BitSet(new long[]{0x0000020001000000L});
-	public static final BitSet FOLLOW_ID_in_declist602 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_COL_in_declist604 = new BitSet(new long[]{0x0000000069000400L});
-	public static final BitSet FOLLOW_type_in_declist608 = new BitSet(new long[]{0x0000020000002000L});
-	public static final BitSet FOLLOW_COMMA_in_declist690 = new BitSet(new long[]{0x0000000001000000L});
-	public static final BitSet FOLLOW_ID_in_declist694 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_COL_in_declist696 = new BitSet(new long[]{0x0000000069000400L});
-	public static final BitSet FOLLOW_type_in_declist700 = new BitSet(new long[]{0x0000020000002000L});
-	public static final BitSet FOLLOW_RPAR_in_declist816 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_CLPAR_in_declist818 = new BitSet(new long[]{0x0000898C53640000L});
-	public static final BitSet FOLLOW_let_in_declist877 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_exp_in_declist945 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_CRPAR_in_declist981 = new BitSet(new long[]{0x0000040000000000L});
-	public static final BitSet FOLLOW_SEMIC_in_declist983 = new BitSet(new long[]{0x0001000000800002L});
-	public static final BitSet FOLLOW_term_in_exp1042 = new BitSet(new long[]{0x0000001180080002L});
-	public static final BitSet FOLLOW_EQ_in_exp1095 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_term_in_exp1101 = new BitSet(new long[]{0x0000001180080002L});
-	public static final BitSet FOLLOW_NOTEQ_in_exp1157 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_term_in_exp1163 = new BitSet(new long[]{0x0000001180080002L});
-	public static final BitSet FOLLOW_MINEQ_in_exp1228 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_term_in_exp1234 = new BitSet(new long[]{0x0000001180080002L});
-	public static final BitSet FOLLOW_MAGEQ_in_exp1299 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_term_in_exp1305 = new BitSet(new long[]{0x0000001180080002L});
-	public static final BitSet FOLLOW_value_in_term1408 = new BitSet(new long[]{0x0000006200000002L});
-	public static final BitSet FOLLOW_PLUS_in_term1448 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_value_in_term1454 = new BitSet(new long[]{0x0000006200000002L});
-	public static final BitSet FOLLOW_MINUS_in_term1538 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_value_in_term1544 = new BitSet(new long[]{0x0000006200000002L});
-	public static final BitSet FOLLOW_OR_in_term1628 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_value_in_term1634 = new BitSet(new long[]{0x0000006200000002L});
-	public static final BitSet FOLLOW_fatt_in_value1688 = new BitSet(new long[]{0x0000400000008022L});
-	public static final BitSet FOLLOW_TIMES_in_value1728 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_fatt_in_value1734 = new BitSet(new long[]{0x0000400000008022L});
-	public static final BitSet FOLLOW_DIV_in_value1818 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_fatt_in_value1824 = new BitSet(new long[]{0x0000400000008022L});
-	public static final BitSet FOLLOW_AND_in_value1904 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_fatt_in_value1910 = new BitSet(new long[]{0x0000400000008022L});
-	public static final BitSet FOLLOW_NAT_in_fatt1967 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TRUE_in_fatt2003 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FALSE_in_fatt2050 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EMPTY_in_fatt2097 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LPAR_in_fatt2144 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2150 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_RPAR_in_fatt2152 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_fatt2191 = new BitSet(new long[]{0x0000000040000012L});
-	public static final BitSet FOLLOW_ALPAR_in_fatt2264 = new BitSet(new long[]{0x0000000029000400L});
-	public static final BitSet FOLLOW_primType_in_fatt2268 = new BitSet(new long[]{0x0000000000002080L});
-	public static final BitSet FOLLOW_COMMA_in_fatt2271 = new BitSet(new long[]{0x0000000029000400L});
-	public static final BitSet FOLLOW_primType_in_fatt2275 = new BitSet(new long[]{0x0000000000002080L});
-	public static final BitSet FOLLOW_ARPAR_in_fatt2279 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_LPAR_in_fatt2285 = new BitSet(new long[]{0x00008B8C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2339 = new BitSet(new long[]{0x0000020000002000L});
-	public static final BitSet FOLLOW_COMMA_in_fatt2397 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2403 = new BitSet(new long[]{0x0000020000002000L});
-	public static final BitSet FOLLOW_RPAR_in_fatt2477 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IF_in_fatt2547 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2553 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_THEN_in_fatt2555 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_CLPAR_in_fatt2557 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2563 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_CRPAR_in_fatt2565 = new BitSet(new long[]{0x0000000000020000L});
-	public static final BitSet FOLLOW_ELSE_in_fatt2583 = new BitSet(new long[]{0x0000000000000800L});
-	public static final BitSet FOLLOW_CLPAR_in_fatt2585 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2591 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_CRPAR_in_fatt2593 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SLPAR_in_fatt2640 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2646 = new BitSet(new long[]{0x0000000000010000L});
-	public static final BitSet FOLLOW_DOUBLCOL_in_fatt2648 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2654 = new BitSet(new long[]{0x0000100000000000L});
-	public static final BitSet FOLLOW_SRPAR_in_fatt2656 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FIRST_in_fatt2703 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_LPAR_in_fatt2705 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2711 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_RPAR_in_fatt2713 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_REST_in_fatt2760 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_LPAR_in_fatt2762 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2768 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_RPAR_in_fatt2770 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_PRINT_in_fatt2817 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_LPAR_in_fatt2819 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2825 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_RPAR_in_fatt2827 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_NOT_in_fatt2874 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_LPAR_in_fatt2876 = new BitSet(new long[]{0x0000898C43640000L});
-	public static final BitSet FOLLOW_exp_in_fatt2882 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_RPAR_in_fatt2884 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_primType_in_type2938 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_funParType_in_type2989 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LPAR_in_funParType3041 = new BitSet(new long[]{0x0000020069000400L});
-	public static final BitSet FOLLOW_type_in_funParType3091 = new BitSet(new long[]{0x0000020000002000L});
-	public static final BitSet FOLLOW_COMMA_in_funParType3149 = new BitSet(new long[]{0x0000000069000400L});
-	public static final BitSet FOLLOW_type_in_funParType3155 = new BitSet(new long[]{0x0000020000002000L});
-	public static final BitSet FOLLOW_RPAR_in_funParType3225 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_ARROW_in_funParType3227 = new BitSet(new long[]{0x0000000029000400L});
-	public static final BitSet FOLLOW_primType_in_funParType3233 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_INTTYPE_in_primType3274 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_BOOLTYPE_in_primType3321 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LISTTYPE_in_primType3372 = new BitSet(new long[]{0x0000080000000000L});
-	public static final BitSet FOLLOW_SLPAR_in_primType3374 = new BitSet(new long[]{0x0000000029000400L});
-	public static final BitSet FOLLOW_primType_in_primType3378 = new BitSet(new long[]{0x0000100000002000L});
-	public static final BitSet FOLLOW_COMMA_in_primType3381 = new BitSet(new long[]{0x0000000029000400L});
-	public static final BitSet FOLLOW_primType_in_primType3385 = new BitSet(new long[]{0x0000100000002000L});
-	public static final BitSet FOLLOW_SRPAR_in_primType3389 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_primType3425 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_let_in_prog41 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LET_in_let68 = new BitSet(new long[]{0x0001000004800000L});
+	public static final BitSet FOLLOW_declist_in_let93 = new BitSet(new long[]{0x0000000004000000L});
+	public static final BitSet FOLLOW_IN_in_let95 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_let101 = new BitSet(new long[]{0x0000040000000000L});
+	public static final BitSet FOLLOW_SEMIC_in_let103 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_VAR_in_declist155 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_ID_in_declist161 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_COL_in_declist163 = new BitSet(new long[]{0x0000000029000400L});
+	public static final BitSet FOLLOW_primType_in_declist169 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_ASS_in_declist171 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_declist177 = new BitSet(new long[]{0x0000040000000000L});
+	public static final BitSet FOLLOW_SEMIC_in_declist179 = new BitSet(new long[]{0x0001000000800002L});
+	public static final BitSet FOLLOW_FUN_in_declist203 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_ID_in_declist209 = new BitSet(new long[]{0x0000000000001010L});
+	public static final BitSet FOLLOW_ALPAR_in_declist249 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_ID_in_declist253 = new BitSet(new long[]{0x0000000000002080L});
+	public static final BitSet FOLLOW_COMMA_in_declist274 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_ID_in_declist280 = new BitSet(new long[]{0x0000000000002080L});
+	public static final BitSet FOLLOW_ARPAR_in_declist310 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_COL_in_declist341 = new BitSet(new long[]{0x0000000069000400L});
+	public static final BitSet FOLLOW_type_in_declist345 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_LPAR_in_declist349 = new BitSet(new long[]{0x0000020001000000L});
+	public static final BitSet FOLLOW_ID_in_declist379 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_COL_in_declist381 = new BitSet(new long[]{0x0000000069000400L});
+	public static final BitSet FOLLOW_type_in_declist385 = new BitSet(new long[]{0x0000020000002000L});
+	public static final BitSet FOLLOW_COMMA_in_declist420 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_ID_in_declist424 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_COL_in_declist426 = new BitSet(new long[]{0x0000000069000400L});
+	public static final BitSet FOLLOW_type_in_declist430 = new BitSet(new long[]{0x0000020000002000L});
+	public static final BitSet FOLLOW_RPAR_in_declist508 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_CLPAR_in_declist510 = new BitSet(new long[]{0x0000898C53640000L});
+	public static final BitSet FOLLOW_let_in_declist553 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_exp_in_declist601 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_CRPAR_in_declist624 = new BitSet(new long[]{0x0000040000000000L});
+	public static final BitSet FOLLOW_SEMIC_in_declist626 = new BitSet(new long[]{0x0001000000800002L});
+	public static final BitSet FOLLOW_term_in_exp647 = new BitSet(new long[]{0x0000001180080002L});
+	public static final BitSet FOLLOW_EQ_in_exp654 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_term_in_exp660 = new BitSet(new long[]{0x0000001180080002L});
+	public static final BitSet FOLLOW_NOTEQ_in_exp696 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_term_in_exp702 = new BitSet(new long[]{0x0000001180080002L});
+	public static final BitSet FOLLOW_MINEQ_in_exp711 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_term_in_exp717 = new BitSet(new long[]{0x0000001180080002L});
+	public static final BitSet FOLLOW_MAGEQ_in_exp726 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_term_in_exp732 = new BitSet(new long[]{0x0000001180080002L});
+	public static final BitSet FOLLOW_value_in_term764 = new BitSet(new long[]{0x0000006200000002L});
+	public static final BitSet FOLLOW_PLUS_in_term771 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_value_in_term777 = new BitSet(new long[]{0x0000006200000002L});
+	public static final BitSet FOLLOW_MINUS_in_term804 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_value_in_term810 = new BitSet(new long[]{0x0000006200000002L});
+	public static final BitSet FOLLOW_OR_in_term837 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_value_in_term843 = new BitSet(new long[]{0x0000006200000002L});
+	public static final BitSet FOLLOW_fatt_in_value887 = new BitSet(new long[]{0x0000400000008022L});
+	public static final BitSet FOLLOW_TIMES_in_value894 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_fatt_in_value900 = new BitSet(new long[]{0x0000400000008022L});
+	public static final BitSet FOLLOW_DIV_in_value927 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_fatt_in_value933 = new BitSet(new long[]{0x0000400000008022L});
+	public static final BitSet FOLLOW_AND_in_value956 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_fatt_in_value962 = new BitSet(new long[]{0x0000400000008022L});
+	public static final BitSet FOLLOW_NAT_in_fatt994 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TRUE_in_fatt1002 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FALSE_in_fatt1032 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EMPTY_in_fatt1050 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LPAR_in_fatt1080 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1086 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_RPAR_in_fatt1088 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_fatt1110 = new BitSet(new long[]{0x0000000040000012L});
+	public static final BitSet FOLLOW_ALPAR_in_fatt1152 = new BitSet(new long[]{0x0000000029000400L});
+	public static final BitSet FOLLOW_primType_in_fatt1156 = new BitSet(new long[]{0x0000000000002080L});
+	public static final BitSet FOLLOW_COMMA_in_fatt1178 = new BitSet(new long[]{0x0000000029000400L});
+	public static final BitSet FOLLOW_primType_in_fatt1182 = new BitSet(new long[]{0x0000000000002080L});
+	public static final BitSet FOLLOW_ARPAR_in_fatt1204 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_LPAR_in_fatt1210 = new BitSet(new long[]{0x00008B8C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1241 = new BitSet(new long[]{0x0000020000002000L});
+	public static final BitSet FOLLOW_COMMA_in_fatt1269 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1275 = new BitSet(new long[]{0x0000020000002000L});
+	public static final BitSet FOLLOW_RPAR_in_fatt1327 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IF_in_fatt1369 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1375 = new BitSet(new long[]{0x0000200000000000L});
+	public static final BitSet FOLLOW_THEN_in_fatt1377 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_CLPAR_in_fatt1379 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1399 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_CRPAR_in_fatt1415 = new BitSet(new long[]{0x0000000000020000L});
+	public static final BitSet FOLLOW_ELSE_in_fatt1417 = new BitSet(new long[]{0x0000000000000800L});
+	public static final BitSet FOLLOW_CLPAR_in_fatt1419 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1440 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_CRPAR_in_fatt1456 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SLPAR_in_fatt1474 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1480 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_DOUBLCOL_in_fatt1482 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1488 = new BitSet(new long[]{0x0000100000000000L});
+	public static final BitSet FOLLOW_SRPAR_in_fatt1490 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FIRST_in_fatt1520 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_LPAR_in_fatt1522 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1528 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_RPAR_in_fatt1530 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_REST_in_fatt1548 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_LPAR_in_fatt1550 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1556 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_RPAR_in_fatt1558 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_PRINT_in_fatt1588 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_LPAR_in_fatt1590 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1596 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_RPAR_in_fatt1598 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_NOT_in_fatt1628 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_LPAR_in_fatt1630 = new BitSet(new long[]{0x0000898C43640000L});
+	public static final BitSet FOLLOW_exp_in_fatt1636 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_RPAR_in_fatt1638 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_primType_in_type1671 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_funParType_in_type1705 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LPAR_in_funParType1750 = new BitSet(new long[]{0x0000020069000400L});
+	public static final BitSet FOLLOW_type_in_funParType1772 = new BitSet(new long[]{0x0000020000002000L});
+	public static final BitSet FOLLOW_COMMA_in_funParType1795 = new BitSet(new long[]{0x0000000069000400L});
+	public static final BitSet FOLLOW_type_in_funParType1801 = new BitSet(new long[]{0x0000020000002000L});
+	public static final BitSet FOLLOW_RPAR_in_funParType1835 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_ARROW_in_funParType1837 = new BitSet(new long[]{0x0000000029000400L});
+	public static final BitSet FOLLOW_primType_in_funParType1843 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INTTYPE_in_primType1857 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_BOOLTYPE_in_primType1875 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LISTTYPE_in_primType1893 = new BitSet(new long[]{0x0000080000000000L});
+	public static final BitSet FOLLOW_SLPAR_in_primType1895 = new BitSet(new long[]{0x0000000029000400L});
+	public static final BitSet FOLLOW_primType_in_primType1899 = new BitSet(new long[]{0x0000100000002000L});
+	public static final BitSet FOLLOW_COMMA_in_primType1902 = new BitSet(new long[]{0x0000000029000400L});
+	public static final BitSet FOLLOW_primType_in_primType1906 = new BitSet(new long[]{0x0000100000002000L});
+	public static final BitSet FOLLOW_SRPAR_in_primType1910 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ID_in_primType1930 = new BitSet(new long[]{0x0000000000000002L});
 }

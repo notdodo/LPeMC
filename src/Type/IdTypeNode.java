@@ -6,14 +6,14 @@
 
 package Type;
 
-import Generics.Node;
+import Generics.*;
 
 
 public class IdTypeNode extends Node {
     
-    private String id;
+    private STentry id;
     
-    public IdTypeNode (String idp){
+    public IdTypeNode (STentry idp){
         id = idp;
     }
     
