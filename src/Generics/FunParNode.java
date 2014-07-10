@@ -36,8 +36,8 @@ public class FunParNode extends Node {
             }
         }
         return this.getClass().getSimpleName()
-                + "[" + diffNesting + "," 
-                + (decl.getOffSet()) + "," 
+                + "[" + diffNesting + ","
+                + (decl.getOffSet()) + ","
                 + parString + "]";
     }
 
@@ -68,9 +68,8 @@ public class FunParNode extends Node {
             return MiniFunLib.LOADFP //parte il codice per trovare l'indirizzo del codice della funzione chiamata
                     + lookupAL
                     + MiniFunLib.PUSH + this.decl.getOffSet() + "\n"
-                    + MiniFunLib.SUB 
+                    + MiniFunLib.SUB
                     + MiniFunLib.LOADW
-
                     + MiniFunLib.LOADFP// parte il codice per trovarci l'AL
                     + lookupAL
                     + MiniFunLib.PUSH + (this.decl.getOffSet() + 1) + "\n"

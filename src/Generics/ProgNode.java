@@ -11,8 +11,8 @@ public class ProgNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() 
-                + "[" + this.let.toPrint() 
+        return this.getClass().getSimpleName()
+                + "[" + this.let.toPrint()
                 + "]";
     }
 

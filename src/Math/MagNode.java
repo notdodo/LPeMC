@@ -15,7 +15,7 @@ public class MagNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() 
+        return this.getClass().getSimpleName()
                 + "[" + this.left.toPrint() + ","
                 + this.right.toPrint() + "]";
     }
@@ -44,7 +44,7 @@ public class MagNode extends Node {
                 + this.right.codeGen()
                 + this.left.codeGen()
                 + MiniFunLib.BRANCHEQ + lab2 + "\n"
-                + MiniFunLib.PUSH  + MiniFunLib.TRUE + "\n"
+                + MiniFunLib.PUSH + MiniFunLib.TRUE + "\n"
                 + MiniFunLib.BRANCH + lab3 + "\n"
                 + lab2 + ":\n"
                 + MiniFunLib.PUSH + MiniFunLib.FALSE + "\n"

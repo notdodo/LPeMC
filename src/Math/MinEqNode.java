@@ -15,8 +15,8 @@ public class MinEqNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() 
-                + "[" + this.left.toPrint() + "," 
+        return this.getClass().getSimpleName()
+                + "[" + this.left.toPrint() + ","
                 + this.right.toPrint() + "]";
     }
 
@@ -38,10 +38,10 @@ public class MinEqNode extends Node {
         String lab2 = MiniFunLib.newLabel();
         return this.left.codeGen() + this.right.codeGen()
                 + MiniFunLib.BRANCHLESS + lab1 + "\n"
-                + MiniFunLib.PUSH  + MiniFunLib.FALSE + "\n"
+                + MiniFunLib.PUSH + MiniFunLib.FALSE + "\n"
                 + MiniFunLib.BRANCH + lab2 + "\n"
                 + lab1 + ":\n"
-                + MiniFunLib.PUSH  + MiniFunLib.TRUE + "\n"
+                + MiniFunLib.PUSH + MiniFunLib.TRUE + "\n"
                 + lab2 + ":\n";
     }
 }

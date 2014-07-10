@@ -1,25 +1,25 @@
 package Generics;
 
-public class DecTypeNode extends Node{
-    
+public class DecTypeNode extends Node {
+
     private String id;
-    
-    public DecTypeNode (String idType){
-        id=idType;
+
+    public DecTypeNode(String idType) {
+        id = idType;
     }
-    
+
     @Override
-    public String toPrint(){
-        return "";
+    public String toPrint() {
+        return this.getClass().getSimpleName() + "[" + id + "]";
     }
-    
+
     @Override
-    public String typeCheck(){
+    public String typeCheck() {
         return "";
     }
 
     @Override
     public String codeGen() {
         return "";
-    }    
+    }
 }

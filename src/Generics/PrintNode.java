@@ -10,8 +10,8 @@ public class PrintNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() 
-                + "[" + exp.toPrint() 
+        return this.getClass().getSimpleName()
+                + "[" + exp.toPrint()
                 + "]";
     }
 
@@ -22,9 +22,9 @@ public class PrintNode extends Node {
 
     @Override
     public String codeGen() {
-                 
+
         return exp.codeGen()
                 + MiniFunLib.PRINT;
-        
+
     }
 }

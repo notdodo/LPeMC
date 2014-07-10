@@ -16,7 +16,7 @@ public class TimesNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() 
+        return this.getClass().getSimpleName()
                 + "[" + left.toPrint() + ","
                 + right.toPrint() + "]";
     }

@@ -27,7 +27,7 @@ public class AndNode extends Node {
      */
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() 
+        return this.getClass().getSimpleName()
                 + "[" + left.toPrint() + ","
                 + right.toPrint() + "]";
     }
@@ -51,10 +51,9 @@ public class AndNode extends Node {
      */
     @Override
     public String codeGen() {
-        return left.codeGen() 
-                + right.codeGen() 
-                + MiniFunLib.MULT
-                ;
+        return left.codeGen()
+                + right.codeGen()
+                + MiniFunLib.MULT;
     }
 
 }

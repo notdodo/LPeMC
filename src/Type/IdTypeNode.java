@@ -3,28 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package Type;
 
 import Generics.*;
 
-
 public class IdTypeNode extends Node {
-    
+
     private STentry id;
-    
-    public IdTypeNode (STentry idp){
+
+    public IdTypeNode(STentry idp) {
         id = idp;
     }
-    
+
     @Override
     public String toPrint() {
-        return this.id.toPrint();
+        return this.getClass().getSimpleName() + "[" + this.id.toPrint() + "]";
     }
 
     @Override
     public String typeCheck() {
-        System.out.println(this.id.getDecl());
+        System.out.println("IdTypeNode richiama: " + this.id.getDecl());
         return "";
     }
 
@@ -32,5 +30,5 @@ public class IdTypeNode extends Node {
     public String codeGen() {
         return "";
     }
-    
+
 }

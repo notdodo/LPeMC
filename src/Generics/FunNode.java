@@ -15,15 +15,15 @@ public class FunNode extends Node {
         this.diffNesting = dn;
         this.parList = pl;
     }
-    
-    public STentry getDecl(){
+
+    public STentry getDecl() {
         return this.decl;
     }
-    
+
     public void addParType(ArrayList<Node> pt) {
         this.paramTypes = pt;
     }
-    
+
     @Override
     public String toPrint() {
         String parString = "";

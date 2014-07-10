@@ -12,8 +12,8 @@ public class VarNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() 
-                + "[" + diffNesting + "," 
+        return this.getClass().getSimpleName()
+                + "[" + diffNesting + ","
                 + decl.getOffSet() + "]";
     }
 
@@ -35,7 +35,7 @@ public class VarNode extends Node {
          */
         return MiniFunLib.LOADFP
                 + lookupAL
-                + MiniFunLib.PUSH+ decl.getOffSet() + "\n"
+                + MiniFunLib.PUSH + decl.getOffSet() + "\n"
                 + MiniFunLib.SUB
                 + MiniFunLib.LOADW;
     }

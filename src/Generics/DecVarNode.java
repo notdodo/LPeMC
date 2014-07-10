@@ -16,7 +16,7 @@ public class DecVarNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() 
+        return this.getClass().getSimpleName()
                 + "[" + id + ","
                 + type.toPrint() + ","
                 + exp.toPrint() + "]";
@@ -29,7 +29,7 @@ public class DecVarNode extends Node {
                 typeChecked = true;
                 typeString = type.typeCheck();
             } else {
-                System.out.println("Type Error: " 
+                System.out.println("Type Error: "
                         + this.getClass().getSimpleName()
                         + " " + this.id);
                 System.exit(0);

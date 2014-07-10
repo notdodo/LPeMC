@@ -16,8 +16,6 @@ public class DecFunNode extends Node {
     private String typeString = "";
     private ArrayList<Node> decList = new ArrayList<Node>();
     private ArrayList<Node> paramTypes = new ArrayList<Node>();
-    private Node decType;
-    
 
     /**
      * @param i Identificare del nome della funzione
@@ -60,10 +58,11 @@ public class DecFunNode extends Node {
     public String getID() {
         return this.id;
     }
-    
-    public void addParType(ArrayList<Node> apt){
-        this.paramTypes=apt;
+
+    public void addParType(ArrayList<Node> apt) {
+        this.paramTypes = apt;
     }
+
     @Override
     public String toPrint() {
         String parString = "";
@@ -75,7 +74,7 @@ public class DecFunNode extends Node {
             }
         }
 
-        return this.getClass().getSimpleName() 
+        return this.getClass().getSimpleName()
                 + "[" + id + ","
                 + retType.toPrint() + ","
                 + parString + ","
@@ -89,9 +88,9 @@ public class DecFunNode extends Node {
                 typeChecked = true;
                 typeString = this.body.typeCheck();
             } else {
-                System.out.println("Type Error: + " 
+                System.out.println("Type Error: + "
                         + this.getClass().getSimpleName()
-                        + " " + this.id + " Tipo ritorno incompatibile" 
+                        + " " + this.id + " Tipo ritorno incompatibile"
                         + this.body.getClass());
                 System.exit(0);
             }

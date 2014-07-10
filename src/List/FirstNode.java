@@ -14,8 +14,8 @@ public class FirstNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() 
-                + "[" + exp.toPrint() 
+        return this.getClass().getSimpleName()
+                + "[" + exp.toPrint()
                 + "]";
     }
 

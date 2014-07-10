@@ -9,10 +9,10 @@ public class MiniFunLib {
     public static final int NULLPOINTER = -1;
     public static final String EMPTY = "Empty";
     public static final String LIST = "List:";
-    
+
     private static int labIndex = 0;
     private static String functionCode = "";
-    
+
     public static final String PUSH = "push ";
     public static final String POP = "pop\n";
     public static final String ADD = "add\n";
@@ -31,7 +31,7 @@ public class MiniFunLib {
     public static final String STORERV = "srv\n";
     public static final String LOADFP = "lfp\n";
     public static final String STOREFP = "sfp\n";
-    public static final String COPYFP  = "cfp\n";
+    public static final String COPYFP = "cfp\n";
     public static final String LOADHP = "lhp\n";
     public static final String STOREHP = "shp\n";
     public static final String PRINT = "print\n";
@@ -43,11 +43,10 @@ public class MiniFunLib {
                 || (n1.typeCheck().indexOf(MiniFunLib.LIST) == 0 && n2.typeCheck().equals(MiniFunLib.EMPTY)))
                 || (n2.typeCheck().indexOf(MiniFunLib.LIST) == 0 && n1.typeCheck().equals(MiniFunLib.EMPTY))
                 || (n1.typeCheck().equals(MiniFunLib.INT) && n2.typeCheck().equals(MiniFunLib.EMPTY))
-                || (n2.typeCheck().equals(MiniFunLib.INT) && n1.typeCheck().equals(MiniFunLib.EMPTY))
-                ) {
+                || (n2.typeCheck().equals(MiniFunLib.INT) && n1.typeCheck().equals(MiniFunLib.EMPTY))) {
             return true;
         }
-        System.out.println("===\nn1.typeCheck = "+n1.typeCheck()+"\nn2.typeCheck = "+n2.typeCheck()+"\nn1.getClass = "+n1.getClass()+"\nn2.getClass = "+n2.getClass());
+        System.out.println("===\nn1.typeCheck = " + n1.typeCheck() + "\nn2.typeCheck = " + n2.typeCheck() + "\nn1.getClass = " + n1.getClass() + "\nn2.getClass = " + n2.getClass());
         return false;
     }
 

@@ -36,11 +36,11 @@ public class ListNode extends Node {
             if (this.rest instanceof EmptyNode || (listFirst).equals(listRest)) {
                 typeString = listFirst;
                 return listFirst;
-            }else {
+            } else {
                 System.out.println("Type Error " + this.getClass().getSimpleName());
                 System.exit(0);
             }
-        } 
+        }
         return typeString;
     }
 
@@ -58,8 +58,7 @@ public class ListNode extends Node {
                 + "push 2\n"
                 + MiniFunLib.LOADHP
                 + MiniFunLib.ADD
-                + MiniFunLib.STOREHP
-                ;
+                + MiniFunLib.STOREHP;
     }
 
 }
