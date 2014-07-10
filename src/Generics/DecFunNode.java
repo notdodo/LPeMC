@@ -75,7 +75,7 @@ public class DecFunNode extends Node {
         }
 
         return this.getClass().getSimpleName()
-                + "[" + id + ","
+                + "[\"" + id + "\","
                 + retType.toPrint() + ","
                 + parString + ","
                 + body.toPrint() + "]";

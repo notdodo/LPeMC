@@ -18,7 +18,7 @@ public class Test {
         MiniFunParser parser = new MiniFunParser(tokens);
         Node ast = parser.prog();
         String alberoSintattico = ast.toPrint();
-        //System.out.println(alberoSintattico);
+        System.out.println(alberoSintattico);
         //System.out.println(stringConverter(alberoSintattico));
         System.out.println(ast.typeCheck());
         String asm = ast.codeGen();

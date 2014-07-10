@@ -10,7 +10,7 @@ public class DecTypeNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + id + "]";
+        return this.getClass().getSimpleName() + "[\"" + id + "\"]";
     }
 
     @Override

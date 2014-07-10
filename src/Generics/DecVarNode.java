@@ -17,7 +17,7 @@ public class DecVarNode extends Node {
     @Override
     public String toPrint() {
         return this.getClass().getSimpleName()
-                + "[" + id + ","
+                + "[\"" + id + "\","
                 + type.toPrint() + ","
                 + exp.toPrint() + "]";
     }
