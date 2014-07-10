@@ -157,9 +157,14 @@ fatt returns [Node ast]:
             | FALSE {$ast = new BoolNode(false);}
             | EMPTY {$ast = new EmptyNode();}            
             | LPAR e = exp RPAR {$ast = $e.ast;}  
-            | i=ID  {HashMap<String,STentry> hm;
+            | i=ID  {ArrayList<Node> paramTypes = new ArrayList<Node>();}
+            	(ALPAR p1=primType {paramTypes.add($p1.ast);}
+                		(COMMA p2=primType {paramTypes.add($p2.ast);})*
+                	ARPAR)? 
+            	{HashMap<String,STentry> hm;
                     	STentry entry = null;
-                    	int declNL;                    
+                    	int declNL;          
+                    	FunParNode fpn = null;
                    	 // controllo che esista una dichiarazione per quell'ID
                    	for (declNL = nestingLevel; declNL >= 0; declNL--) {
                     		hm = symTable.get(declNL);
@@ -173,19 +178,20 @@ fatt returns [Node ast]:
                    	}
                    	if(entry.getDecl() instanceof DecFunNode ||
                         	(entry.getDecl() instanceof DecParNode && ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null) {
-                        	$ast = new FunParNode(entry,nestingLevel-declNL);
+                        	fpn = new FunParNode(entry,nestingLevel-declNL);
+                        	fpn.addParType(paramTypes);
+                        	$ast = fpn;
                     	} else {
                     		$ast = new VarNode(entry,nestingLevel-declNL);
                     	}}
                 	// l'ID e' una funzione -> controllo i parametri
-                	((ALPAR cane=primType 
-                		(COMMA p=primType)* 
-                	ARPAR)?
-		LPAR {ArrayList<Node> parList = new ArrayList<Node>();}
+                	(LPAR {ArrayList<Node> parList = new ArrayList<Node>();}
                     		(fp = exp {parList.add($fp.ast);}
                     			(COMMA p = exp {parList.add($p.ast);})*
                     		)?
-                    	RPAR {$ast = new FunNode(entry,nestingLevel-declNL,parList);}
+                    	RPAR {FunNode fn = new FunNode(entry,nestingLevel-declNL,parList);
+                    		fn.addParType(paramTypes);
+                    		$ast = fn;}
                     	)?
             | IF x = exp THEN CLPAR 
             	y = exp 

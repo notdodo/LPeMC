@@ -30,10 +30,8 @@ public class ListNode extends Node {
             this.typeChecked = true;
             // type check della lista meno il first
             String listRest = this.rest.typeCheck();
-            System.out.println(listRest);
             // creo il tipo LIST:type
             String listFirst = MiniFunLib.LIST + this.first.typeCheck();
-            System.out.println(listFirst);
             // se la lista è vuota (EMPTY) o i tipi di first e rest sono uguali
             if (this.rest instanceof EmptyNode || (listFirst).equals(listRest)) {
                 typeString = listFirst;

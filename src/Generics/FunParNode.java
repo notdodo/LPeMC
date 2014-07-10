@@ -7,6 +7,7 @@ public class FunParNode extends Node {
     private STentry decl;
     private int diffNesting;
     private ArrayList<Node> parList;
+    private ArrayList<Node> paramTypes;
 
     public FunParNode(STentry d, int dn, ArrayList<Node> pl) {
         decl = d;
@@ -77,6 +78,10 @@ public class FunParNode extends Node {
                     + MiniFunLib.LOADW //abbiamo trovato l'access link
                     ;
         }
+    }
+
+    public void addParType(ArrayList<Node> paramTypes) {
+        this.paramTypes = paramTypes;
     }
 
 }

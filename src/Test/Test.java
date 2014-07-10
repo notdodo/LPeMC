@@ -20,7 +20,7 @@ public class Test {
         String alberoSintattico = ast.toPrint();
         //System.out.println(alberoSintattico);
         //System.out.println(stringConverter(alberoSintattico));
-        //System.out.println(ast.typeCheck());
+        System.out.println(ast.typeCheck());
         String asm = ast.codeGen();
 
         FileWriter fstream = new FileWriter(args[0] + ".asm");

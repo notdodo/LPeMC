@@ -19,12 +19,13 @@ public class IdTypeNode extends Node {
     
     @Override
     public String toPrint() {
-            return this.getClass().getSimpleName();
+        return this.id.toPrint();
     }
 
     @Override
     public String typeCheck() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(this.id.getDecl());
+        return "";
     }
 
     @Override

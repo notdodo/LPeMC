@@ -8,6 +8,7 @@ public class FunNode extends Node {
     protected STentry decl;
     protected int diffNesting;
     protected ArrayList<Node> parList;
+    protected ArrayList<Node> paramTypes;
 
     public FunNode(STentry d, int dn, ArrayList<Node> pl) {
         this.decl = d;
@@ -16,7 +17,11 @@ public class FunNode extends Node {
     }
     
     public STentry getDecl(){
-    return this.decl;
+        return this.decl;
+    }
+    
+    public void addParType(ArrayList<Node> pt) {
+        this.paramTypes = pt;
     }
     
     @Override
@@ -42,12 +47,12 @@ public class FunNode extends Node {
             FunParType funType = ((FunParType) ((DecParNode) decl.getDecl()).getType());
             ArrayList<Node> decFunPar = funType.getPar();
             // Controllo di avere lo stesso numero di parametri
-            if (parameterMatch(decFunPar, parList)) {
+            if (checkPar(decFunPar, parList)) {
                 return funType.getRetType().typeCheck();
             }
         } else if (decl.getDecl() instanceof DecFunNode) {
             ArrayList<Node> decPar = ((DecFunNode) this.decl.getDecl()).getPar();
-            if (parameterMatch(decPar, parList)) {
+            if (checkPar(decPar, parList)) {
                 return ((DecFunNode) this.decl.getDecl()).getRetType().typeCheck();
             }
         }
@@ -120,7 +125,7 @@ public class FunNode extends Node {
                 + MiniFunLib.JS; //effettua il salto all'indirizzo corretto
     }
 
-    private boolean parameterMatch(ArrayList<Node> declParameter, ArrayList<Node> passedParameter) {
+    private boolean checkPar(ArrayList<Node> declParameter, ArrayList<Node> passedParameter) {
         //controllare che se è un funparnode
         if (declParameter.size() == passedParameter.size()) {
             // Controllo ad uno ad un la compatibilità dei Parametri con la

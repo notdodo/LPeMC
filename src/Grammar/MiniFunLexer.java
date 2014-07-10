@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-08 21:31:01
+// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-09 14:13:58
 
 package Grammar;
 
@@ -78,8 +78,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:235:5: ( 'let' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:235:7: 'let'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:241:5: ( 'let' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:241:7: 'let'
 			{
 			match("let"); 
 
@@ -99,8 +99,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = APICI;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:236:7: ( '\"' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:236:9: '\"'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:242:7: ( '\"' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:242:9: '\"'
 			{
 			match('\"'); 
 			}
@@ -119,8 +119,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = IN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:238:4: ( 'in' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:238:6: 'in'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:244:4: ( 'in' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:244:6: 'in'
 			{
 			match("in"); 
 
@@ -140,8 +140,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SEMIC;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:239:7: ( ';' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:239:9: ';'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:245:7: ( ';' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:245:9: ';'
 			{
 			match(';'); 
 			}
@@ -160,8 +160,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = COL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:240:5: ( ':' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:240:7: ':'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:246:5: ( ':' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:246:7: ':'
 			{
 			match(':'); 
 			}
@@ -180,8 +180,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = DOUBLCOL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:241:9: ( '::' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:241:11: '::'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:247:9: ( '::' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:247:11: '::'
 			{
 			match("::"); 
 
@@ -201,8 +201,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:242:7: ( ',' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:242:9: ','
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:248:7: ( ',' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:248:9: ','
 			{
 			match(','); 
 			}
@@ -221,8 +221,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ASS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:243:5: ( '=' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:243:7: '='
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:249:5: ( '=' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:249:7: '='
 			{
 			match('='); 
 			}
@@ -241,8 +241,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = EQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:244:4: ( '==' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:244:6: '=='
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:250:4: ( '==' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:250:6: '=='
 			{
 			match("=="); 
 
@@ -262,8 +262,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MINEQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:245:7: ( '<=' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:245:9: '<='
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:251:7: ( '<=' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:251:9: '<='
 			{
 			match("<="); 
 
@@ -283,8 +283,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MAGEQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:246:7: ( '>=' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:246:9: '>='
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:252:7: ( '>=' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:252:9: '>='
 			{
 			match(">="); 
 
@@ -304,8 +304,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = NOTEQ;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:247:7: ( '!=' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:247:9: '!='
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:253:7: ( '!=' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:253:9: '!='
 			{
 			match("!="); 
 
@@ -325,8 +325,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = PLUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:248:6: ( '+' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:248:8: '+'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:254:6: ( '+' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:254:8: '+'
 			{
 			match('+'); 
 			}
@@ -345,8 +345,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = TIMES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:249:7: ( '*' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:249:9: '*'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:255:7: ( '*' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:255:9: '*'
 			{
 			match('*'); 
 			}
@@ -365,8 +365,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = MINUS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:250:7: ( '-' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:250:9: '-'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:256:7: ( '-' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:256:9: '-'
 			{
 			match('-'); 
 			}
@@ -385,8 +385,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = OR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:251:4: ( '||' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:251:6: '||'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:257:4: ( '||' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:257:6: '||'
 			{
 			match("||"); 
 
@@ -406,8 +406,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = AND;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:252:5: ( '&&' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:252:7: '&&'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:258:5: ( '&&' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:258:7: '&&'
 			{
 			match("&&"); 
 
@@ -427,8 +427,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = DIV;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:253:5: ( '/' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:253:7: '/'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:259:5: ( '/' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:259:7: '/'
 			{
 			match('/'); 
 			}
@@ -447,7 +447,7 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = NAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:254:5: ( ( ( '1' .. '9' ) ( '0' .. '9' )* ) | '0' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:260:5: ( ( ( '1' .. '9' ) ( '0' .. '9' )* ) | '0' )
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( ((LA2_0 >= '1' && LA2_0 <= '9')) ) {
@@ -465,10 +465,10 @@ public class MiniFunLexer extends Lexer {
 
 			switch (alt2) {
 				case 1 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:254:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:260:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
 					{
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:254:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:254:8: ( '1' .. '9' ) ( '0' .. '9' )*
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:260:7: ( ( '1' .. '9' ) ( '0' .. '9' )* )
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:260:8: ( '1' .. '9' ) ( '0' .. '9' )*
 					{
 					if ( (input.LA(1) >= '1' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -478,7 +478,7 @@ public class MiniFunLexer extends Lexer {
 						recover(mse);
 						throw mse;
 					}
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:254:18: ( '0' .. '9' )*
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:260:18: ( '0' .. '9' )*
 					loop1:
 					while (true) {
 						int alt1=2;
@@ -512,7 +512,7 @@ public class MiniFunLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:254:33: '0'
+					// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:260:33: '0'
 					{
 					match('0'); 
 					}
@@ -533,8 +533,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = TRUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:255:6: ( 'true' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:255:8: 'true'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:261:6: ( 'true' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:261:8: 'true'
 			{
 			match("true"); 
 
@@ -554,8 +554,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FALSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:256:7: ( 'false' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:256:9: 'false'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:262:7: ( 'false' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:262:9: 'false'
 			{
 			match("false"); 
 
@@ -575,8 +575,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = NOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:257:5: ( 'not' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:257:7: 'not'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:263:5: ( 'not' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:263:7: 'not'
 			{
 			match("not"); 
 
@@ -596,8 +596,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = EMPTY;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:258:7: ( 'empty' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:258:9: 'empty'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:264:7: ( 'empty' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:264:9: 'empty'
 			{
 			match("empty"); 
 
@@ -617,8 +617,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:259:5: ( 'var' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:259:7: 'var'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:265:5: ( 'var' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:265:7: 'var'
 			{
 			match("var"); 
 
@@ -638,8 +638,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FUN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:260:5: ( 'fun' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:260:7: 'fun'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:266:5: ( 'fun' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:266:7: 'fun'
 			{
 			match("fun"); 
 
@@ -659,8 +659,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ARROW;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:261:7: ( '->' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:261:9: '->'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:267:7: ( '->' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:267:9: '->'
 			{
 			match("->"); 
 
@@ -680,8 +680,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:262:6: ( '(' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:262:8: '('
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:268:6: ( '(' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:268:8: '('
 			{
 			match('('); 
 			}
@@ -700,8 +700,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = RPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:263:6: ( ')' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:263:8: ')'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:269:6: ( ')' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:269:8: ')'
 			{
 			match(')'); 
 			}
@@ -720,8 +720,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = CLPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:264:7: ( '{' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:264:9: '{'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:270:7: ( '{' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:270:9: '{'
 			{
 			match('{'); 
 			}
@@ -740,8 +740,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = CRPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:265:7: ( '}' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:265:9: '}'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:271:7: ( '}' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:271:9: '}'
 			{
 			match('}'); 
 			}
@@ -760,8 +760,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SLPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:266:7: ( '[' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:266:9: '['
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:272:7: ( '[' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:272:9: '['
 			{
 			match('['); 
 			}
@@ -780,8 +780,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = SRPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:267:7: ( ']' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:267:9: ']'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:273:7: ( ']' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:273:9: ']'
 			{
 			match(']'); 
 			}
@@ -800,8 +800,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ALPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:268:7: ( '<' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:268:9: '<'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:274:7: ( '<' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:274:9: '<'
 			{
 			match('<'); 
 			}
@@ -820,8 +820,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ARPAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:269:7: ( '>' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:269:9: '>'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:275:7: ( '>' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:275:9: '>'
 			{
 			match('>'); 
 			}
@@ -840,8 +840,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:270:4: ( 'if' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:270:6: 'if'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:276:4: ( 'if' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:276:6: 'if'
 			{
 			match("if"); 
 
@@ -861,8 +861,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = THEN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:271:6: ( 'then' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:271:8: 'then'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:277:6: ( 'then' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:277:8: 'then'
 			{
 			match("then"); 
 
@@ -882,8 +882,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ELSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:272:6: ( 'else' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:272:8: 'else'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:278:6: ( 'else' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:278:8: 'else'
 			{
 			match("else"); 
 
@@ -903,8 +903,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = PRINT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:273:7: ( 'print' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:273:9: 'print'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:279:7: ( 'print' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:279:9: 'print'
 			{
 			match("print"); 
 
@@ -924,8 +924,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = FIRST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:274:7: ( 'first' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:274:9: 'first'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:280:7: ( 'first' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:280:9: 'first'
 			{
 			match("first"); 
 
@@ -945,8 +945,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = REST;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:275:6: ( 'rest' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:275:8: 'rest'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:281:6: ( 'rest' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:281:8: 'rest'
 			{
 			match("rest"); 
 
@@ -966,8 +966,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = INTTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:276:9: ( 'int' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:276:11: 'int'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:282:9: ( 'int' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:282:11: 'int'
 			{
 			match("int"); 
 
@@ -987,8 +987,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = BOOLTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:277:9: ( 'bool' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:277:11: 'bool'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:283:9: ( 'bool' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:283:11: 'bool'
 			{
 			match("bool"); 
 
@@ -1008,8 +1008,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = LISTTYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:278:9: ( 'list' )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:278:11: 'list'
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:284:9: ( 'list' )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:284:11: 'list'
 			{
 			match("list"); 
 
@@ -1029,8 +1029,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:280:4: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:280:6: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:286:4: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:286:6: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -1040,7 +1040,7 @@ public class MiniFunLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:281:3: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:287:3: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -1085,10 +1085,10 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = WHITESP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:283:9: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:283:11: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:289:9: ( ( '\\t' | ' ' | '\\r' | '\\n' )+ )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:289:11: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			{
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:283:11: ( '\\t' | ' ' | '\\r' | '\\n' )+
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:289:11: ( '\\t' | ' ' | '\\r' | '\\n' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -1138,8 +1138,8 @@ public class MiniFunLexer extends Lexer {
 		try {
 			int _type = ERR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:285:5: ( . )
-			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:285:7: .
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:291:5: ( . )
+			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:291:7: .
 			{
 			matchAny(); 
 			 System.out.println("Invalid char: "+getText()); 
