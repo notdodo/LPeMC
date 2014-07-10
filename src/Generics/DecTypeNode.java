@@ -3,6 +3,7 @@ package Generics;
 public class DecTypeNode extends Node {
 
     private String id;
+    private Node genericType = null;
 
     public DecTypeNode(String idType) {
         id = idType;
@@ -15,11 +16,21 @@ public class DecTypeNode extends Node {
 
     @Override
     public String typeCheck() {
-        return "";
+        // Se è generico aggiungo PAR
+        if (genericType == null) {
+            return MiniFunLib.TYPE + this.id;
+        }
+        return this.genericType.typeCheck();
     }
 
     @Override
     public String codeGen() {
         return "";
+    }
+
+    public void setGenericType(Node type) {
+        if (!type.typeCheck().equals(MiniFunLib.TYPE + this.id)) {
+            this.genericType = type;
+        }
     }
 }

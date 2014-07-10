@@ -42,17 +42,17 @@ public class FunNode extends Node {
 
     @Override
     public String typeCheck() {
-        if (decl.getDecl() instanceof DecParNode) {
+        if (this.decl.getDecl() instanceof DecParNode) {
             // Recupero parametri dalla dichiarazione della funzione
             FunParType funType = ((FunParType) ((DecParNode) decl.getDecl()).getType());
             ArrayList<Node> decFunPar = funType.getPar();
-            // Controllo di avere lo stesso numero di parametri
-            if (checkPar(decFunPar, parList)) {
+            // Controllo di avere lo stesso numero e tipo di parametri
+            if (checkPar(decFunPar, this.parList)) {
                 return funType.getRetType().typeCheck();
             }
-        } else if (decl.getDecl() instanceof DecFunNode) {
+        } else if (this.decl.getDecl() instanceof DecFunNode) {
             ArrayList<Node> decPar = ((DecFunNode) this.decl.getDecl()).getPar();
-            if (checkPar(decPar, parList)) {
+            if (checkPar(decPar, this.parList)) {
                 return ((DecFunNode) this.decl.getDecl()).getRetType().typeCheck();
             }
         }
@@ -126,7 +126,6 @@ public class FunNode extends Node {
     }
 
     private boolean checkPar(ArrayList<Node> declParameter, ArrayList<Node> passedParameter) {
-        //controllare che se è un funparnode
         if (declParameter.size() == passedParameter.size()) {
             // Controllo ad uno ad un la compatibilità dei Parametri con la
             // loro dichiarazione

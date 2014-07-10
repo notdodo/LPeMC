@@ -9,6 +9,7 @@ public class MiniFunLib {
     public static final int NULLPOINTER = -1;
     public static final String EMPTY = "Empty";
     public static final String LIST = "List:";
+    public static final String TYPE = "Type:";
 
     private static int labIndex = 0;
     private static String functionCode = "";
