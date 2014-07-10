@@ -87,13 +87,12 @@ public class DecFunNode extends Node {
             if (MiniFunLib.isCompatible(this.retType, this.body)) {
                 typeChecked = true;
                 typeString = this.body.typeCheck();
-            } else {
-                System.out.println("Type Error: + "
-                        + this.getClass().getSimpleName()
-                        + " " + this.id + " Tipo ritorno incompatibile"
-                        + this.body.getClass());
-                System.exit(0);
             }
+            System.out.println("Type Error: + "
+                    + this.getClass().getSimpleName()
+                    + " " + this.id + " Tipo ritorno incompatibile"
+                    + this.body.getClass());
+            System.exit(0);
         }
         return typeString;
     }

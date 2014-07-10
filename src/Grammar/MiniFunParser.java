@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-10 22:46:17
+// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-11 01:37:09
 
 package Grammar;
 import Generics.*;
@@ -244,7 +244,7 @@ public class MiniFunParser extends Parser {
 					            							STentry entry = new STentry(vn,offSet++);
 					                        						HashMap<String,STentry> hm = symTable.get(nestingLevel);
 					                        						if (hm.put((i!=null?i.getText():null),entry) != null) {
-					                            							System.out.println("Identifier " + (i!=null?i.getText():null) + " at line "+(i!=null?i.getLine():0)+" already defined");
+					                            							System.err.println("Identifier " + (i!=null?i.getText():null) + " at line "+(i!=null?i.getLine():0)+" already defined");
 					                           							System.exit(0);
 					                           						}
 					                           						// la dichiarazione viene aggiunta alla hashmap, come il riferimento al nodo DecVar
@@ -261,7 +261,7 @@ public class MiniFunParser extends Parser {
 					                 		 STentry entry = new STentry(fn,offSet++);
 					                 		 HashMap<String, STentry> hm = symTable.get(nestingLevel);
 					                 		 if (hm.put((f!=null?f.getText():null), entry) != null) {
-					                 		 	System.out.println("Identifier " + (f!=null?f.getText():null) + " at line " + (f!=null?f.getLine():0) + " is already defined");
+					                 		 	System.err.println("Identifier " + (f!=null?f.getText():null) + " at line " + (f!=null?f.getLine():0) + " is already defined");
 					                            		System.exit(0);
 					                 		 }
 					                 		 hm = new HashMap<String, STentry>();
@@ -304,7 +304,7 @@ public class MiniFunParser extends Parser {
 									             				    paramTypes.add(tn2);
 									             				    entry = new STentry(tn2, 0);
 									             				    if (hmType.put((i2!=null?i2.getText():null),entry) != null) {
-									                             				System.out.println("Parameter " + (i!=null?i.getText():null) + " at line "+(i!=null?i.getLine():0)+" already defined");
+									                             				System.err.println("Parameter " + (i!=null?i.getText():null) + " at line "+(i!=null?i.getLine():0)+" already defined");
 									                             				System.exit(0);
 									                       				    }
 									}
@@ -387,7 +387,7 @@ public class MiniFunParser extends Parser {
 									                                							}
 									                                							entry = new STentry(dpn, parOffSet--);
 									                                							if (hm.put((fpi!=null?fpi.getText():null),entry) != null) {
-									                                    							System.out.println("Identifier " + (fpi!=null?fpi.getText():null) + " at line " + (fpi!=null?fpi.getLine():0) + " already defined");
+									                                    							System.err.println("Identifier " + (fpi!=null?fpi.getText():null) + " at line " + (fpi!=null?fpi.getLine():0) + " already defined");
 									                                    							System.exit(0);
 									                                							}
 									                                							parList.add(dpn);
@@ -973,7 +973,7 @@ public class MiniFunParser extends Parser {
 					                    			break;
 					                  	}
 					                  	if (entry == null) {
-					                    		System.out.println("Identifier " + (i!=null?i.getText():null) + " at line " + (i!=null?i.getLine():0) + " is not defined");
+					                    		System.err.println("Identifier " + (i!=null?i.getText():null) + " at line " + (i!=null?i.getLine():0) + " is not defined");
 					                     		System.exit(0);
 					                   	}
 					                   	if(entry.getDecl() instanceof DecFunNode ||
@@ -1418,7 +1418,7 @@ public class MiniFunParser extends Parser {
 					                          		break;
 					                       }
 					                       if (entryPar == null) {
-								System.out.println("Parameter Type " + (i!=null?i.getText():null) + " at line " + (i!=null?i.getLine():0) + " is not defined");
+								System.err.println("Parameter Type " + (i!=null?i.getText():null) + " at line " + (i!=null?i.getLine():0) + " is not defined");
 					                          	System.exit(0);
 					                       }
 					                       ast = new IdTypeNode(entryPar);

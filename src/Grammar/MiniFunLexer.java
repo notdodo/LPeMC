@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-10 22:46:18
+// $ANTLR 3.5.1 /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g 2014-07-11 01:37:09
 
 package Grammar;
 
@@ -1142,7 +1142,7 @@ public class MiniFunLexer extends Lexer {
 			// /home/edoardo/NetBeansProjects/LPeMC/src/Grammar/MiniFun.g:291:7: .
 			{
 			matchAny(); 
-			 System.out.println("Invalid char: "+getText()); 
+			 System.err.println("Invalid char: "+getText()); 
 			}
 
 			state.type = _type;

@@ -58,7 +58,7 @@ declist returns [ArrayList<Node> astList]:
             							STentry entry = new STentry(vn,offSet++);
                         						HashMap<String,STentry> hm = symTable.get(nestingLevel);
                         						if (hm.put($i.text,entry) != null) {
-                            							System.out.println("Identifier " + $i.text + " at line "+$i.line+" already defined");
+                            							System.err.println("Identifier " + $i.text + " at line "+$i.line+" already defined");
                            							System.exit(0);
                            						}
                            						// la dichiarazione viene aggiunta alla hashmap, come il riferimento al nodo DecVar
@@ -68,7 +68,7 @@ declist returns [ArrayList<Node> astList]:
                  		 STentry entry = new STentry(fn,offSet++);
                  		 HashMap<String, STentry> hm = symTable.get(nestingLevel);
                  		 if (hm.put($f.text, entry) != null) {
-                 		 	System.out.println("Identifier " + $f.text + " at line " + $f.line + " is already defined");
+                 		 	System.err.println("Identifier " + $f.text + " at line " + $f.line + " is already defined");
                             		System.exit(0);
                  		 }
                  		 hm = new HashMap<String, STentry>();
@@ -85,7 +85,7 @@ declist returns [ArrayList<Node> astList]:
              				    paramTypes.add(tn2);
              				    entry = new STentry(tn2, 0);
              				    if (hmType.put($i2.text,entry) != null) {
-                             				System.out.println("Parameter " + $i.text + " at line "+$i.line+" already defined");
+                             				System.err.println("Parameter " + $i.text + " at line "+$i.line+" already defined");
                              				System.exit(0);
                        				    }})*
                        	ARPAR {fn.addParType(paramTypes);})?
@@ -111,7 +111,7 @@ declist returns [ArrayList<Node> astList]:
                                 							}
                                 							entry = new STentry(dpn, parOffSet--);
                                 							if (hm.put($fpi.text,entry) != null) {
-                                    							System.out.println("Identifier " + $fpi.text + " at line " + $fpi.line + " already defined");
+                                    							System.err.println("Identifier " + $fpi.text + " at line " + $fpi.line + " already defined");
                                     							System.exit(0);
                                 							}
                                 							parList.add(dpn);})*
@@ -173,7 +173,7 @@ fatt returns [Node ast]:
                     			break;
                   	}
                   	if (entry == null) {
-                    		System.out.println("Identifier " + $i.text + " at line " + $i.line + " is not defined");
+                    		System.err.println("Identifier " + $i.text + " at line " + $i.line + " is not defined");
                      		System.exit(0);
                    	}
                    	if(entry.getDecl() instanceof DecFunNode ||
@@ -229,7 +229,7 @@ primType returns [Node ast]:
                           		break;
                        }
                        if (entryPar == null) {
-			System.out.println("Parameter Type " + $i.text + " at line " + $i.line + " is not defined");
+			System.err.println("Parameter Type " + $i.text + " at line " + $i.line + " is not defined");
                           	System.exit(0);
                        }
                        $ast= new IdTypeNode(entryPar);}
@@ -288,4 +288,4 @@ ID : ('a'..'z'|'A'..'Z')
 
 WHITESP : ( '\t' | ' ' | '\r' | '\n' )+ { skip(); } ;
  
-ERR : . { System.out.println("Invalid char: "+$text); };
+ERR : . { System.err.println("Invalid char: "+$text); };
