@@ -6,7 +6,7 @@ let fun caller<Y>:int(lista:list[Y]){
             };
         in length<Y>(lista);
     };
-in print(caller<int>([true ::[false :: empty]]));
+in print(caller<bool>([true ::[false :: empty]]));
 
 let var lista:list[int] = [1 :: [2 :: empty]];
     fun printl:int(l:list[int]) {

@@ -12,7 +12,7 @@ public class IdTypeNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + "[" + this.id.toPrint() + "]";
+        return "IdTypeNode[" + this.id.toPrint() + "]";
     }
 
     @Override

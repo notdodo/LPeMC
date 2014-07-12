@@ -61,9 +61,6 @@ public class DecFunNode extends Node {
 
     public void addParType(ArrayList<Node> apt) {
         this.paramTypes = apt;
-        for (int i = 0; i < this.paramTypes.size(); i++) {
-            System.out.println(this.paramTypes.get(i).getClass());
-        }
     }
     
     public ArrayList<Node> getParType() {

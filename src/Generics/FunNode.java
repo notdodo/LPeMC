@@ -52,6 +52,16 @@ public class FunNode extends Node {
             }
         } else if (this.decl.getDecl() instanceof DecFunNode) {
             ArrayList<Node> decPar = ((DecFunNode) this.decl.getDecl()).getPar();
+            // Recupero i tipi parametrici
+            ArrayList<Node> decParamTypes = ((DecFunNode) this.decl.getDecl()).getParType();
+            if (this.paramTypes.size() == decParamTypes.size() && decParamTypes.size() > 0) {
+                for (int i = 0; i < decParamTypes.size(); i++) {
+                    ((DecTypeNode) decParamTypes.get(i)).setGenericType(this.paramTypes.get(i));
+                }
+            } else if (this.paramTypes.size() != decParamTypes.size()) {
+                System.err.println("Parametric Type Error: Numero dei tipi parametrici incompatibile");
+                System.exit(0);
+            }
             if (checkPar(decPar, this.parList)) {
                 return ((DecFunNode) this.decl.getDecl()).getRetType().typeCheck();
             }
@@ -59,7 +69,6 @@ public class FunNode extends Node {
         System.out.println("Errore di dichiarazione " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
-
     }
 
     @Override
