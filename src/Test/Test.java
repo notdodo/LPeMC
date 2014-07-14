@@ -20,7 +20,8 @@ public class Test {
         String astString = ast.toPrint();
         System.out.println(astString);
         System.out.println(stringConverter(astString));
-        System.out.println(ast.typeCheck());
+        System.out.println("\nTypeCheck: " + ast.typeCheck());
+        System.out.println("\nCodeGen: ");
         String asm = ast.codeGen();
 
         FileWriter fstream = new FileWriter(args[0] + ".asm");
