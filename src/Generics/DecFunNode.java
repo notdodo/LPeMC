@@ -62,7 +62,7 @@ public class DecFunNode extends Node {
     public void addParType(ArrayList<Node> apt) {
         this.paramTypes = apt;
     }
-    
+
     public ArrayList<Node> getParType() {
         return this.paramTypes;
     }
@@ -70,6 +70,7 @@ public class DecFunNode extends Node {
     @Override
     public String toPrint() {
         String parString = "";
+        String parTypeString = "";
         for (int i = 0; i < parList.size(); i++) {
             if (i == 0) {
                 parString = (parList.get(i)).toPrint();
@@ -77,9 +78,16 @@ public class DecFunNode extends Node {
                 parString = parString + "," + (parList.get(i)).toPrint();
             }
         }
-
+        for (int i = 0; i < this.paramTypes.size(); i++) {
+            if (i == 0) {
+                parTypeString = (this.paramTypes.get(i)).toPrint();
+            } else {
+                parTypeString = parTypeString + "," + (this.paramTypes.get(i)).toPrint();
+            }
+        }
         return this.getClass().getSimpleName()
                 + "[\"" + id + "\","
+                + parTypeString + ","
                 + retType.toPrint() + ","
                 + parString + ","
                 + body.toPrint() + "]";

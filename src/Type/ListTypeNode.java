@@ -14,7 +14,7 @@ public class ListTypeNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName();
+        return this.getClass().getSimpleName() + ":" + type.toPrint();
     }
 
     @Override
