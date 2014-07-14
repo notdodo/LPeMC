@@ -17,9 +17,9 @@ public class Test {
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         MiniFunParser parser = new MiniFunParser(tokens);
         Node ast = parser.prog();
-        String alberoSintattico = ast.toPrint();
-        System.out.println(alberoSintattico);
-        //System.out.println(stringConverter(alberoSintattico));
+        String astString = ast.toPrint();
+        System.out.println(astString);
+        System.out.println(stringConverter(astString));
         System.out.println(ast.typeCheck());
         String asm = ast.codeGen();
 
@@ -52,7 +52,7 @@ public class Test {
             }
             for (int j = 0; j < sep2.length; j++) {
                 if (sep2[j].indexOf(",") == 0) {
-                    sep2[j] = sep2[j].substring(2);
+                    sep2[j] = sep2[j].substring(1);
                 }
 
                 if (sep2[j].compareTo("") != 0) {

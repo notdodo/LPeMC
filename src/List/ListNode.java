@@ -17,7 +17,7 @@ public class ListNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "ListNode"
                 + "[" + first.toPrint() + ","
                 + rest.toPrint()
                 + "]";
