@@ -36,10 +36,10 @@ public class DecParNode extends Node {
 
     @Override
     public String typeCheck() {
-        if (!typeChecked) {
+        //if (!typeChecked) {
             typeChecked = true;
             typeString = type.typeCheck();
-        }
+        //}
         return typeString;
     }
 

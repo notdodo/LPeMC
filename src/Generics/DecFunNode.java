@@ -84,10 +84,11 @@ public class DecFunNode extends Node {
             } else {
                 parTypeString = parTypeString + "," + (this.paramTypes.get(i)).toPrint();
             }
+            parTypeString += ",";
         }
         return this.getClass().getSimpleName()
                 + "[\"" + id + "\","
-                + parTypeString + ","
+                + parTypeString
                 + retType.toPrint() + ","
                 + parString + ","
                 + body.toPrint() + "]";

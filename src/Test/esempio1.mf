@@ -1,3 +1,43 @@
+let 
+	fun caller<X>:int(f:(list[X])->int, lista:list[X]) { f(lista)};
+	fun length<X>:int(l:list[X]){
+		let
+			fun X<X>:X(){
+				let
+					var ok:X = first(l);
+				in
+					ok;
+			};
+		in
+			if (l==empty) 
+			then {0}
+	  		else {1 + length<X>(rest(l))};
+  	};
+in
+	print(caller<int>(length<int>, [1 ::[2 :: empty]]));
+
+let fun map<X,Y>:list[Y] (l:list[X],f:(X)->Y){ 
+    if (l==empty) 
+    then {empty}
+    else { [f(first(l)) :: map<X,Y>(rest(l),f)] } 
+  };
+
+  fun id:int(n:int) { n+5 };
+
+in print(map<int,int>([1 :: [12 :: empty]],id));
+
+let
+    fun f<Xmas>:int(p2:Xmas){
+        let
+            fun ff:int(p3:Xmas){
+                print(56)
+            };
+        in
+            ff(p2);
+    };
+in
+    print(f<bool>(5));
+
 let fun caller<Y>:int(lista:list[Y]){
         let fun length<X>:int(l:list[X]){
                 if (l==empty) then 
@@ -6,7 +46,7 @@ let fun caller<Y>:int(lista:list[Y]){
             };
         in length<Y>(lista);
     };
-in print(caller<int>([true ::[false :: empty]]));
+in print(caller<bool>([true ::[false :: empty]]));
 
 let var lista:list[int] = [1 :: [2 :: empty]];
     fun printl:int(l:list[int]) {
@@ -22,35 +62,6 @@ let var lista:list[int] = [1 :: [2 :: empty]];
     };
 in print(lenght(lista));
 
-let fun applica:int(x:int, fo:(int)->int) {
-        fo(x)
-    };
-
-    fun fac:int(x:int) {
-        if (x==0) then {
-            1
-        }else {
-            x*fac(x-1)
-        }
-    };
-
-    fun lenght:int(x:list[int]) {
-        if (x==empty) then {
-            0
-        }else {
-            1+lenght(rest(x))
-        }
-    };
-
-    fun log:bool(x:int) {
-        if (x>=0) then {
-            true
-        }else {
-            false
-        }
-    };
-in print(applica(applica([1::[4::[1::empty]]],lenght),fac));
-
 let var lista:list[int] = [1 :: [2 :: empty]];
     fun lenght:int(l:list[int]) {
         if (l == empty) then
@@ -58,24 +69,6 @@ let var lista:list[int] = [1 :: [2 :: empty]];
         else { 1+lenght(rest(l)) }
     };
 in print(lenght(lista));
-
-
-let     var g:int=12;
-	var zz:int=4;
-	fun useFun:int(f2:(int,int)->int, a2:int, b2:int){
-		f2(a2,b2)   
-	};
-        
-        fun passofunz:int(f3:((int,int)->int, int, int)-> int){
-            let
-    		var g:int=2;
-    		var k:int=3;
-    		fun inside:int(c:int,y:int) { c+y };
-            in
-    		f3(inside,5,3);
-        };
-in
-	print(passofunz(useFun));
 
 let fun somma:int(y:int, g:int) {
         y+g

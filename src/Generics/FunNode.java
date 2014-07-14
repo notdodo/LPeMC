@@ -27,6 +27,7 @@ public class FunNode extends Node {
     @Override
     public String toPrint() {
         String parString = "";
+        String parTypeString = "";
         for (int i = 0; i < parList.size(); i++) {
             if (i == 0) {
                 parString = parString + (parList.get(i)).toPrint();
@@ -34,8 +35,17 @@ public class FunNode extends Node {
                 parString = parString + "," + (parList.get(i)).toPrint();
             }
         }
+        for (int i = 0; i < this.paramTypes.size(); i++) {
+            if (i == 0) {
+                parTypeString = parTypeString + (this.paramTypes.get(i)).toPrint();
+            } else {
+                parTypeString = parTypeString + "," + (this.paramTypes.get(i)).toPrint();
+            }
+        }
         return this.getClass().getSimpleName()
-                + "[" + diffNesting + ","
+                + "["
+                + parTypeString + ","
+                + diffNesting + ","
                 + (decl.getOffSet()) + ","
                 + parString + "]";
     }
@@ -55,7 +65,7 @@ public class FunNode extends Node {
             // Recupero i tipi parametrici
             ArrayList<Node> decParamTypes = ((DecFunNode) this.decl.getDecl()).getParType();
             // Controllo i tipi parametrici
-            if (this.paramTypes.size() == decParamTypes.size() && decParamTypes.size() > 0) {
+            if (this.paramTypes.size() == decParamTypes.size()) {
                 for (int i = 0; i < decParamTypes.size(); i++) {
                     ((DecTypeNode) decParamTypes.get(i)).setGenericType(this.paramTypes.get(i));
                 }
@@ -137,7 +147,7 @@ public class FunNode extends Node {
 
     private boolean checkPar(ArrayList<Node> declParameter, ArrayList<Node> passedParameter) {
         if (declParameter.size() == passedParameter.size()) {
-            // Controllo ad uno ad un la compatibilità dei Parametri con la
+            // Controllo ad uno ad uno la compatibilità dei Parametri con la
             // loro dichiarazione
             for (int i = 0; i < declParameter.size(); i++) {
                 Node par = declParameter.get(i);
@@ -148,6 +158,14 @@ public class FunNode extends Node {
                             ArrayList<Node> parCheckFunPar = ((FunParNode) (passedParameter.get(i))).getPar();
                         } else {
                             System.out.println("Parametro atteso: funzione");
+                            System.exit(0);
+                        }
+                    } else {
+                        if (!MiniFunLib.isCompatible(declParameter.get(i), passedParameter.get(i))) {
+                            System.out.println("Type Error FunNode: Parametri incompatibili:"
+                                    + declParameter.get(i).typeCheck()
+                                    + ", "
+                                    + passedParameter.get(i).typeCheck());
                             System.exit(0);
                         }
                     }

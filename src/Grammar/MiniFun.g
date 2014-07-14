@@ -89,8 +89,9 @@ declist returns [ArrayList<Node> astList]:
                              				System.exit(0);
                        				    }})*
                        	ARPAR {fn.addParType(paramTypes);})?
-                       		COL rt=type {fn.addRet($rt.ast);} LPAR {int parOffSet = -1;
-                       							     ArrayList<Node> parList = new ArrayList<Node>();}
+                       		COL rt=type {fn.addRet($rt.ast);}
+                       		 LPAR {int parOffSet = -1;
+                       			ArrayList<Node> parList = new ArrayList<Node>();}
                     			(fp=ID COL t=type    {DecParNode dpn;
                     						if ($t.ast instanceof FunParType) {
                     							parOffSet--;
@@ -103,10 +104,8 @@ declist returns [ArrayList<Node> astList]:
                             					parList.add(dpn);}
                         			(COMMA fpi=ID COL t=type {if ($t.ast instanceof FunParType) {
                                     							parOffSet--;
-                                    							//aggiunto fpi
                                     							dpn = new DecParNode($fpi.text, $t.ast, true);
                                 							} else {
-                                    							//aggiunto fpi
                                     							dpn = new DecParNode($fpi.text, $t.ast);
                                 							}
                                 							entry = new STentry(dpn, parOffSet--);
@@ -177,7 +176,7 @@ fatt returns [Node ast]:
                      		System.exit(0);
                    	}
                    	if(entry.getDecl() instanceof DecFunNode ||
-                        	(entry.getDecl() instanceof DecParNode && ((DecParNode)entry.getDecl()).getType() instanceof FunParType) && entry != null) {
+                        	(entry.getDecl() instanceof DecParNode && ((DecParNode)entry.getDecl()).getType() instanceof FunParType)) {
                         	fpn = new FunParNode(entry,nestingLevel-declNL);
                         	fpn.addParType(paramTypes);
                         	$ast = fpn;
