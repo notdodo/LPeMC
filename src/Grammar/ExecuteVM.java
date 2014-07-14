@@ -1,8 +1,5 @@
 package Grammar;
 
-import Generics.InstructionMapper;
-import virtualMachine.viewers.VMViewer;
-
 public class ExecuteVM {
 
     public static final int CODESIZE = 10000;
@@ -24,15 +21,7 @@ public class ExecuteVM {
     }
 
     public void cpu() {
-        VMViewer vmv = null;
-        if (debug) {
-            vmv = new VMViewer(new InstructionMapper());
-        }
         while (ip < code.length) {
-            if (debug) {
-                vmv.updateGraphic(code, memory, ip, sp, ra, rv, hp, fp);
-            }
-
             int bytecode = code[ip++]; // fetch
             int v1, v2;
             switch (bytecode) {
