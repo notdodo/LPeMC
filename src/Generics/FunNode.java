@@ -54,6 +54,7 @@ public class FunNode extends Node {
             ArrayList<Node> decPar = ((DecFunNode) this.decl.getDecl()).getPar();
             // Recupero i tipi parametrici
             ArrayList<Node> decParamTypes = ((DecFunNode) this.decl.getDecl()).getParType();
+            // Controllo i tipi parametrici
             if (this.paramTypes.size() == decParamTypes.size() && decParamTypes.size() > 0) {
                 for (int i = 0; i < decParamTypes.size(); i++) {
                     ((DecTypeNode) decParamTypes.get(i)).setGenericType(this.paramTypes.get(i));
