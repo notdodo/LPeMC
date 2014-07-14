@@ -17,12 +17,9 @@ public class BoolNode extends Node {
         val = v;
     }
 
-    /**
-     * @return Stampa l'albero sintattico
-     */
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "BoolNode"
                 + "[" + val + "]";
     }
 

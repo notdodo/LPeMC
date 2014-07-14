@@ -3,17 +3,24 @@ package Logic;
 import Generics.Node;
 import Generics.MiniFunLib;
 
+/**
+ * Classe per la gestione del nodo di negazione<br/>
+ * ESEMPIO: not(b)
+ */
 public class NotNode extends Node {
 
     private final Node exp;
 
+    /**
+     * @param exp Identifica il nodo da negare
+     */
     public NotNode(Node exp) {
         this.exp = exp;
     }
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "NotNode"
                 + "[" + this.exp.toPrint()
                 + "]";
     }

@@ -3,6 +3,9 @@ package List;
 import Generics.MiniFunLib;
 import Generics.Node;
 
+/**
+ * Classe per la creazione del nodo che indentifica una lista vuota
+ */
 public class EmptyNode extends Node {
 
     public EmptyNode() {
@@ -10,7 +13,7 @@ public class EmptyNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName();
+        return "EmptyNode";
     }
 
     @Override

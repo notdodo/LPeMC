@@ -3,11 +3,19 @@ package Logic;
 import Generics.Node;
 import Generics.MiniFunLib;
 
+/**
+ * Classe per la gestione del nodo di disuguaglianza<br/>
+ * ESEMPIO: a != b
+ */
 public class NotEqNode extends Node {
 
     private final Node left;
     private final Node right;
 
+    /**
+     * @param left Identifica il primo operatore
+     * @param right Identifica il secondo operatore
+     */
     public NotEqNode(Node left, Node right) {
         this.left = left;
         this.right = right;
@@ -15,7 +23,7 @@ public class NotEqNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "NotEqNode"
                 + "[" + this.left.toPrint()
                 + "," + this.right.toPrint()
                 + "]";
@@ -28,14 +36,13 @@ public class NotEqNode extends Node {
         } else if (MiniFunLib.isCompatible(right, left)) {
             return MiniFunLib.BOOL;
         }
-        System.out.println("Type Error " + this.getClass().getSimpleName());
+        System.err.println("Type Error " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
     }
 
     @Override
     public String codeGen() {
-
         String lab1 = MiniFunLib.newLabel();
         String lab2 = MiniFunLib.newLabel();
         return left.codeGen()

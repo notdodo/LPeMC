@@ -1,10 +1,17 @@
 package Generics;
 
+/**
+ * Classe per la creazione di un nodo per una variabile
+ */
 public class VarNode extends Node {
 
     private final STentry decl;
     private final int diffNesting;
 
+    /**
+     * @param d Identifica la dichiarazione della variabile
+     * @param dn Identifica la posizione della variabile
+     */
     public VarNode(STentry d, int dn) {
         decl = d;
         diffNesting = dn;
@@ -12,7 +19,7 @@ public class VarNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "VarNode"
                 + "[" + diffNesting + ","
                 + decl.getOffSet() + "]";
     }
@@ -30,9 +37,7 @@ public class VarNode extends Node {
         for (int i = 0; i < diffNesting; i++) {
             lookupAL += MiniFunLib.LOADW;
         }
-        /*
-         Stessa logica del FunNode
-         */
+
         return MiniFunLib.LOADFP
                 + lookupAL
                 + MiniFunLib.PUSH + decl.getOffSet() + "\n"

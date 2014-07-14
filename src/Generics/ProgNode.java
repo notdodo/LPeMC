@@ -1,17 +1,23 @@
 package Generics;
 
+/**
+ * Classe per la crazione del nodo padre del programma da cui tutti gli altri
+ * nodi derivano
+ */
 public class ProgNode extends Node {
 
     private final Node let;
 
-    // il costruttore accetta un LetNode
+    /**
+     * @param l Identifica il LetNode
+     */
     public ProgNode(Node l) {
         this.let = l;
     }
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "ProgNode"
                 + "[" + this.let.toPrint()
                 + "]";
     }

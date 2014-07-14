@@ -4,12 +4,21 @@ import Generics.MiniFunLib;
 import Generics.Node;
 import Type.BoolTypeNode;
 
+/**
+ * Classe per la gestione del nodo di controllo<br/>
+ * ESEMPIO: if (a) then {1} else {2}
+ */
 public class IfNode extends Node {
 
     private final Node cond;
     private final Node th;
     private final Node el;
 
+    /**
+     * @param c Identifica la condizione da verificare
+     * @param t Identifica il nodo THEN
+     * @param e Identifica il nodo ELSE
+     */
     public IfNode(Node c, Node t, Node e) {
         cond = c;
         th = t;
@@ -33,7 +42,7 @@ public class IfNode extends Node {
                 if (MiniFunLib.isCompatible(el, th)) {
                     return th.typeCheck();
                 } else {
-                    System.out.println("Type Error Else/Then " + this.getClass().getSimpleName());
+                    System.err.println("Type Error Else/Then " + this.getClass().getSimpleName());
                     System.exit(0);
                 }
             }

@@ -2,6 +2,9 @@ package Type;
 
 import Generics.*;
 
+/**
+ * Classe per la creazione di un tipo parametrico
+ */
 public class IdTypeNode extends Node {
 
     private STentry id;

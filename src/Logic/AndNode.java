@@ -5,8 +5,8 @@ import Generics.Node;
 import Type.BoolTypeNode;
 
 /**
- * Classe per la gestione del nodo And<br/>
- * ESEMPIO: a == b
+ * Classe per la gestione del nodo congiunzione<br/>
+ * ESEMPIO: a && b
  */
 public class AndNode extends Node {
 
@@ -14,8 +14,8 @@ public class AndNode extends Node {
     private final Node right;
 
     /**
-     * @param l Albero sintattico del primo operatore
-     * @param r Albero sintattico del secondo operatore
+     * @param l Identifica il primo operatore
+     * @param r Identifica il secondo operatore
      */
     public AndNode(Node l, Node r) {
         left = l;
@@ -27,7 +27,7 @@ public class AndNode extends Node {
      */
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "AndNode"
                 + "[" + left.toPrint() + ","
                 + right.toPrint() + "]";
     }
@@ -41,7 +41,7 @@ public class AndNode extends Node {
                 && (MiniFunLib.isCompatible(right, new BoolTypeNode()))) {
             return MiniFunLib.BOOL;
         }
-        System.out.println("Type Error: " + this.getClass().getSimpleName());
+        System.err.println("Type Error: " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
     }

@@ -3,11 +3,18 @@ package Math;
 import Generics.Node;
 import Generics.MiniFunLib;
 
+/**
+ * Classe per utlizzare l'operatore "maggiore uguale" (>=)
+ */
 public class MagEqNode extends Node {
 
     private final Node left;
     private final Node right;
 
+    /**
+     * @param left Identifica il primo operatore
+     * @param right Identifica il secondo operatore
+     */
     public MagEqNode(Node left, Node right) {
         this.left = left;
         this.right = right;
@@ -15,7 +22,7 @@ public class MagEqNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "MagEqNode"
                 + "[" + this.left.toPrint() + ","
                 + this.right.toPrint() + "]";
     }
@@ -27,7 +34,7 @@ public class MagEqNode extends Node {
         } else if (MiniFunLib.isCompatible(right, left)) {
             return MiniFunLib.BOOL;
         }
-        System.out.println("Type Error: " + this.getClass().getSimpleName());
+        System.err.println("Type Error: " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
     }

@@ -3,11 +3,19 @@ package Logic;
 import Generics.Node;
 import Generics.MiniFunLib;
 
+/**
+ * Classe per la gestione del nodo di uguaglianza<br/>
+ * ESEMPIO: a == b
+ */
 public class EqNode extends Node {
 
     private final Node left;
     private final Node right;
 
+    /**
+     * @param l Albero sintattico del primo operatore
+     * @param r Albero sintattico del secondo operatore
+     */
     public EqNode(Node l, Node r) {
         left = l;
         right = r;
@@ -15,7 +23,7 @@ public class EqNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "EqNode"
                 + "[" + left.toPrint() + ","
                 + right.toPrint() + "]";
     }

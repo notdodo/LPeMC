@@ -10,7 +10,7 @@ public class IntTypeNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName();
+        return "IntTypeNode";
     }
 
     @Override

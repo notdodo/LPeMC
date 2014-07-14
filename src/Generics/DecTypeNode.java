@@ -1,10 +1,16 @@
 package Generics;
 
+/**
+ * Classe per la creazione del nodo per i tipi parametrici
+ */
 public class DecTypeNode extends Node {
 
     private String id;
     private Node genericType = null;
 
+    /**
+     * @param idType Identifica il nome del tipo parametrico
+     */
     public DecTypeNode(String idType) {
         id = idType;
     }
@@ -16,7 +22,7 @@ public class DecTypeNode extends Node {
 
     @Override
     public String typeCheck() {
-        // Se è generico aggiungo PAR
+        // Antepongo la string Type: prima del nome del tipo parametrico per riconoscerlo
         if (genericType == null) {
             return MiniFunLib.TYPE + this.id;
         }
@@ -28,6 +34,7 @@ public class DecTypeNode extends Node {
         return "";
     }
 
+    // Sostituisco il tipo parametrico con quello finale
     public void setGenericType(Node type) {
         if (!type.typeCheck().equals(MiniFunLib.TYPE + this.id)) {
             this.genericType = type;

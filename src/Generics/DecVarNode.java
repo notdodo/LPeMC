@@ -1,5 +1,8 @@
 package Generics;
 
+/**
+ * Classe per la creazione del nodo di dichiarazione delle variabili
+ */
 public class DecVarNode extends Node {
 
     private final String id;
@@ -8,6 +11,11 @@ public class DecVarNode extends Node {
     private boolean typeChecked = false;
     private String typeString = "";
 
+    /**
+     * @param i Identifica il nome della variabile
+     * @param t Identifica il tipo della variabile
+     * @param e Identifica l'espressione che assume la variabile
+     */
     public DecVarNode(String i, Node t, Node e) {
         id = i;
         type = t;
@@ -16,7 +24,7 @@ public class DecVarNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "DecVarNode"
                 + "[\"" + id + "\","
                 + type.toPrint() + ","
                 + exp.toPrint() + "]";
@@ -25,11 +33,13 @@ public class DecVarNode extends Node {
     @Override
     public String typeCheck() {
         if (!typeChecked) {
+            // Controllo che i tipi siano compatibili
             if (MiniFunLib.isCompatible(exp, type)) {
+                // Blocco la ricorsione del typeCheck
                 typeChecked = true;
                 typeString = type.typeCheck();
             } else {
-                System.out.println("Type Error: "
+                System.err.println("Type Error: "
                         + this.getClass().getSimpleName()
                         + " " + this.id);
                 System.exit(0);

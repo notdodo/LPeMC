@@ -10,7 +10,7 @@ public class BoolTypeNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName();
+        return "BoolTypeNode";
     }
 
     @Override

@@ -3,11 +3,18 @@ package Math;
 import Generics.MiniFunLib;
 import Generics.Node;
 
+/**
+ * Classe per utilizzare l'operatore "minore uguale" (<=)
+ */
 public class MinEqNode extends Node {
 
     private final Node left;
     private final Node right;
 
+    /**
+     * @param left Identifica il primo operatore
+     * @param right Identifica il secondo operatore
+     */
     public MinEqNode(Node left, Node right) {
         this.left = left;
         this.right = right;
@@ -15,7 +22,7 @@ public class MinEqNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "MinEqNode"
                 + "[" + this.left.toPrint() + ","
                 + this.right.toPrint() + "]";
     }
@@ -27,7 +34,7 @@ public class MinEqNode extends Node {
         } else if (MiniFunLib.isCompatible(right, left)) {
             return MiniFunLib.BOOL;
         }
-        System.out.println("Type Error " + this.getClass().getSimpleName());
+        System.err.println("Type Error " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
     }

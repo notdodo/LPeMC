@@ -4,11 +4,18 @@ import Generics.Node;
 import Generics.MiniFunLib;
 import Type.IntTypeNode;
 
+/**
+ * Classe per utilizzare l'operatore di moltiplicazione
+ */
 public class TimesNode extends Node {
 
     private final Node left;
     private final Node right;
 
+    /**
+     * @param l Identifica il primo operatore
+     * @param r Identifica il secondo operatore
+     */
     public TimesNode(Node l, Node r) {
         left = l;
         right = r;
@@ -16,7 +23,7 @@ public class TimesNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "TimesNode"
                 + "[" + left.toPrint() + ","
                 + right.toPrint() + "]";
     }
@@ -27,7 +34,7 @@ public class TimesNode extends Node {
                 && (MiniFunLib.isCompatible(right, new IntTypeNode()))) {
             return MiniFunLib.INT;
         }
-        System.out.println("Type Error " + this.getClass().getSimpleName());
+        System.err.println("Type Error " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
     }

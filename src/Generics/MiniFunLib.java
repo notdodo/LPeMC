@@ -1,5 +1,9 @@
 package Generics;
 
+/**
+ * Classe che contiene le stringe per la generazione del codice e delle funzioni
+ * utility
+ */
 public class MiniFunLib {
 
     public static final String INT = "Int";
@@ -38,29 +42,37 @@ public class MiniFunLib {
     public static final String PRINT = "print\n";
     public static final String HALT = "halt\n";
 
-    // controlla il tipo di n1 e n2, se sono liste devo controllare che siano compatibili (EMPTY è una lista)
+    /**
+     * Controlla il tipo di n1 e n2, se sono liste controlla che siano
+     * compatibili (EMPTY è una lista)
+     */
     public static boolean isCompatible(Node n1, Node n2) {
         if ((n1.typeCheck().equals(n2.typeCheck())
                 || (n1.typeCheck().indexOf(MiniFunLib.LIST) == 0 && n2.typeCheck().equals(MiniFunLib.EMPTY)))
-                || (n2.typeCheck().indexOf(MiniFunLib.LIST) == 0 && n1.typeCheck().equals(MiniFunLib.EMPTY))
-//                || (n1.typeCheck().equals(MiniFunLib.INT) && n2.typeCheck().equals(MiniFunLib.EMPTY))
-//                || (n2.typeCheck().equals(MiniFunLib.INT) && n1.typeCheck().equals(MiniFunLib.EMPTY))) {
-                ) {
+                || (n2.typeCheck().indexOf(MiniFunLib.LIST) == 0 && n1.typeCheck().equals(MiniFunLib.EMPTY))) {
             return true;
         }
-                System.out.println(n1.toPrint() + "\n" + n2.toPrint());
-        System.out.println("===\nn1.typeCheck = " + n1.typeCheck() + "\nn2.typeCheck = " + n2.typeCheck() + "\nn1.getClass = " + n1.getClass() + "\nn2.getClass = " + n2.getClass());
+        System.err.println("===\nn1.typeCheck = " + n1.typeCheck() + "\nn2.typeCheck = " + n2.typeCheck() + "\nn1.getClass = " + n1.getClass() + "\nn2.getClass = " + n2.getClass());
         return false;
     }
 
+    /**
+     * @return Una nuova label
+     */
     public static String newLabel() {
         return "lab" + labIndex++;
     }
 
+    /**
+     * Appende il codice della funzione
+     */
     public static void addFunctionCode(String code) {
         functionCode += code;
     }
 
+    /**
+     * Recupera il codice della funzione
+     */
     public static String getFunctionCode() {
         return functionCode;
     }

@@ -1,16 +1,10 @@
-package Type;
+package Generics;
 
 import Generics.Node;
 import java.util.ArrayList;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
- *
- * @author Edoardo
+ * Classe per dichiarare le funzione tramite l'operatore freccia
  */
 public class FunParType extends Node {
 
@@ -21,18 +15,22 @@ public class FunParType extends Node {
         this.parList = new ArrayList<>();
     }
 
+    // Aggiunge il tipo di ritorno
     public void addRet(Node rt) {
         this.retType = rt;
     }
 
+    // Aggiunge i parametri
     public void addPar(Node n) {
         this.parList.add(n);
     }
 
+    // Recupera i parametri
     public ArrayList<Node> getPar() {
         return this.parList;
     }
 
+    // Recupera il tipo di ritorno
     public Node getRetType() {
         return this.retType;
     }
@@ -47,7 +45,7 @@ public class FunParType extends Node {
                 parString = parString + "," + (parList.get(i)).toPrint();
             }
         }
-        return this.getClass().getSimpleName()
+        return "FunParType"
                 + "[" + parString + ", "
                 + this.retType.toPrint() + "]";
     }
@@ -61,5 +59,4 @@ public class FunParType extends Node {
     public String codeGen() {
         return "";
     }
-
 }

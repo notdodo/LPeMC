@@ -1,20 +1,25 @@
 package Type;
 
-// tipo lista generico
 import Generics.MiniFunLib;
 import Generics.Node;
 
+/**
+ * Classe per la creazione di un tipo lista
+ */
 public class ListTypeNode extends Node {
 
     private final Node type;
 
+    /**
+     * @param t Identifica il tipo della lista
+     */
     public ListTypeNode(Node t) {
         this.type = t;
     }
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName() + ":" + type.toPrint();
+        return "ListTypeNode" + ":" + type.toPrint();
     }
 
     @Override

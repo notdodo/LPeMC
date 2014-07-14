@@ -3,17 +3,23 @@ package Type;
 import Generics.Node;
 import Generics.MiniFunLib;
 
+/**
+ * Classe per la gestione del tipo intero (Int)<br/>
+ */
 public class NatNode extends Node {
 
     private final int val;
 
+    /**
+     * @param v Identifica il valore intero 
+     */
     public NatNode(int v) {
         val = v;
     }
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "NatNode"
                 + "[" + val + "]";
     }
 

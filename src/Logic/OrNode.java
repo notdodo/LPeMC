@@ -4,11 +4,19 @@ import Generics.MiniFunLib;
 import Generics.Node;
 import Type.BoolTypeNode;
 
+/**
+ * Classe per la gestione del nodo disgiunzione<br/>
+ * ESEMPIO: a || b
+ */
 public class OrNode extends Node {
 
     private final Node left;
     private final Node right;
 
+    /**
+     * @param l Identifica il primo operatore
+     * @param r Identifica il secondo operatore
+     */
     public OrNode(Node l, Node r) {
         left = l;
         right = r;
@@ -16,7 +24,7 @@ public class OrNode extends Node {
 
     @Override
     public String toPrint() {
-        return this.getClass().getSimpleName()
+        return "OrNode"
                 + "[" + left.toPrint() + ","
                 + right.toPrint() + "]";
     }
@@ -27,7 +35,7 @@ public class OrNode extends Node {
                 && (MiniFunLib.isCompatible(right, new BoolTypeNode()))) {
             return MiniFunLib.BOOL;
         }
-        System.out.println("Type Error " + this.getClass().getSimpleName());
+        System.err.println("Type Error " + this.getClass().getSimpleName());
         System.exit(0);
         return "";
     }
@@ -38,5 +46,4 @@ public class OrNode extends Node {
                 + right.codeGen()
                 + MiniFunLib.ADD;
     }
-
 }

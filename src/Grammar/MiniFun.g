@@ -238,8 +238,6 @@ primType returns [Node ast]:
  * LEXER RULES
  *------------------------------------------------------------------*/
 LET : 'let' ;
-APICI : '"';
-
 IN : 'in' ;
 SEMIC : ';' ;
 COL : ':' ;
