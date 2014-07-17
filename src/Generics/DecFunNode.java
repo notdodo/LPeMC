@@ -142,7 +142,7 @@ public class DecFunNode extends Node {
                 + MiniFunLib.COPYFP // prendo il contenuto dello stack e lo copio nel FP che punta al nuovo AR
                 + MiniFunLib.LOADRA // push RA del chiamante
                 + body.codeGen() // genero il codice per eseguire la funzione
-                // bisogna ripulire lo stack e risaltare al chiamante
+                // bisogna ripulire lo stack e tornare al chiamante
                 + MiniFunLib.STORERV // per salvare il valore
                 + popListDec // aggiunto per la seconda estensione
                 + MiniFunLib.STORERA // salvo il RA

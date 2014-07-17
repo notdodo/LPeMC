@@ -1,38 +1,83 @@
 // LetNode
-push 3
-push lab0 // a
+push lab0 // sqr
+push lab1 // sum
+push lab2 // passofunz
 lfp
+push 1
 push 5
-push 4
-lfp
 lfp
 push 2
+sub
+lw
+lfp
+lfp
+push 1
+sub
+lw
+lfp
+lfp
+lfp
+push 3
 sub
 lw
 js
 print
 halt
-lab0: // a
+lab0: // sqr
 cfp
 lra
-// LetNode
-push 4
 lfp
-push 2
+lfp
+push -4
 sub
 lw
-push 0
-beq lab3
-push 1
-b lab4
-lab3:
-push 0
-lab4:
-push 1
-beq lab1
-push 0
-b lab2
-lab1:
+lfp
+push -3
+sub
+lw
+lfp
+push -1
+sub
+lw
+lfp
+push -2
+sub
+lw
+js
+lfp
+lfp
+push -4
+sub
+lw
+lfp
+push -3
+sub
+lw
+lfp
+push -1
+sub
+lw
+lfp
+push -2
+sub
+lw
+js
+mult
+srv
+sra
+pop
+pop
+pop
+pop
+pop
+sfp
+lrv
+lra
+js
+// END sqr
+lab1: // sum
+cfp
+lra
 lfp
 push -1
 sub
@@ -42,22 +87,7 @@ push -2
 sub
 lw
 add
-lfp
-lw
-push 1
-sub
-lw
-add
-lfp
-push 2
-sub
-lw
-div
-
-lab2:
-// END LetNode
 srv
-pop
 sra
 pop
 pop
@@ -66,5 +96,48 @@ sfp
 lrv
 lra
 js
-// END a
+// END sum
+lab2: // passofunz
+cfp
+lra
+lfp
+lfp
+push -6
+sub
+lw
+lfp
+push -5
+sub
+lw
+lfp
+push -4
+sub
+lw
+lfp
+push -3
+sub
+lw
+lfp
+push -1
+sub
+lw
+lfp
+push -2
+sub
+lw
+js
+srv
+sra
+pop
+pop
+pop
+pop
+pop
+pop
+pop
+sfp
+lrv
+lra
+js
+// END passofunz
 // END LetNode
