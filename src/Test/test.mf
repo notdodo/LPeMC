@@ -1,63 +1,12 @@
-let fun caller<X>:int(f:(list[X])->int, lista:list[X]) { 
-        f(lista)
-    };
-    fun length<X>:int(l:list[X]) {
-        let fun X<X>:X() {
-                let	var ok:X = first(l);
-                in ok;
-            };
-        in if (l==empty) then 
-            {0}
-           else {
-            1 + length<X>(rest(l))
-           };
-    };
-in  print(caller<int>(length<int>, [1 ::[2 :: empty]]));
-
-let fun map<X,Y>:list[Y] (l:list[X],f:(X)->Y) { 
-        if (l==empty) then {
-            empty
-        }else { 
-            [f(first(l)) :: map<X,Y>(rest(l),f)] 
-        } 
-    };
-    fun id:int(n:int) { n+5 };
-in print(map<int,int>([1 :: [12 :: empty]],id));
-
-let fun f<Xmas>:int(p2:Xmas) {
-        let fun ff:int(p3:Xmas) {
-                print(56)
-            };
-        in ff(p2);
-    };
-in print(f<bool>(5));
-
-let fun caller<Y>:int(lista:list[Y]){
-        let fun length<X>:int(l:list[X]){
-                if (l==empty) then 
-                    {0}
-                else {1 + length<X>(rest(l))}
-            };
-        in length<Y>(lista);
-    };
-in print(caller<bool>([true ::[false :: empty]]));
-
-let var lista:list[int] = [1 :: [2 :: empty]];
-    fun lenght:int(l:list[int]) {
-        if (l == empty) then
-        { 0 }
-        else { 1+lenght(rest(l)) }
-    };
-in print(lenght(lista));
-
-let fun somma:int(y:int, g:int) {
-        y+g
-    };
-
-    fun a:int(y:int,x:int,fo:(int,int)->int) {
-        fo(x,y)
-    };
-in print(a(1,6,somma));
+let var x:int=3;
+    fun a:int(m:int, n:int) {
+        let var y:int = 4;
+        in if(y != 0) then 
+                {(m+n+x) / y}
+            else
+                {0};
+    }
+in print(a(4,5));
 
 let fun sqr:int(f2:(int,int)->int, x:int, y:int) { 
         f2(x,y)*f2(x,y)
@@ -69,3 +18,13 @@ let fun sqr:int(f2:(int,int)->int, x:int, y:int) {
         f1(f2,x,y)
     };
 in print(passofunz(sqr, sum, 5, 1));
+
+let fun caller<Y>:int(lista:list[Y]){
+        let fun length<X>:int(l:list[X]){
+                if (l==empty) then 
+                    {0}
+                else {1 + length<X>(rest(l))}
+            };
+        in length<Y>(lista);
+    };
+in print(caller<bool>([true ::[false :: empty]]));

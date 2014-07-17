@@ -21,7 +21,7 @@ public class Test {
         System.out.println(astString);
         System.out.println(stringConverter(astString));
         System.out.println("\nTypeCheck: " + ast.typeCheck());
-        System.out.println("\nCodeGen: ");
+        System.out.println("\nResult: ");
         String asm = ast.codeGen();
 
         FileWriter fstream = new FileWriter(args[0] + ".asm");

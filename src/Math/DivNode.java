@@ -43,7 +43,7 @@ public class DivNode extends Node {
     public String codeGen() {
         String lab1 = MiniFunLib.newLabel();
         String lab2 = MiniFunLib.newLabel();
-        return left.codeGen()
+        /*return left.codeGen()
                 + right.codeGen()
                 + "push 0\n"
                 + MiniFunLib.BRANCHEQ + lab1 + "\n"
@@ -51,6 +51,7 @@ public class DivNode extends Node {
                 + "b " + lab2 + "\n"
                 + lab1 + ":\n"
                 + MiniFunLib.HALT
-                + lab2 + ":\n";
+                + lab2 + ":\n";*/
+        return this.left.codeGen() + this.right.codeGen() + MiniFunLib.DIV + "\n";
     }
 }

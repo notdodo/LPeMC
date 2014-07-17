@@ -139,7 +139,7 @@ public class DecFunNode extends Node {
 
         MiniFunLib.addFunctionCode(
                 labelFun + ": // " + this.id + "\n"
-                + MiniFunLib.COPYFP // prendo il contenuto dello stack e lo copio del FP che punta al nuovo AR
+                + MiniFunLib.COPYFP // prendo il contenuto dello stack e lo copio nel FP che punta al nuovo AR
                 + MiniFunLib.LOADRA // push RA del chiamante
                 + body.codeGen() // genero il codice per eseguire la funzione
                 // bisogna ripulire lo stack e risaltare al chiamante
