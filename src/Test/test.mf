@@ -1,7 +1,7 @@
 let var x:int=3;
     fun a:int(m:int, n:int) {
         let var y:int = 4;
-        in if(y != 0) then 
+        in if (y != 0) then 
                 {(m+n+x) / y}
             else
                 {0};
