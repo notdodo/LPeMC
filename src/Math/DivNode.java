@@ -41,8 +41,6 @@ public class DivNode extends Node {
 
     @Override
     public String codeGen() {
-        String lab1 = MiniFunLib.newLabel();
-        String lab2 = MiniFunLib.newLabel();
         return this.left.codeGen() + this.right.codeGen() + MiniFunLib.DIV + "\n";
     }
 }
